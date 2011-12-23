@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:script>var itrerate = {"foo": "bar"}</fest:script>
+    <fest:for iterate="itrerate" index="i">
+        <fest:value>i</fest:value>=<fest:value>itrerate[i]</fest:value>
+    </fest:for>
+</fest:template>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="list">
+    <fest:foreach iterate="list" index="i">
+        <fest:value>list[i]</fest:value>
+    </fest:foreach>
+</fest:template>

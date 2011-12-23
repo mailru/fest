@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <link href="http://img.imgsmail.ru/mail/ru/css/neo/pages/main.css?3.95.2" rel="stylesheet" type="text/css"/>
+        <script src="checknew.js"></script>
+        <script src="js_messagelist.fest.js"></script>
+    </head>
+    <body>
+        <script>
+            console.time('transform');
+            var html = template(json.data);
+            console.timeEnd('transform');
+            document.body.innerHTML = html;
+        </script>
+    </body>
+</html>

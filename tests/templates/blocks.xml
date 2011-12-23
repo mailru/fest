@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="foreach">
+    start
+    <fest:get name="one-one"/>
+    <fest:set name="one-one">|one|</fest:set>
+
+
+    <fest:get name="two"/>
+    <fest:set name="two">two1|</fest:set>
+    <fest:set name="two">two2|</fest:set>
+
+
+    <fest:get name="three"/>
+    <fest:set name="three">three1|</fest:set>
+    <fest:set name="three" test="false">three2|</fest:set>
+
+
+    <fest:get name="four"/>
+    <fest:set name="four">
+        <fest:get name="five"/>
+    </fest:set>
+    <fest:set name="five">five|</fest:set>
+
+    <fest:set name="six">six|</fest:set>
+    <fest:get name="six"/>
+
+    <fest:set name="seven">seven|</fest:set>
+    <fest:set name="eight">eight|</fest:set>
+
+    <fest:foreach iterate="[7, 8]" index="i">
+        <fest:choose>
+            <fest:when test="i == 0">
+                <fest:get name="seven"/>
+            </fest:when>
+            <fest:when test="i == 1">
+                <fest:get name="eight"/>
+            </fest:when>
+            <fest:otherwise/>
+        </fest:choose>
+    </fest:foreach>
+    finish
+</fest:template>

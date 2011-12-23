@@ -1,0 +1,963 @@
+/status OK
+/data/cts 1319625888
+/data/username kk_test2
+/data/userdomain mail.ru
+/data/mailboxsize 318
+/data/mailboxlimit 10440
+/data/totalunread 167
+/data/CheckNewNum 3
+/data/build 3
+/data/folders[0]/Id 0
+/data/folders[0]/Name Входящие
+/data/folders[0]/Unread 161
+/data/folders[0]/Messages 804
+/data/folders[0]/Secure 0
+/data/folders[0]/ParentId 0
+/data/folders[0]/IsSubfolder 0
+/data/folders[1]/Id 14
+/data/folders[1]/Name Quelle
+/data/folders[1]/Unread 0
+/data/folders[1]/Messages 61
+/data/folders[1]/Secure 0
+/data/folders[1]/ParentId 0
+/data/folders[1]/IsSubfolder 1
+/data/folders[2]/Id 8
+/data/folders[2]/Name Вложенная во входящие
+/data/folders[2]/Unread 0
+/data/folders[2]/Messages 22
+/data/folders[2]/Secure 0
+/data/folders[2]/ParentId 0
+/data/folders[2]/IsSubfolder 1
+/data/folders[3]/Id 15
+/data/folders[3]/Name Babyblog.ru
+/data/folders[3]/Unread 0
+/data/folders[3]/Messages 0
+/data/folders[3]/Secure 0
+/data/folders[3]/ParentId 0
+/data/folders[3]/IsSubfolder 0
+/data/folders[4]/Id 16
+/data/folders[4]/Name Head hanter
+/data/folders[4]/Unread 0
+/data/folders[4]/Messages 4
+/data/folders[4]/Secure 0
+/data/folders[4]/ParentId 0
+/data/folders[4]/IsSubfolder 0
+/data/folders[5]/Id 5
+/data/folders[5]/Name PMF
+/data/folders[5]/Unread 0
+/data/folders[5]/Messages 31
+/data/folders[5]/Secure 0
+/data/folders[5]/ParentId 0
+/data/folders[5]/IsSubfolder 0
+/data/folders[6]/Id 10
+/data/folders[6]/Name Schö
+/data/folders[6]/Unread 0
+/data/folders[6]/Messages 1
+/data/folders[6]/Secure 1
+/data/folders[6]/ParentId 0
+/data/folders[6]/IsSubfolder 0
+/data/folders[7]/Id 6
+/data/folders[7]/Name Secure
+/data/folders[7]/Unread 0
+/data/folders[7]/Messages 1
+/data/folders[7]/Secure 1
+/data/folders[7]/ParentId 0
+/data/folders[7]/IsSubfolder 0
+/data/folders[8]/Id 3
+/data/folders[8]/Name badletter
+/data/folders[8]/Unread 0
+/data/folders[8]/Messages 107
+/data/folders[8]/Secure 0
+/data/folders[8]/ParentId 0
+/data/folders[8]/IsSubfolder 0
+/data/folders[9]/Id 11
+/data/folders[9]/Name benötigen
+/data/folders[9]/Unread 0
+/data/folders[9]/Messages 0
+/data/folders[9]/Secure 0
+/data/folders[9]/ParentId 0
+/data/folders[9]/IsSubfolder 0
+/data/folders[10]/Id 2
+/data/folders[10]/Name facebook
+/data/folders[10]/Unread 0
+/data/folders[10]/Messages 20
+/data/folders[10]/Secure 0
+/data/folders[10]/ParentId 0
+/data/folders[10]/IsSubfolder 0
+/data/folders[11]/Id 13
+/data/folders[11]/Name hh
+/data/folders[11]/Unread 0
+/data/folders[11]/Messages 0
+/data/folders[11]/Secure 0
+/data/folders[11]/ParentId 0
+/data/folders[11]/IsSubfolder 0
+/data/folders[12]/Id 12
+/data/folders[12]/Name hsdgsdhgsd
+/data/folders[12]/Unread 0
+/data/folders[12]/Messages 0
+/data/folders[12]/Secure 0
+/data/folders[12]/ParentId 0
+/data/folders[12]/IsSubfolder 0
+/data/folders[13]/Id 1
+/data/folders[13]/Name twitter
+/data/folders[13]/Unread 0
+/data/folders[13]/Messages 0
+/data/folders[13]/Secure 0
+/data/folders[13]/ParentId 0
+/data/folders[13]/IsSubfolder 0
+/data/folders[14]/Id 4
+/data/folders[14]/Name Проблемы tw-fb 2010-08-18
+/data/folders[14]/Unread 0
+/data/folders[14]/Messages 6
+/data/folders[14]/Secure 0
+/data/folders[14]/ParentId 0
+/data/folders[14]/IsSubfolder 0
+/data/folders[15]/Id 9
+/data/folders[15]/Name Вложенная в другую папку
+/data/folders[15]/Unread 0
+/data/folders[15]/Messages 2
+/data/folders[15]/Secure 0
+/data/folders[15]/ParentId 4
+/data/folders[15]/IsSubfolder 1
+/data/folders[16]/Id 500000
+/data/folders[16]/Name Отправленные
+/data/folders[16]/Unread 6
+/data/folders[16]/Messages 493
+/data/folders[16]/Secure 0
+/data/folders[16]/ParentId 0
+/data/folders[16]/IsSubfolder 0
+/data/folders[17]/Id 7
+/data/folders[17]/Name Вложенная в отправленные
+/data/folders[17]/Unread 0
+/data/folders[17]/Messages 2
+/data/folders[17]/Secure 0
+/data/folders[17]/ParentId 500000
+/data/folders[17]/IsSubfolder 1
+/data/folders[18]/Id 500001
+/data/folders[18]/Name Черновики
+/data/folders[18]/Unread 0
+/data/folders[18]/Messages 47
+/data/folders[18]/Secure 0
+/data/folders[18]/ParentId 0
+/data/folders[18]/IsSubfolder 0
+/data/folders[19]/Id 950
+/data/folders[19]/Name Спам
+/data/folders[19]/Unread 42
+/data/folders[19]/Messages 48
+/data/folders[19]/Secure 0
+/data/folders[19]/ParentId 0
+/data/folders[19]/IsSubfolder 0
+/data/folders[20]/Id 500002
+/data/folders[20]/Name Корзина
+/data/folders[20]/Unread 0
+/data/folders[20]/Messages 0
+/data/folders[20]/Secure 1
+/data/folders[20]/ParentId 0
+/data/folders[20]/IsSubfolder 0
+/data/folders_hash 1319625888
+/data/messages[0]/Id 13195992060000000583
+/data/messages[0]/FolderId 0
+/data/messages[0]/PrevId
+/data/messages[0]/NextId 13195748300000000970
+/data/messages[0]/Unread 1
+/data/messages[0]/Flagged 0
+/data/messages[0]/Priority 3
+/data/messages[0]/Reply 0
+/data/messages[0]/Forward 0
+/data/messages[0]/Attachment 0
+/data/messages[0]/From letter@babyblog.ru
+/data/messages[0]/FromList Babyblog.ru &lt;letter@babyblog.ru&gt;
+/data/messages[0]/FromShort Babyblog.ru
+/data/messages[0]/To kk_test2@mail.ru
+/data/messages[0]/ToList kk_test2@mail.ru
+/data/messages[0]/ToShort kk_test2@mail.ru
+/data/messages[0]/Cc
+/data/messages[0]/Date Ср 26 окт 2011 07:20:05
+/data/messages[0]/DateUTS 1319599205
+/data/messages[0]/DateShort 07:20
+/data/messages[0]/Subject Новости BabyBlog.ru #2: Кулинарные школы для детей
+/data/messages[0]/ReSentTo
+/data/messages[0]/ReSentFrom
+/data/messages[0]/ReSentDate
+/data/messages[0]/ReSendComment
+/data/messages[0]/IcoFromWho
+/data/messages[0]/Size 17 Кб
+/data/messages[0]/FilinN false
+/data/messages[0]/FilinEM false
+/data/messages[0]/Microformat/ntype letter
+/data/messages[0]/Microformat/text                                                                                                                                                                                                   Здравствуйте!  Что нового на Babyblog.ru сегодня? Что актуально для будущих и настоящих мам? Что будет вам интересно для чтения и обсуждения?                                                                     Новости недели                                                                     Ваши рецепты увидит весь Babyblog.ru!   В разделе «Рецепты» вы можете увидеть около сотни рецептов разнообразных блюд. Каждый может добавить свой рецепт. Пусть те аппетитнейшие и вкуснейшие яства, которыми вы балу
+/data/messages[1]/Id 13195748300000000970
+/data/messages[1]/FolderId 0
+/data/messages[1]/PrevId 13195992060000000583
+/data/messages[1]/NextId 13195602020000000005
+/data/messages[1]/Unread 1
+/data/messages[1]/Flagged 0
+/data/messages[1]/Priority 3
+/data/messages[1]/Reply 0
+/data/messages[1]/Forward 0
+/data/messages[1]/Attachment 0
+/data/messages[1]/From info@site.hh.ru
+/data/messages[1]/FromList HeadHunter &lt;info@site.hh.ru&gt;
+/data/messages[1]/FromShort HeadHunter
+/data/messages[1]/To kk_test2@mail.ru
+/data/messages[1]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[1]/ToShort Фатеев Артур
+/data/messages[1]/Cc
+/data/messages[1]/Date Ср 26 окт 2011 00:33:49
+/data/messages[1]/DateUTS 1319574829
+/data/messages[1]/DateShort 00:33
+/data/messages[1]/Subject Рубль обогнал доллар
+/data/messages[1]/ReSentTo
+/data/messages[1]/ReSentFrom
+/data/messages[1]/ReSentDate
+/data/messages[1]/ReSendComment
+/data/messages[1]/IcoFromWho
+/data/messages[1]/Size 17 Кб
+/data/messages[1]/FilinN false
+/data/messages[1]/FilinEM false
+/data/messages[1]/Microformat/ntype letter
+/data/messages[1]/Microformat/text                 xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;                                                                             Рубль обогнал доллар                                                                                                                        Результаты исследований            Рубль обогнал доллар            46%25 работников, получающих зарплату в долларах, с удовольствием перешли бы на другую валюту.                                                    Результаты исследований            По секрету всему свету            36%25 работников случалось отправлять рабочую информацию не тому адресату, но ни в одном случае ошибка не привела к увольнению.
+/data/messages[2]/Id 13195602020000000005
+/data/messages[2]/FolderId 0
+/data/messages[2]/PrevId 13195748300000000970
+/data/messages[2]/NextId 13195601440000000240
+/data/messages[2]/Unread 1
+/data/messages[2]/Flagged 0
+/data/messages[2]/Priority 3
+/data/messages[2]/Reply 0
+/data/messages[2]/Forward 0
+/data/messages[2]/Attachment 0
+/data/messages[2]/From noreply@billing.ihor.ru
+/data/messages[2]/FromList noreply@billing.ihor.ru
+/data/messages[2]/FromShort noreply@billing.ihor.ru
+/data/messages[2]/To kk_test2@mail.ru
+/data/messages[2]/ToList &quot;ZXCZCXZXC&quot; &lt;kk_test2@mail.ru&gt;
+/data/messages[2]/ToShort &quot;ZXCZCXZXC&quot;
+/data/messages[2]/Cc
+/data/messages[2]/Date Вт 25 окт 2011 20:30:01
+/data/messages[2]/DateUTS 1319560201
+/data/messages[2]/DateShort 25 окт
+/data/messages[2]/Subject Виртуальный хостинг - www.ihor.ru
+/data/messages[2]/ReSentTo
+/data/messages[2]/ReSentFrom
+/data/messages[2]/ReSentDate
+/data/messages[2]/ReSendComment
+/data/messages[2]/IcoFromWho
+/data/messages[2]/Size 2 Кб
+/data/messages[2]/FilinN false
+/data/messages[2]/FilinEM false
+/data/messages[2]/Microformat/ntype letter
+/data/messages[2]/Microformat/text Настоящим письмом уведомляем, что на ваше имя была зарегистрирована услуга &quot;Виртуальный хостинг&quot;. Предлагаем распечатать данное сообщение для удобства использования в дальнейшем. Информация о конфигурации услуги &quot;Виртуальный хостинг&quot;: Логин:  user13071 Пароль: P1.z8g7mUj4hAFyt IP-адрес вашего сайта: 94.142.136.23 DNS сервера: ns1.marosnet.ru ns2.marosnet.ru С уважением, ООО &quot;Телекоммуникационная Компания МАРОСНЕТ&quot;                                                                                 support@ihor.ru
+/data/messages[3]/Id 13195601440000000240
+/data/messages[3]/FolderId 0
+/data/messages[3]/PrevId 13195602020000000005
+/data/messages[3]/NextId 13195350740000000169
+/data/messages[3]/Unread 1
+/data/messages[3]/Flagged 0
+/data/messages[3]/Priority 3
+/data/messages[3]/Reply 0
+/data/messages[3]/Forward 0
+/data/messages[3]/Attachment 0
+/data/messages[3]/From noreply@billing.ihor.ru
+/data/messages[3]/FromList noreply@billing.ihor.ru
+/data/messages[3]/FromShort noreply@billing.ihor.ru
+/data/messages[3]/To kk_test2@mail.ru
+/data/messages[3]/ToList &quot;ZXCZCXZXC&quot; &lt;kk_test2@mail.ru&gt;
+/data/messages[3]/ToShort &quot;ZXCZCXZXC&quot;
+/data/messages[3]/Cc
+/data/messages[3]/Date Вт 25 окт 2011 20:29:01
+/data/messages[3]/DateUTS 1319560141
+/data/messages[3]/DateShort 25 окт
+/data/messages[3]/Subject Вы успешно зарегистрировались в биллинговой системе - www.ihor.ru!
+/data/messages[3]/ReSentTo
+/data/messages[3]/ReSentFrom
+/data/messages[3]/ReSentDate
+/data/messages[3]/ReSendComment
+/data/messages[3]/IcoFromWho
+/data/messages[3]/Size 3 Кб
+/data/messages[3]/FilinN false
+/data/messages[3]/FilinEM false
+/data/messages[3]/Microformat/ntype letter
+/data/messages[3]/Microformat/text Уважаемый(ая) ZXCZCXZXC, Вы успешно зарегистрировались в биллинговой системе компании ООО &quot;ТК МАРОСНЕТ&quot;. Вход в биллинг : https://billing.ihor.ru/manager/billmgr         Логин  : user130599         Пароль : пароль указанный вами при регистрации      Биллинговая система позволяет вам выполнять все необходимые действия по управлению вашим аккаунтом. Полную информацию о биллинге вы можете найти в документации, доступной из интерфейса BILLmanager. Основные возможности : - &quot;Товары / Услуги&quot; - в этой группе модулей вы можете заказывать новые товары и услуги,   а также продлять
+/data/messages[4]/Id 13195350740000000169
+/data/messages[4]/FolderId 0
+/data/messages[4]/PrevId 13195601440000000240
+/data/messages[4]/NextId 13194702370000000908
+/data/messages[4]/Unread 0
+/data/messages[4]/Flagged 0
+/data/messages[4]/Priority 3
+/data/messages[4]/Reply 0
+/data/messages[4]/Forward 0
+/data/messages[4]/Attachment 0
+/data/messages[4]/From mail@e.biglion.ru
+/data/messages[4]/FromList &quot;Biglion&quot; &lt;mail@e.biglion.ru&gt;
+/data/messages[4]/FromShort &quot;Biglion&quot;
+/data/messages[4]/To kk_test2@mail.ru
+/data/messages[4]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[4]/ToShort kk_test2
+/data/messages[4]/Cc
+/data/messages[4]/Date Вт 25 окт 2011 13:31:14
+/data/messages[4]/DateUTS 1319535074
+/data/messages[4]/DateShort 25 окт
+/data/messages[4]/Subject Авиабилеты / Зимние шины / Иностранные языки / Автошкола / Ski-pass
+/data/messages[4]/ReSentTo kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[4]/ReSentFrom Дмитрий Калугин-Балашов &lt;rvncerr@inbox.ru&gt;
+/data/messages[4]/ReSentDate Tue, 25 Oct 2011 13:31:13 +0400
+/data/messages[4]/ReSendComment
+/data/messages[4]/IcoFromWho
+/data/messages[4]/Size 148 Кб
+/data/messages[4]/FilinN false
+/data/messages[4]/FilinEM false
+/data/messages[4]/Microformat/ntype letter
+/data/messages[4]/Microformat/text
+/data/messages[5]/Id 13194702370000000908
+/data/messages[5]/FolderId 0
+/data/messages[5]/PrevId 13195350740000000169
+/data/messages[5]/NextId 13194698420000000461
+/data/messages[5]/Unread 0
+/data/messages[5]/Flagged 0
+/data/messages[5]/Priority 3
+/data/messages[5]/Reply 4096
+/data/messages[5]/Forward 0
+/data/messages[5]/Attachment 1
+/data/messages[5]/From firulina@corp.mail.ru
+/data/messages[5]/FromList Фирюлина Елена &lt;firulina@corp.mail.ru&gt;
+/data/messages[5]/FromShort Фирюлина Елена
+/data/messages[5]/To kk_test2@mail.ru
+/data/messages[5]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[5]/ToShort kk_test2
+/data/messages[5]/Cc
+/data/messages[5]/Date Пн 24 окт 2011 19:30:37
+/data/messages[5]/DateUTS 1319470237
+/data/messages[5]/DateShort 24 окт
+/data/messages[5]/Subject [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам
+/data/messages[5]/ReSentTo kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[5]/ReSentFrom Дмитрий Шкинёв &lt;shkinev@corp.mail.ru&gt;
+/data/messages[5]/ReSentDate Mon, 24 Oct 2011 19:30:36 +0400
+/data/messages[5]/ReSendComment
+/data/messages[5]/IcoFromWho
+/data/messages[5]/Size 84 Кб
+/data/messages[5]/FilinN false
+/data/messages[5]/FilinEM false
+/data/messages[5]/Microformat/ntype letter
+/data/messages[5]/Microformat/text xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:w=&quot;urn:schemas-microsoft-com:office:word&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns:p=&quot;urn:schemas-microsoft-com:office:powerpoint&quot; xmlns:a=&quot;urn:schemas-microsoft-com:office:access&quot; xmlns:dt=&quot;uuid:C2F41010-65B3-11d1-A29F-00AA00C14882&quot; xmlns:s=&quot;uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882&quot; xmlns:rs=&quot;urn:schemas-microsoft-com:rowset&quot; xmlns:z=&quot;&#35;RowsetSchema&quot; xmlns:b=&quot;urn:schemas-microsoft-com:office:publisher&quot; xmlns:ss=&quot;urn:schemas-microsoft-com:office:spreadsheet&quot; xmlns:c=&quot;urn:schemas-microsoft-com:office:component:spreadsheet&quot; xmlns:odc=&quot;urn:schemas-microsoft-com:office:odc&quot; xmlns:oa=&quot;urn:schemas-microsoft-com:office:activation&quot; xmlns:html=&quot;http://www.w3.org/TR/REC-html40&quot; xmlns:q=&quot;http://schemas.xmlsoap.
+/data/messages[6]/Id 13194698420000000461
+/data/messages[6]/FolderId 0
+/data/messages[6]/PrevId 13194702370000000908
+/data/messages[6]/NextId 13194697800000000932
+/data/messages[6]/Unread 0
+/data/messages[6]/Flagged 0
+/data/messages[6]/Priority 3
+/data/messages[6]/Reply 0
+/data/messages[6]/Forward 0
+/data/messages[6]/Attachment 0
+/data/messages[6]/From defgdfgdf@mail.ru
+/data/messages[6]/FromList defgdfgdf dfgdfg &lt;defgdfgdf@mail.ru&gt;
+/data/messages[6]/FromShort defgdfgdf dfgdfg
+/data/messages[6]/To kk_test2@mail.ru
+/data/messages[6]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[6]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[6]/Cc
+/data/messages[6]/Date Пн 24 окт 2011 19:24:02
+/data/messages[6]/DateUTS 1319469842
+/data/messages[6]/DateShort 24 окт
+/data/messages[6]/Subject Re: Мобильная версия Mail.Ru
+/data/messages[6]/ReSentTo
+/data/messages[6]/ReSentFrom
+/data/messages[6]/ReSentDate
+/data/messages[6]/ReSendComment
+/data/messages[6]/IcoFromWho
+/data/messages[6]/Size 25 Кб
+/data/messages[6]/FilinN false
+/data/messages[6]/FilinEM false
+/data/messages[6]/Microformat/ntype letter
+/data/messages[6]/Microformat/text 24 октября 2011, 19:09 от Команда Mail.Ru    &lt;  welcome@corp.mail.ru  &gt;  :                                         Добрый день,      Мы позаботились о том, чтобы дать Вам возможность постоянного доступа к Mail.Ru.     Для этого мы создали специальную мобильную версию.           Читайте и отправляйте почту с мобильного, это легко и удобно!     Узнавайте что нового у друзей в Моем Мире.     Следите за новостями, смотрите прогноз погоды и курсы валют.        А также знакомства, расписание кино, любимые игры, музыка и многое другое.     Будьте всегда на связи! m.mail.ru        *бесплатно
+/data/messages[7]/Id 13194697800000000932
+/data/messages[7]/FolderId 0
+/data/messages[7]/PrevId 13194698420000000461
+/data/messages[7]/NextId 13194696720000000564
+/data/messages[7]/Unread 0
+/data/messages[7]/Flagged 0
+/data/messages[7]/Priority 3
+/data/messages[7]/Reply 0
+/data/messages[7]/Forward 0
+/data/messages[7]/Attachment 0
+/data/messages[7]/From defgdfgdf@mail.ru
+/data/messages[7]/FromList defgdfgdf dfgdfg &lt;defgdfgdf@mail.ru&gt;
+/data/messages[7]/FromShort defgdfgdf dfgdfg
+/data/messages[7]/To kk_test2@mail.ru
+/data/messages[7]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[7]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[7]/Cc
+/data/messages[7]/Date Пн 24 окт 2011 19:23:00
+/data/messages[7]/DateUTS 1319469780
+/data/messages[7]/DateShort 24 окт
+/data/messages[7]/Subject Re: Мобильная версия Mail.Ru
+/data/messages[7]/ReSentTo
+/data/messages[7]/ReSentFrom
+/data/messages[7]/ReSentDate
+/data/messages[7]/ReSendComment
+/data/messages[7]/IcoFromWho
+/data/messages[7]/Size 25 Кб
+/data/messages[7]/FilinN false
+/data/messages[7]/FilinEM false
+/data/messages[7]/Microformat/ntype letter
+/data/messages[7]/Microformat/text 24 октября 2011, 19:09 от Команда Mail.Ru    &lt;  welcome@corp.mail.ru  &gt;  :                                         Добрый день,      Мы позаботились о том, чтобы дать Вам возможность постоянного доступа к Mail.Ru.     Для этого мы создали специальную мобильную версию.           Читайте и отправляйте почту с мобильного, это легко и удобно!     Узнавайте что нового у друзей в Моем Мире.     Следите за новостями, смотрите прогноз погоды и курсы валют.        А также знакомства, расписание кино, любимые игры, музыка и многое другое.     Будьте всегда на связи! m.mail.ru        *бесплатно
+/data/messages[8]/Id 13194696720000000564
+/data/messages[8]/FolderId 0
+/data/messages[8]/PrevId 13194697800000000932
+/data/messages[8]/NextId 13194665460000000936
+/data/messages[8]/Unread 0
+/data/messages[8]/Flagged 0
+/data/messages[8]/Priority 3
+/data/messages[8]/Reply 0
+/data/messages[8]/Forward 0
+/data/messages[8]/Attachment 1
+/data/messages[8]/From defgdfgdf@mail.ru
+/data/messages[8]/FromList defgdfgdf dfgdfg &lt;defgdfgdf@mail.ru&gt;
+/data/messages[8]/FromShort defgdfgdf dfgdfg
+/data/messages[8]/To kk_test2@mail.ru
+/data/messages[8]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[8]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[8]/Cc
+/data/messages[8]/Date Пн 24 окт 2011 19:21:11
+/data/messages[8]/DateUTS 1319469671
+/data/messages[8]/DateShort 24 окт
+/data/messages[8]/Subject Re: Fwd: [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам
+/data/messages[8]/ReSentTo
+/data/messages[8]/ReSentFrom
+/data/messages[8]/ReSentDate
+/data/messages[8]/ReSendComment
+/data/messages[8]/IcoFromWho
+/data/messages[8]/Size 79 Кб
+/data/messages[8]/FilinN false
+/data/messages[8]/FilinEM false
+/data/messages[8]/Microformat/ntype letter
+/data/messages[8]/Microformat/text 24 октября 2011, 19:11 от и это тоже длинное такое имя отправителя   &lt;  kk_test2@mail.ru  &gt;  :     -------- Пересылаемое сообщение --------  От кого: Фирюлина Елена   &lt;  firulina@corp.mail.ru  &gt;  Кому: kk_test2   &lt;  kk_test2@mail.ru  &gt;  Дата: 24 октября 2011, 18:29  Тема: [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам  Дорогие коллеги!    Наша замечательная команда Почты@Mail.Ru представляет своего нового партнера -     международную систему оценки сайтов WOT (Web of Trust).     Это партнерство поможет нам повысить уровень безопасности почты.    Теперь все ссылки, содержащиеся в письмах, получаемых по
+/data/messages[9]/Id 13194665460000000936
+/data/messages[9]/FolderId 0
+/data/messages[9]/PrevId 13194696720000000564
+/data/messages[9]/NextId 13194633610000000180
+/data/messages[9]/Unread 0
+/data/messages[9]/Flagged 0
+/data/messages[9]/Priority 3
+/data/messages[9]/Reply 4096
+/data/messages[9]/Forward 8192
+/data/messages[9]/Attachment 1
+/data/messages[9]/From firulina@corp.mail.ru
+/data/messages[9]/FromList Фирюлина Елена &lt;firulina@corp.mail.ru&gt;
+/data/messages[9]/FromShort Фирюлина Елена
+/data/messages[9]/To kk_test2@mail.ru
+/data/messages[9]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[9]/ToShort kk_test2
+/data/messages[9]/Cc
+/data/messages[9]/Date Пн 24 окт 2011 18:29:05
+/data/messages[9]/DateUTS 1319466545
+/data/messages[9]/DateShort 24 окт
+/data/messages[9]/Subject [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам
+/data/messages[9]/ReSentTo kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[9]/ReSentFrom Дмитрий Шкинёв &lt;shkinev@corp.mail.ru&gt;
+/data/messages[9]/ReSentDate Mon, 24 Oct 2011 18:29:04 +0400
+/data/messages[9]/ReSendComment
+/data/messages[9]/IcoFromWho
+/data/messages[9]/Size 84 Кб
+/data/messages[9]/FilinN false
+/data/messages[9]/FilinEM false
+/data/messages[9]/Microformat/ntype letter
+/data/messages[9]/Microformat/text xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:w=&quot;urn:schemas-microsoft-com:office:word&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns:p=&quot;urn:schemas-microsoft-com:office:powerpoint&quot; xmlns:a=&quot;urn:schemas-microsoft-com:office:access&quot; xmlns:dt=&quot;uuid:C2F41010-65B3-11d1-A29F-00AA00C14882&quot; xmlns:s=&quot;uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882&quot; xmlns:rs=&quot;urn:schemas-microsoft-com:rowset&quot; xmlns:z=&quot;&#35;RowsetSchema&quot; xmlns:b=&quot;urn:schemas-microsoft-com:office:publisher&quot; xmlns:ss=&quot;urn:schemas-microsoft-com:office:spreadsheet&quot; xmlns:c=&quot;urn:schemas-microsoft-com:office:component:spreadsheet&quot; xmlns:odc=&quot;urn:schemas-microsoft-com:office:odc&quot; xmlns:oa=&quot;urn:schemas-microsoft-com:office:activation&quot; xmlns:html=&quot;http://www.w3.org/TR/REC-html40&quot; xmlns:q=&quot;http://schemas.xmlsoap.
+/data/messages[10]/Id 13194633610000000180
+/data/messages[10]/FolderId 0
+/data/messages[10]/PrevId 13194665460000000936
+/data/messages[10]/NextId 13194464830000000748
+/data/messages[10]/Unread 0
+/data/messages[10]/Flagged 0
+/data/messages[10]/Priority 3
+/data/messages[10]/Reply 0
+/data/messages[10]/Forward 0
+/data/messages[10]/Attachment 0
+/data/messages[10]/From shkinev@corp.mail.ru
+/data/messages[10]/FromList test1 &lt;shkinev@corp.mail.ru&gt;
+/data/messages[10]/FromShort test1
+/data/messages[10]/To kk_test2@mail.ru
+/data/messages[10]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[10]/ToShort kk_test2
+/data/messages[10]/Cc
+/data/messages[10]/Date Пн 24 окт 2011 17:36:00
+/data/messages[10]/DateUTS 1319463360
+/data/messages[10]/DateShort 24 окт
+/data/messages[10]/Subject test2
+/data/messages[10]/ReSentTo
+/data/messages[10]/ReSentFrom
+/data/messages[10]/ReSentDate
+/data/messages[10]/ReSendComment
+/data/messages[10]/IcoFromWho
+/data/messages[10]/Size 10 Кб
+/data/messages[10]/FilinN false
+/data/messages[10]/FilinEM false
+/data/messages[10]/Microformat/ntype letter
+/data/messages[10]/Microformat/text 29 августа 2011, 20:50 от Фирюлина Елена   &lt;  firulina@corp.mail.ru  &gt;  :                             Дорогие коллеги!    Наша замечательная команда Почты@Mail.Ru представляет своего нового партнера -     международную систему оценки сайтов WOT (Web of Trust).     Это партнерство поможет нам повысить уровень безопасности почты.    Теперь все ссылки, содержащиеся в письмах, получаемых пользователями почтовой службы   Mail  .  Ru  , автоматически проверяются по базе международной системы оценки сайтов   WOT  , которая насчитывает более 32 миллионов ресурсов и обновляется каждые полчаса.      На
+/data/messages[11]/Id 13194464830000000748
+/data/messages[11]/FolderId 0
+/data/messages[11]/PrevId 13194633610000000180
+/data/messages[11]/NextId 13193003390000000991
+/data/messages[11]/Unread 0
+/data/messages[11]/Flagged 0
+/data/messages[11]/Priority 3
+/data/messages[11]/Reply 0
+/data/messages[11]/Forward 0
+/data/messages[11]/Attachment 0
+/data/messages[11]/From shkinev@corp.mail.ru
+/data/messages[11]/FromList test1 &lt;shkinev@corp.mail.ru&gt;
+/data/messages[11]/FromShort test1
+/data/messages[11]/To kk_test2@mail.ru
+/data/messages[11]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[11]/ToShort kk_test2
+/data/messages[11]/Cc
+/data/messages[11]/Date Пн 24 окт 2011 12:54:39
+/data/messages[11]/DateUTS 1319446479
+/data/messages[11]/DateShort 24 окт
+/data/messages[11]/Subject test
+/data/messages[11]/ReSentTo
+/data/messages[11]/ReSentFrom
+/data/messages[11]/ReSentDate
+/data/messages[11]/ReSendComment
+/data/messages[11]/IcoFromWho
+/data/messages[11]/Size 10 Кб
+/data/messages[11]/FilinN false
+/data/messages[11]/FilinEM false
+/data/messages[11]/Microformat/ntype letter
+/data/messages[11]/Microformat/text 29 августа 2011, 20:50 от Фирюлина Елена   &lt;  firulina@corp.mail.ru  &gt;  :                             Дорогие коллеги!    Наша замечательная команда Почты@Mail.Ru представляет своего нового партнера -     международную систему оценки сайтов WOT (Web of Trust).     Это партнерство поможет нам повысить уровень безопасности почты.    Теперь все ссылки, содержащиеся в письмах, получаемых пользователями почтовой службы   Mail  .  Ru  , автоматически проверяются по базе международной системы оценки сайтов   WOT  , которая насчитывает более 32 миллионов ресурсов и обновляется каждые полчаса.      На
+/data/messages[12]/Id 13193003390000000991
+/data/messages[12]/FolderId 0
+/data/messages[12]/PrevId 13194464830000000748
+/data/messages[12]/NextId 13192046900000000269
+/data/messages[12]/Unread 0
+/data/messages[12]/Flagged 0
+/data/messages[12]/Priority 3
+/data/messages[12]/Reply 0
+/data/messages[12]/Forward 0
+/data/messages[12]/Attachment 0
+/data/messages[12]/From no_reply@hh.ru
+/data/messages[12]/FromList HeadHunter &lt;no_reply@hh.ru&gt;
+/data/messages[12]/FromShort HeadHunter
+/data/messages[12]/To kk_test2@mail.ru
+/data/messages[12]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[12]/ToShort Фатеев Артур
+/data/messages[12]/Cc
+/data/messages[12]/Date Сб 22 окт 2011 20:18:58
+/data/messages[12]/DateUTS 1319300338
+/data/messages[12]/DateShort 22 окт
+/data/messages[12]/Subject Ваше резюме неактивно
+/data/messages[12]/ReSentTo
+/data/messages[12]/ReSentFrom
+/data/messages[12]/ReSentDate
+/data/messages[12]/ReSendComment
+/data/messages[12]/IcoFromWho hh.ru
+/data/messages[12]/Size 4 Кб
+/data/messages[12]/FilinN false
+/data/messages[12]/FilinEM false
+/data/messages[12]/Microformat/ntype letter
+/data/messages[12]/Microformat/text Здравствуйте,    Артур!    Мы заметили, что Вы начали создавать резюме   менеждер  , но по каким-то причинам не завершили его. Возможно, Вы не уверены, какую именно информацию следует указывать в нем. Ролики-подсказки в нашем построителе резюме обязательно помогут Вам.   Помните, что все поля очень важны для будущего работодателя: по ним он определяет, какого рода задачи можно доверить Вам. Не пожалейте времени, чтобы добросовестно заполнить эти поля.               Чтобы отписаться от рассылки, перейдите по   этой  ссылке
+/data/messages[13]/Id 13192046900000000269
+/data/messages[13]/FolderId 0
+/data/messages[13]/PrevId 13193003390000000991
+/data/messages[13]/NextId 13192035680000000708
+/data/messages[13]/Unread 0
+/data/messages[13]/Flagged 0
+/data/messages[13]/Priority 3
+/data/messages[13]/Reply 4096
+/data/messages[13]/Forward 0
+/data/messages[13]/Attachment 1
+/data/messages[13]/From shokina@corp.mail.ru
+/data/messages[13]/FromList Любовь Шокина &lt;shokina@corp.mail.ru&gt;
+/data/messages[13]/FromShort Любовь Шокина
+/data/messages[13]/To kk_test2@mail.ru
+/data/messages[13]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[13]/ToShort kk_test2
+/data/messages[13]/Cc
+/data/messages[13]/Date Пт 21 окт 2011 17:44:48
+/data/messages[13]/DateUTS 1319204688
+/data/messages[13]/DateShort 21 окт
+/data/messages[13]/Subject [Allusers] С Днем Рождения!
+/data/messages[13]/ReSentTo kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[13]/ReSentFrom Николай Шуляковский &lt;shulyakovsky@corp.mail.ru&gt;
+/data/messages[13]/ReSentDate Fri, 21 Oct 2011 17:44:46 +0400
+/data/messages[13]/ReSendComment
+/data/messages[13]/IcoFromWho
+/data/messages[13]/Size 492 Кб
+/data/messages[13]/FilinN false
+/data/messages[13]/FilinEM false
+/data/messages[13]/Microformat/ntype letter
+/data/messages[13]/Microformat/text xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:w=&quot;urn:schemas-microsoft-com:office:word&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns:m=&quot;http://schemas.microsoft.com/office/2004/12/omml&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;                              Доброе утро, дорогие коллеги!          Сегодня, 21 октября  поздравляем с Днем рождения:                              Ирину Чеснокову      Бухгалтера                                    mail  .  ru    agent  :   chesnokova  @  corp  .  mail  .  ru                                Александра Григорьева      Программист проекта Рассылки                     mail  .  ru    agent  :   grigorev  @  corp  .  mail  .  ru                           Евгения Кильмана
+/data/messages[14]/Id 13192035680000000708
+/data/messages[14]/FolderId 0
+/data/messages[14]/PrevId 13192046900000000269
+/data/messages[14]/NextId 13191382410000000920
+/data/messages[14]/Unread 0
+/data/messages[14]/Flagged 0
+/data/messages[14]/Priority 3
+/data/messages[14]/Reply 0
+/data/messages[14]/Forward 0
+/data/messages[14]/Attachment 0
+/data/messages[14]/From shkinev@corp.mail.ru
+/data/messages[14]/FromList test1 &lt;shkinev@corp.mail.ru&gt;
+/data/messages[14]/FromShort test1
+/data/messages[14]/To kk_test2@mail.ru
+/data/messages[14]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[14]/ToShort kk_test2
+/data/messages[14]/Cc
+/data/messages[14]/Date Пт 21 окт 2011 17:26:07
+/data/messages[14]/DateUTS 1319203567
+/data/messages[14]/DateShort 21 окт
+/data/messages[14]/Subject LINKS
+/data/messages[14]/ReSentTo
+/data/messages[14]/ReSentFrom
+/data/messages[14]/ReSentDate
+/data/messages[14]/ReSendComment
+/data/messages[14]/IcoFromWho
+/data/messages[14]/Size 2 Кб
+/data/messages[14]/FilinN false
+/data/messages[14]/FilinEM false
+/data/messages[14]/Microformat/ntype letter
+/data/messages[14]/Microformat/text http://youtu.be/mYaQ2QjyMtM  http://www.youtube.com/watch?v=ob6Hr-F4HOc  &amp;  feature  =topvideos_music&#35;u/p/o/xlrteerertert  http://vimeo.com/29965463&#35;u/p/o/xlrteerertert  http://video.mail.ru/mail/vasiliska_pre/1/37.html?newbest_from_main=1&#35;u/p/o/xlrteerertert  http://www.rutube.ru/tracks/4906682.html?v=fb1bf808c76082b7d71af73ac1190237&#35;u/p/o/xlrteerertert  http://smotri.com/video/view/?id=v1172587af2&#35;u/
+/data/messages[15]/Id 13191382410000000920
+/data/messages[15]/FolderId 0
+/data/messages[15]/PrevId 13192035680000000708
+/data/messages[15]/NextId 13189855790000000504
+/data/messages[15]/Unread 1
+/data/messages[15]/Flagged 0
+/data/messages[15]/Priority 3
+/data/messages[15]/Reply 0
+/data/messages[15]/Forward 0
+/data/messages[15]/Attachment 0
+/data/messages[15]/From info@site.hh.ru
+/data/messages[15]/FromList HeadHunter &lt;info@site.hh.ru&gt;
+/data/messages[15]/FromShort HeadHunter
+/data/messages[15]/To kk_test2@mail.ru
+/data/messages[15]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[15]/ToShort Фатеев Артур
+/data/messages[15]/Cc
+/data/messages[15]/Date Чт 20 окт 2011 23:17:20
+/data/messages[15]/DateUTS 1319138240
+/data/messages[15]/DateShort 20 окт
+/data/messages[15]/Subject 5 вакансий с зарплатой более 100 000 рублей
+/data/messages[15]/ReSentTo
+/data/messages[15]/ReSentFrom
+/data/messages[15]/ReSentDate
+/data/messages[15]/ReSendComment
+/data/messages[15]/IcoFromWho
+/data/messages[15]/Size 10 Кб
+/data/messages[15]/FilinN false
+/data/messages[15]/FilinEM false
+/data/messages[15]/Microformat/ntype letter
+/data/messages[15]/Microformat/text                                                                                             5 интересных вакансий с зарплатой более 100 000 рублей                                                                                                                                           Директор по развитию,         Russian Research Group                                        з/п от 100 000 р.                                Web product manager         КупиКупон                                        з/п от 100 000 р.                            Consumer insight @ Innovation Manager         HPS Group                                        з/п от 100 000 р. до 130 00 р.                         Начальник отдела рекламы         Банк Авангард                                        з/п от 100 000 р.                           Директор по маркетин
+/data/messages[16]/Id 13189855790000000504
+/data/messages[16]/FolderId 0
+/data/messages[16]/PrevId 13191382410000000920
+/data/messages[16]/NextId 13189172670000000432
+/data/messages[16]/Unread 0
+/data/messages[16]/Flagged 0
+/data/messages[16]/Priority 3
+/data/messages[16]/Reply 0
+/data/messages[16]/Forward 0
+/data/messages[16]/Attachment 0
+/data/messages[16]/From info@site.hh.ru
+/data/messages[16]/FromList HeadHunter &lt;info@site.hh.ru&gt;
+/data/messages[16]/FromShort HeadHunter
+/data/messages[16]/To kk_test2@mail.ru
+/data/messages[16]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[16]/ToShort Фатеев Артур
+/data/messages[16]/Cc
+/data/messages[16]/Date Ср 19 окт 2011 04:52:59
+/data/messages[16]/DateUTS 1318985579
+/data/messages[16]/DateShort 19 окт
+/data/messages[16]/Subject Настоящая жизнь проходит мимо
+/data/messages[16]/ReSentTo
+/data/messages[16]/ReSentFrom
+/data/messages[16]/ReSentDate
+/data/messages[16]/ReSendComment
+/data/messages[16]/IcoFromWho
+/data/messages[16]/Size 18 Кб
+/data/messages[16]/FilinN false
+/data/messages[16]/FilinEM false
+/data/messages[16]/Microformat/ntype letter
+/data/messages[16]/Microformat/text                 xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;                                                                             Настоящая жизнь проходит мимо                                                                                                                        Новости            Одной строкой            Численность безработных снизилась; спрос на выпускников MBA вырос.                                                    Результаты исследований            Самые модные профессии            По мнению молодых специалистов.                                             Результаты исследований            Каким должно быть руководство            Чтобы сотрудникам было за него не стыдно.
+/data/messages[17]/Id 13189172670000000432
+/data/messages[17]/FolderId 0
+/data/messages[17]/PrevId 13189855790000000504
+/data/messages[17]/NextId 13187731590000000026
+/data/messages[17]/Unread 0
+/data/messages[17]/Flagged 0
+/data/messages[17]/Priority 3
+/data/messages[17]/Reply 0
+/data/messages[17]/Forward 0
+/data/messages[17]/Attachment 0
+/data/messages[17]/From letter@babyblog.ru
+/data/messages[17]/FromList Babyblog.ru &lt;letter@babyblog.ru&gt;
+/data/messages[17]/FromShort Babyblog.ru
+/data/messages[17]/To kk_test2@mail.ru
+/data/messages[17]/ToList kk_test2@mail.ru
+/data/messages[17]/ToShort kk_test2@mail.ru
+/data/messages[17]/Cc
+/data/messages[17]/Date Вт 18 окт 2011 09:54:25
+/data/messages[17]/DateUTS 1318917265
+/data/messages[17]/DateShort 18 окт
+/data/messages[17]/Subject Новости BabyBlog.ru #1: Я никогда не хотела двойняшек!!!
+/data/messages[17]/ReSentTo
+/data/messages[17]/ReSentFrom
+/data/messages[17]/ReSentDate
+/data/messages[17]/ReSendComment
+/data/messages[17]/IcoFromWho
+/data/messages[17]/Size 15 Кб
+/data/messages[17]/FilinN false
+/data/messages[17]/FilinEM false
+/data/messages[17]/Microformat/ntype letter
+/data/messages[17]/Microformat/text                                                                                                                                                                                                   Здравствуйте!  В еженедельных рассылках с обновленным дизайном мы продолжаем знакомить всех мам и пап нашего сайта с самыми горячими новостями BabyBlog.ru. Каждый вторник вы будете узнавать всё самое интересное из жизни нашего сайта.                                                                     Новости недели                                                                     Техническая поддержка пользователей  У нас новая страница техподдержки. Ею можно пользоваться без авторизации н
+/data/messages[18]/Id 13187731590000000026
+/data/messages[18]/FolderId 0
+/data/messages[18]/PrevId 13189172670000000432
+/data/messages[18]/NextId 13186699260000000716
+/data/messages[18]/Unread 0
+/data/messages[18]/Flagged 0
+/data/messages[18]/Priority 3
+/data/messages[18]/Reply 0
+/data/messages[18]/Forward 0
+/data/messages[18]/Attachment 0
+/data/messages[18]/From no-reply@sxnarod.com
+/data/messages[18]/FromList no-reply@sxnarod.com
+/data/messages[18]/FromShort no-reply@sxnarod.com
+/data/messages[18]/To kk_test2@mail.ru
+/data/messages[18]/ToList kk_test2@mail.ru
+/data/messages[18]/ToShort kk_test2@mail.ru
+/data/messages[18]/Cc
+/data/messages[18]/Date Вс 16 окт 2011 17:52:37
+/data/messages[18]/DateUTS 1318773157
+/data/messages[18]/DateShort 16 окт
+/data/messages[18]/Subject Рассылка Секснарода
+/data/messages[18]/ReSentTo
+/data/messages[18]/ReSentFrom
+/data/messages[18]/ReSentDate
+/data/messages[18]/ReSendComment
+/data/messages[18]/IcoFromWho
+/data/messages[18]/Size 8 Кб
+/data/messages[18]/FilinN false
+/data/messages[18]/FilinEM false
+/data/messages[18]/Microformat/ntype letter
+/data/messages[18]/Microformat/text Это письмо пришло вам с форума Секснарод (  http://www.sxnarod.com  ), Вы указали при регистрации в нем этот e-mail. _________________________________________________________________________________________________________________   Форумчане гоняют на танках. Присоединяйся к нам: http://pa.tankionline.com/lucky.html    kk_test2,    Автоматический вход в форум: http://www.sxnarod.com/index.php?act=Login  &amp;  CODE  =loginhash  &amp;  hash  =135de780a5a72bd00e52c6e5a1422169    Последние новости форума:  Конкурс Сибирские картинки + Морозный юмор       Сибиряки отличаются от остальных?    *** Ухаживание - это унижение? ***        Виртуальное наваждение- что это такое?    ГОЛОСОВАНИЕ  !    &quot;
+/data/messages[19]/Id 13186699260000000716
+/data/messages[19]/FolderId 0
+/data/messages[19]/PrevId 13187731590000000026
+/data/messages[19]/NextId 13185878910000000028
+/data/messages[19]/Unread 0
+/data/messages[19]/Flagged 0
+/data/messages[19]/Priority 3
+/data/messages[19]/Reply 0
+/data/messages[19]/Forward 0
+/data/messages[19]/Attachment 0
+/data/messages[19]/From no_reply@hh.ru
+/data/messages[19]/FromList HeadHunter &lt;no_reply@hh.ru&gt;
+/data/messages[19]/FromShort HeadHunter
+/data/messages[19]/To kk_test2@mail.ru
+/data/messages[19]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[19]/ToShort Фатеев Артур
+/data/messages[19]/Cc
+/data/messages[19]/Date Сб 15 окт 2011 13:12:05
+/data/messages[19]/DateUTS 1318669925
+/data/messages[19]/DateShort 15 окт
+/data/messages[19]/Subject Ваше резюме неактивно
+/data/messages[19]/ReSentTo
+/data/messages[19]/ReSentFrom
+/data/messages[19]/ReSentDate
+/data/messages[19]/ReSendComment
+/data/messages[19]/IcoFromWho hh.ru
+/data/messages[19]/Size 5 Кб
+/data/messages[19]/FilinN false
+/data/messages[19]/FilinEM false
+/data/messages[19]/Microformat/ntype letter
+/data/messages[19]/Microformat/text Здравствуйте,    Артур!     Мы заметили, что Вы создали резюме   менеждер  , но по каким-то причинам не смогли его завершить. Вы спросите, зачем Вам снова тратить на это время? С помощью резюме Вы сможете откликаться на интересные вакансии,   а работодатели смогут найти Ваше резюме в базе данных.   Создание резюме состоит из 5 шагов. Постарайтесь максимально подробно заполнить каждый шаг, для того, чтобы работодатель смог адекватно оценить Ваши знания и опыт. Если Вы не уверены, что Ваше резюме будет замечено, воспользуйтесь услугой   Успешное рез
+/data/messages[20]/Id 13185878910000000028
+/data/messages[20]/FolderId 0
+/data/messages[20]/PrevId 13186699260000000716
+/data/messages[20]/NextId 13185197900000000899
+/data/messages[20]/Unread 0
+/data/messages[20]/Flagged 0
+/data/messages[20]/Priority 3
+/data/messages[20]/Reply 0
+/data/messages[20]/Forward 0
+/data/messages[20]/Attachment 1
+/data/messages[20]/From st368_v1@mail.ru
+/data/messages[20]/FromList test user &lt;st368_v1@mail.ru&gt;
+/data/messages[20]/FromShort test user
+/data/messages[20]/To &lt;Не указано&gt;
+/data/messages[20]/ToList
+/data/messages[20]/ToShort &lt;Не указано&gt;
+/data/messages[20]/Cc
+/data/messages[20]/Date Пт 14 окт 2011 14:24:45
+/data/messages[20]/DateUTS 1318587885
+/data/messages[20]/DateShort 14 окт
+/data/messages[20]/Subject 2бол+4арх+1муз+1емл+4тхт+1табл+2пикчи
+/data/messages[20]/ReSentTo kk_test2@mail.ru
+/data/messages[20]/ReSentFrom test user &lt;st368_v1@mail.ru&gt;
+/data/messages[20]/ReSentDate Fri, 14 Oct 2011 14:24:42 +0400
+/data/messages[20]/ReSendComment
+/data/messages[20]/IcoFromWho
+/data/messages[20]/Size 13533 Кб
+/data/messages[20]/FilinN false
+/data/messages[20]/FilinEM false
+/data/messages[20]/Microformat/ntype letter
+/data/messages[20]/Microformat/text     К этому письму приложены ссылки на следующие файлы, загруженные на Файлы@Mail.Ru:       Ссылка для скачивания файлов:   http://files.mail.ru/HU61UW        Файлы будут храниться до 13.11.2011
+/data/messages[21]/Id 13185197900000000899
+/data/messages[21]/FolderId 0
+/data/messages[21]/PrevId 13185878910000000028
+/data/messages[21]/NextId 13184137820000000301
+/data/messages[21]/Unread 0
+/data/messages[21]/Flagged 0
+/data/messages[21]/Priority 3
+/data/messages[21]/Reply 0
+/data/messages[21]/Forward 0
+/data/messages[21]/Attachment 0
+/data/messages[21]/From shkinev@corp.mail.ru
+/data/messages[21]/FromList test1 &lt;shkinev@corp.mail.ru&gt;
+/data/messages[21]/FromShort test1
+/data/messages[21]/To kk_test2@mail.ru
+/data/messages[21]/ToList kk_test2 &lt;kk_test2@mail.ru&gt;
+/data/messages[21]/ToShort kk_test2
+/data/messages[21]/Cc
+/data/messages[21]/Date Чт 13 окт 2011 19:29:49
+/data/messages[21]/DateUTS 1318519789
+/data/messages[21]/DateShort 13 окт
+/data/messages[21]/Subject Fwd: [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам
+/data/messages[21]/ReSentTo
+/data/messages[21]/ReSentFrom
+/data/messages[21]/ReSentDate
+/data/messages[21]/ReSendComment
+/data/messages[21]/IcoFromWho
+/data/messages[21]/Size 10 Кб
+/data/messages[21]/FilinN false
+/data/messages[21]/FilinEM false
+/data/messages[21]/Microformat/ntype letter
+/data/messages[21]/Microformat/text -------- Пересылаемое сообщение --------  От кого: Фирюлина Елена   &lt;  firulina@corp.mail.ru  &gt;  Кому:   &lt;  allcompany@corp.mail.ru  &gt;  Дата: 29 августа 2011, 20:50  Тема: [Allcompany] Mail.Ru предупредит при переходе по опасным ссылкам                             Дорогие коллеги!    Наша замечательная команда Почты@Mail.Ru представляет своего нового партнера -     международную систему оценки сайтов WOT (Web of Trust).     Это партнерство поможет нам повысить уровень безопасности почты.    Теперь все ссылки, содержащиеся в письмах, получаемых пользователями почтовой службы   Mail  .  Ru  , автоматически проверяются
+/data/messages[22]/Id 13184137820000000301
+/data/messages[22]/FolderId 0
+/data/messages[22]/PrevId 13185197900000000899
+/data/messages[22]/NextId 13184137230000000574
+/data/messages[22]/Unread 0
+/data/messages[22]/Flagged 0
+/data/messages[22]/Priority 3
+/data/messages[22]/Reply 0
+/data/messages[22]/Forward 0
+/data/messages[22]/Attachment 0
+/data/messages[22]/From kk_test2@mail.ru
+/data/messages[22]/FromList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[22]/FromShort и это тоже длинное такое имя отправителя
+/data/messages[22]/To kk_test2@mail.ru
+/data/messages[22]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[22]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[22]/Cc
+/data/messages[22]/Date Ср 12 окт 2011 14:03:02
+/data/messages[22]/DateUTS 1318413782
+/data/messages[22]/DateShort 12 окт
+/data/messages[22]/Subject Re: &quot;test&quot;
+/data/messages[22]/ReSentTo
+/data/messages[22]/ReSentFrom
+/data/messages[22]/ReSentDate
+/data/messages[22]/ReSendComment
+/data/messages[22]/IcoFromWho
+/data/messages[22]/Size 3 Кб
+/data/messages[22]/FilinN false
+/data/messages[22]/FilinEM false
+/data/messages[22]/Microformat/ntype letter
+/data/messages[22]/Microformat/text Yahoo!  11 октября 2011, 14:53 от и это тоже длинное такое имя отправителя   &lt;  kk_test2@mail.ru  &gt;  :                             &quot;test&quot;         Подпись   --- &apos; --- &quot; --- `   line 3                           По
+/data/messages[23]/Id 13184137230000000574
+/data/messages[23]/FolderId 0
+/data/messages[23]/PrevId 13184137820000000301
+/data/messages[23]/NextId 13184136730000000573
+/data/messages[23]/Unread 0
+/data/messages[23]/Flagged 0
+/data/messages[23]/Priority 3
+/data/messages[23]/Reply 0
+/data/messages[23]/Forward 0
+/data/messages[23]/Attachment 0
+/data/messages[23]/From kk_test2@mail.ru
+/data/messages[23]/FromList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[23]/FromShort и это тоже длинное такое имя отправителя
+/data/messages[23]/To kk_test2@mail.ru
+/data/messages[23]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[23]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[23]/Cc
+/data/messages[23]/Date Ср 12 окт 2011 14:02:03
+/data/messages[23]/DateUTS 1318413723
+/data/messages[23]/DateShort 12 окт
+/data/messages[23]/Subject Re: &quot;test&quot;
+/data/messages[23]/ReSentTo
+/data/messages[23]/ReSentFrom
+/data/messages[23]/ReSentDate
+/data/messages[23]/ReSendComment
+/data/messages[23]/IcoFromWho
+/data/messages[23]/Size 2 Кб
+/data/messages[23]/FilinN false
+/data/messages[23]/FilinEM false
+/data/messages[23]/Microformat/ntype letter
+/data/messages[23]/Microformat/text test   11 октября 2011, 14:53 от и это тоже длинное такое имя отправителя   : &gt; &quot;test&quot; &gt;  &gt; Подпись &gt; --- &apos; --- &quot; --- ` &gt; line 3 Подпись --- &apos; --- &quot; --- `
+/data/messages[24]/Id 13184136730000000573
+/data/messages[24]/FolderId 0
+/data/messages[24]/PrevId 13184137230000000574
+/data/messages[24]/NextId 13183846710000000110
+/data/messages[24]/Unread 0
+/data/messages[24]/Flagged 0
+/data/messages[24]/Priority 3
+/data/messages[24]/Reply 0
+/data/messages[24]/Forward 0
+/data/messages[24]/Attachment 0
+/data/messages[24]/From kk_test2@mail.ru
+/data/messages[24]/FromList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[24]/FromShort и это тоже длинное такое имя отправителя
+/data/messages[24]/To kk_test2@mail.ru
+/data/messages[24]/ToList и это тоже длинное такое имя отправителя &lt;kk_test2@mail.ru&gt;
+/data/messages[24]/ToShort и это тоже длинное такое имя отправителя
+/data/messages[24]/Cc
+/data/messages[24]/Date Ср 12 окт 2011 14:01:12
+/data/messages[24]/DateUTS 1318413672
+/data/messages[24]/DateShort 12 окт
+/data/messages[24]/Subject Re: &quot;test&quot;
+/data/messages[24]/ReSentTo
+/data/messages[24]/ReSentFrom
+/data/messages[24]/ReSentDate
+/data/messages[24]/ReSendComment
+/data/messages[24]/IcoFromWho
+/data/messages[24]/Size 3 Кб
+/data/messages[24]/FilinN false
+/data/messages[24]/FilinEM false
+/data/messages[24]/Microformat/ntype letter
+/data/messages[24]/Microformat/text !!! Fuck OFFF  11 октября 2011, 14:53 от и это тоже длинное такое имя отправителя   &lt;  kk_test2@mail.ru  &gt;  :                             &quot;test&quot;         Подпись   --- &apos; --- &quot; --- `   line 3                           Подпись   --- &apos; --- &quot; --- `   line 3
+/data/messages[25]/Id 13183846710000000110
+/data/messages[25]/FolderId 0
+/data/messages[25]/PrevId 13184136730000000573
+/data/messages[25]/NextId 13183304200000000107
+/data/messages[25]/Unread 0
+/data/messages[25]/Flagged 0
+/data/messages[25]/Priority 3
+/data/messages[25]/Reply 0
+/data/messages[25]/Forward 0
+/data/messages[25]/Attachment 0
+/data/messages[25]/From info@site.hh.ru
+/data/messages[25]/FromList HeadHunter &lt;info@site.hh.ru&gt;
+/data/messages[25]/FromShort HeadHunter
+/data/messages[25]/To kk_test2@mail.ru
+/data/messages[25]/ToList Фатеев Артур &lt;kk_test2@mail.ru&gt;
+/data/messages[25]/ToShort Фатеев Артур
+/data/messages[25]/Cc
+/data/messages[25]/Date Ср 12 окт 2011 05:57:50
+/data/messages[25]/DateUTS 1318384670
+/data/messages[25]/DateShort 12 окт
+/data/messages[25]/Subject Рынок вышел из кризиса?
+/data/messages[25]/ReSentTo
+/data/messages[25]/ReSentFrom
+/data/messages[25]/ReSentDate
+/data/messages[25]/ReSendComment
+/data/messages[25]/IcoFromWho
+/data/messages[25]/Size 23 Кб
+/data/messages[25]/FilinN false
+/data/messages[25]/FilinEM false
+/data/messages[25]/Microformat/ntype letter
+/data/messages[25]/Microformat/text                 xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;                                                                             Рынок вышел из кризиса?                                                                                                                        Новости            Одной строкой            Каким будет и каким должен быть МРОТ, сколько людей живут за чертой бедности, кого должны готовить вузы, — и другие новости за неделю.                                                    Результаты исследований            Рынок вышел из кризиса?            Каждый четвертый считает, что рынок вышел из кризиса. Однако больше половины уверены: трудности с поиском работы есть.

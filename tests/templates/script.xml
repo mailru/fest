@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:script>
+        <![CDATA[
+        json.script = 2 < 3;
+        ]]>
+    </fest:script>
+    "<fest:value>json.script</fest:value>"
+</fest:template>
