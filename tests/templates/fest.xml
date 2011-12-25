@@ -2,5 +2,6 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <a href="fest:json.href" title="test"></a>
     <fest:script>var safe = "\""</fest:script>
-    <a href="fest('safe', {output:'text', safe:true})" title="test"></a>
+    <a href="fest('safe', {output:'text', safe:true})"></a>
+    <a href="fest-asis:{val:false}.val"></a>
 </fest:template>
