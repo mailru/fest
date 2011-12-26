@@ -6,4 +6,7 @@
         ]]>
     </fest:script>
     "<fest:value>json.script</fest:value>"
+
+    <fest:script src="script.js"/>
+    "<fest:value>include_script</fest:value>"
 </fest:template>

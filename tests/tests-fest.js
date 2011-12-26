@@ -121,7 +121,17 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '"true"');
+            assert.equal(result, '"true""true"');
+        }
+    },
+    'insert':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('tests/templates/insert.xml', {}, promise);
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, '.foo{}\n.bar{}');
         }
     },
     'use strict':{
