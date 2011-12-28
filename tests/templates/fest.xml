@@ -4,6 +4,6 @@
     <fest:script>var safe = "\""</fest:script>
     <a href="fest('safe', {output:'text', safe:true})"></a>
     <a href="fest-asis:{val:false}.val + ''"></a>
-    <a href="fest-get:{name:'attr'}"></a>
-    <fest:set name="attr">link</fest:set>
+    <a href="fest-get:{name:'attr', params:'\'params\''}"></a>
+    <fest:set name="attr">link<fest:value>params</fest:value></fest:set>
 </fest:template>
