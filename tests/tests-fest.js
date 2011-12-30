@@ -200,6 +200,16 @@ vows.describe('Fast tests').addBatch({
         'result':function(result){
             assert.equal(result, '<input/>');
         }
+    },
+    'document.write': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('tests/templates/document.xml', {}, promise);
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, 'foobar');
+        }
     }
 }).addBatch({
     'intercept sync':{
