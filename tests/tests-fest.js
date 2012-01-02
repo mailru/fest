@@ -208,7 +208,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'foobar');
+            assert.equal(result, 'foobarbar');
         }
     }
 }).addBatch({
