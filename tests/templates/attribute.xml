@@ -1,4 +1,22 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <input checked="fest:false"/>
+    <input>
+        <fest:if test="false">
+            <fest:attribute name="checked">checked</fest:attribute>
+        </fest:if>
+    </input>
+    <div>
+        <fest:attribute name="class">
+            foo
+            <fest:if test="true">
+                <fest:text value=" "/>bar
+            </fest:if>
+        </fest:attribute>
+    </div>
+    <div>
+        <fest:attribute name="class">
+            <fest:get name="class"/>
+        </fest:attribute>
+    </div>
+    <fest:set name="class">foo</fest:set>
 </fest:template>

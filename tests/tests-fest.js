@@ -111,7 +111,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<a href="http://fest.mail.ru" title="test"></a><a href="""></a><a href="false"></a><a href="linkparams"></a>');
+            assert.equal(result, '<a href="http://fest.mail.ru" title="test"></a><a href="""></a><a href="false"></a>');
         }
     },
     'script':{
@@ -198,7 +198,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<input/>');
+            assert.equal(result, '<input/><div class="foo bar"></div><div class="foo"></div>');
         }
     },
     'document.write': {
