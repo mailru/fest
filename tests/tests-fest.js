@@ -30,7 +30,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, ' ');
+            assert.equal(result, '  ');
         }
     },
     'shorttag':{
