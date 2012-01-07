@@ -19,4 +19,5 @@
         </fest:attribute>
     </div>
     <fest:set name="class">foo</fest:set>
+    <div>foo</div>
 </fest:template>
