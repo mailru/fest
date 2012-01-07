@@ -18,6 +18,24 @@
             <fest:get name="class"/>
         </fest:attribute>
     </div>
+    <div>
+        <fest:choose>
+            <fest:when test="true">
+                <fest:attribute name="when">true</fest:attribute>
+            </fest:when>
+            <fest:otherwise>
+                <fest:attribute name="when">false</fest:attribute>
+            </fest:otherwise>
+        </fest:choose>
+        <fest:choose>
+            <fest:when test="false">
+                <fest:attribute name="otherwise">false</fest:attribute>
+            </fest:when>
+            <fest:otherwise>
+                <fest:attribute name="otherwise">true</fest:attribute>
+            </fest:otherwise>
+        </fest:choose>
+    </div>
     <fest:set name="class">foo</fest:set>
     <div>foo</div>
 </fest:template>

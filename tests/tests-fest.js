@@ -198,7 +198,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<input/><div class="foo bar"></div><div class="foo"></div><div>foo</div>');
+            assert.equal(result, '<input/><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true"></div><div>foo</div>');
         }
     },
     'document.write': {
