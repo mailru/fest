@@ -6,11 +6,8 @@ var fest = require('../lib/fest'),
     assert = require('assert');
 
 function transform(file, json,  promise, strict, options){
-    fest.compile(file, strict, options).then(function(template){
-        //console.log(template);
-        template = (new Function('return ' + template))();
-        setTimeout(function(){promise.emit('success', template(json));}, 0);
-    });
+    var template = (new Function('return ' + fest.compile(file, strict, options)))();
+    setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
 
 vows.describe('Fast tests').addBatch({
@@ -200,27 +197,6 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, 'foobarbar');
-        }
-    }
-}).addBatch({
-    'intercept':{
-        topic: function(){
-            var promise = new(events.EventEmitter);
-            fest.compile('tests/templates/intercept.xml')
-                .intercept('opentag', function(node){
-                    return '__fest_str+="' + node.local  + '";'
-                })
-                .intercept('closetag', function(node){
-                    return '';
-                })
-                .then(function(template){
-                    template = (new Function('return ' + template))();
-                    setTimeout(function(){promise.emit('success', template({}));}, 0);
-                });
-            return promise;
-        },
-        'result':function(result){
-            assert.equal(result, 'template');
         }
     }
 }).run();
