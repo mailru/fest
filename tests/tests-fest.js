@@ -9,7 +9,7 @@ function transform(file, json,  promise, strict, options){
     fest.compile(file, strict, options).then(function(template){
         //console.log(template);
         template = (new Function('return ' + template))();
-        promise.emit('success', template(json));
+        setTimeout(function(){promise.emit('success', template(json));}, 0);
     });
 }
 
@@ -203,7 +203,7 @@ vows.describe('Fast tests').addBatch({
         }
     }
 }).addBatch({
-    'intercept sync':{
+    'intercept':{
         topic: function(){
             var promise = new(events.EventEmitter);
             fest.compile('tests/templates/intercept.xml')
@@ -215,29 +215,7 @@ vows.describe('Fast tests').addBatch({
                 })
                 .then(function(template){
                     template = (new Function('return ' + template))();
-                    promise.emit('success', template({}));
-                });
-            return promise;
-        },
-        'result':function(result){
-            assert.equal(result, 'template');
-        }
-    },
-    'intercept async':{
-        topic: function(){
-            var promise = new(events.EventEmitter);
-            fest.compile('tests/templates/intercept.xml')
-                .intercept('opentag', function(node){
-                    var promise = defer();
-                    setTimeout(function(){promise.resolve('__fest_str+="' + node.local  + '";')}, 10);
-                    return promise;
-                })
-                .intercept('closetag', function(node){
-                    return '';
-                })
-                .then(function(template){
-                    template = (new Function('return ' + template))();
-                    promise.emit('success', template({}));
+                    setTimeout(function(){promise.emit('success', template({}));}, 0);
                 });
             return promise;
         },
