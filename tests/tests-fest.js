@@ -1,6 +1,4 @@
 var fest = require('../lib/fest'),
-    fs = require('fs'),
-    defer = (new Function(fs.readFileSync(__dirname + '/../lib/defer.js', 'utf-8') + 'return defer'))(),
     vows = require('vows'),
     events = require('events'),
     assert = require('assert');
