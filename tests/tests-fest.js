@@ -104,16 +104,6 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result.substr(2, result.length - 1), '01021112');
         }
     },
-    'fest':{
-        topic:function(){
-            var promise = new(events.EventEmitter);
-            transform('tests/templates/fest.xml', {href:"http://fest.mail.ru"}, promise);
-            return promise;
-        },
-        'result':function(result){
-            assert.equal(result, '<a href="http://fest.mail.ru" title="test"></a><a href="""></a><a href="false"></a>');
-        }
-    },
     'script':{
         topic:function(){
             var promise = new(events.EventEmitter);
