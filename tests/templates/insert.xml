@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:insert src="style.css"/>
+    <style>
+        <fest:insert src="style.css"/>
+    </style>
 </fest:template>
