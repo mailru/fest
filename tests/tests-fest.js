@@ -197,10 +197,10 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, 'foobarbar');
         }
     },
-    'first_attributes': {
+    'first attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
-        transform('tests/templates/attributes.xml', {}, promise);
+        transform('tests/templates/first_attributes.xml', {}, promise);
         return promise;
       },
       'result':function(result) {
