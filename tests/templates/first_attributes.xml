@@ -10,7 +10,7 @@
 <a>
   <b>text</b>
   <fest:attributes>
-    <fest:attribute name="name">text1</fest:attribute>
+    <fest:attribute name="name"><![CDATA[<text1>]]></fest:attribute>
   </fest:attributes>
 </a>
 
