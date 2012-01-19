@@ -187,6 +187,16 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true"></div><div>foo</div>');
         }
     },
+    'first attributes': {
+      topic:function(){
+        var promise = new(events.EventEmitter);
+        transform('tests/templates/first_attributes.xml', {}, promise);
+        return promise;
+      },
+      'result':function(result) {
+        assert.equal(result, '<input/>text<a><b>text</b></a><button name="btn"></button>');
+      }
+    },
     'document.write': {
         topic:function(){
             var promise = new(events.EventEmitter);
