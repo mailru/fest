@@ -1,8 +1,7 @@
 var fest = require('../lib/fest'),
     vows = require('vows'),
     events = require('events'),
-    assert = require('assert'),
-    path = require('path');
+    assert = require('assert');
 
 function transform(file, json,  promise, strict, options){
     var template = (new Function('return ' + fest.compile(__dirname + file, options)))();
