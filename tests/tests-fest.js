@@ -4,7 +4,7 @@ var fest = require('../lib/fest'),
     assert = require('assert');
 
 function transform(file, json,  promise, strict, options){
-    var template = (new Function('return ' + fest.compile(file, strict, options)))();
+    var template = (new Function('return ' + fest.compile(file, options)))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
 
