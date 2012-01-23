@@ -190,7 +190,7 @@ var fest = require('../lib/fest');
 var data = {name: 'Jack "The Ripper"'},
     template = './templates/basic.xml';
 
-var compiled = fest.compile(template, true),
+var compiled = fest.compile(template, true /*, {beatify: false} */),
     template = (new Function('return ' + compiled))();
     
 console.log(template(data));
