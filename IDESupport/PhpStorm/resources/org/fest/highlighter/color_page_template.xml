@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <input>
+        <fest:attributes>
+            <fest:if test="false">
+                <fest:attribute name="checked">checked</fest:attribute>
+            </fest:if>
+        </fest:attributes>
+    </input>
+    <div>
+        <fest:choose>
+            <fest:when test="false">foo</fest:when>
+            <fest:otherwise>foo</fest:otherwise>
+        </fest:choose>
+        bar
+    </div>
+    <div>
+        <fest:attributes>
+            <fest:attribute name="class">
+                foo
+                <fest:if test="true">
+                    <fest:text value=" "/>bar
+                </fest:if>
+            </fest:attribute>
+        </fest:attributes>
+    </div>
+    <div>
+        <fest:attributes>
+            <fest:attribute name="class">
+                <fest:get name="class"/>
+            </fest:attribute>
+        </fest:attributes>
+    </div>
+    <div>
+        <fest:attributes>
+            <fest:choose>
+                <fest:when test="true">
+                    <fest:attribute name="when">true</fest:attribute>
+                </fest:when>
+                <fest:otherwise>
+                    <fest:attribute name="when">false</fest:attribute>
+                </fest:otherwise>
+            </fest:choose>
+            <fest:choose>
+                <fest:when test="false">
+                    <fest:attribute name="otherwise">false</fest:attribute>
+                </fest:when>
+                <fest:otherwise>
+                    <fest:attribute name="otherwise">true</fest:attribute>
+                </fest:otherwise>
+            </fest:choose>
+        </fest:attributes>
+    </div>
+    <fest:set name="class">foo</fest:set>
+    <div>foo</div>
+</fest:template>
