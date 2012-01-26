@@ -8,4 +8,7 @@
             <fest:value>i</fest:value><fest:value>json.subitems[i][j]</fest:value>
         </fest:foreach>
     </fest:foreach>
+    <fest:foreach from="4" to="5" index="i">
+        <fest:value>i</fest:value>
+    </fest:foreach>
 </fest:template>

@@ -76,12 +76,15 @@
 
 ### fest:foreach
 
-Итерация по массиву
+Итерация по массиву или по числовому ряду
 
 ```xml
 <fest:script>json.items = ['a', 'b', 'c']</fest:script>
 <fest:foreach iterate="json.items" index="i">
   <fest:value>json.items[i]</fest:value>
+</fest:foreach>
+<fest:foreach from="1" to="5" index="i">
+  <fest:value>i</fest:value>
 </fest:foreach>
 ```
 
@@ -97,7 +100,7 @@
 
 ### fest:choose, fest:when, fest:otherwise
 
-Ветвление. Если ни один ```fest:when``` не выполнен, будет выбрана ветвь ```fest:otherwise```. 
+Ветвление. Если ни один ```fest:when``` не выполнен, будет выбрана ветвь ```fest:otherwise```.
 
 ```xml
 <fest:choose>
@@ -163,7 +166,7 @@ HTML комментарий
 
 ### fest:include
 
-Вставить содержимое другого шаблона с заданным контекстом. 
+Вставить содержимое другого шаблона с заданным контекстом.
 
 ```xml
 <fest:script>json.list = ['a', 'b', 'c'];</fest:script>
@@ -192,7 +195,7 @@ var data = {name: 'Jack "The Ripper"'},
 
 var compiled = fest.compile(template, true /*, {beatify: false} */),
     template = (new Function('return ' + compiled))();
-    
+
 console.log(template(data));
 ```
 
@@ -202,7 +205,7 @@ basic.xml
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
   <h1>Hello,<fest:space/><fest:value output="text">json.name</fest:value></h1>
-  
+
   <!-- По умолчанию все значения fest:value экранируются -->
   <!--
     Необходимо использовать fest:space или
@@ -228,7 +231,7 @@ var data = {
     {name: 'Mary', age: 21},
     {name: 'Gary', age: 55}
   ],
-  
+
   append: '>>'
 }
 ```
@@ -238,13 +241,13 @@ foreach.xml (основной шаблон)
 ```xml
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-	
+
   <!-- Контекст можно передавать во вложенные шаблоны -->
   <fest:include context_name="json" src="./person.xml"/>
 
   <!-- Значением iterate может быть любое js-выражение -->
   <fest:foreach iterate="json.people.reverse()" index="i">
-	
+
     <!-- Передаваемые значения будут доступны в контексте params -->
     <fest:get name="person">json.people[i]</fest:get>
   </fest:foreach>
@@ -256,7 +259,7 @@ person.xml
 ```xml
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-  
+
   <!--
     Используем set для объявления переменной,
     которую используем в родительском шаблоне
@@ -267,7 +270,7 @@ person.xml
       var first = params.name[0],
           other = params.name.slice(1);
     ]]></fest:script>
-    
+
     <fest:value>json.append</fest:value>
     <strong>
       <fest:value>first</fest:value>
@@ -298,21 +301,21 @@ person.xml
   <fest:set name="all_link">
     <fest:get name="host"/>/cgibin/<fest:get name="all"/>
   </fest:set>
-  
+
   <fest:set name="new_link">
     <fest:get name="host"/>/cgibin/<fest:get name="new"/>
   </fest:set>
 
   <ul>
     <!-- fest:attribute добавляет параметр к родительскому тегу -->
-    
+
     <li><a>
       <fest:attributes>
         <fest:attribute name="href"><fest:get name="all_link"/></fest:attribute>
       </fest:attributes>
     Все сообщения
     </a></li>
-    
+
     <li><a>
       <fest:attributes>
         <fest:attribute name="href"><fest:get name="new_link"/></fest:attribute>

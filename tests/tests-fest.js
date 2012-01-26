@@ -97,7 +97,7 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result.substr(0, 2), '12');
-            assert.equal(result.substr(2, result.length - 1), '01021112');
+            assert.equal(result.substr(2, result.length - 1), '0102111245');
         }
     },
     'script':{
