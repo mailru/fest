@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<idea-plugin url="https://github.com/berkel/FestSupport" version="2">
+	<id>FestSupport</id>
+	<name>Fest Support</name>
+	<description>
+		<![CDATA[
+			Fest templater (<a href="https://github.com/AndrewSumin/Fest">https://github.com/AndrewSumin/Fest</a>) support
+		]]>
+	</description>
+	<version>1.1</version>
+	<vendor email="dmitry@shkinev.ru">Dmitry Shkinev</vendor>
+
+	<change-notes>
+		<![CDATA[
+			<p><b>1.1</b>
+				<ul>
+					<li>Add autocomplete and validation</li>
+					<li>Add new Fest file template</li>
+				</ul>
+			</p>
+			<p><b>1.0</b>
+				<ul>
+					<li>Add syntax highlighting</li>
+				</ul>
+			</p>
+ 		]]>
+	</change-notes>
+
+	<depends>com.intellij.modules.xml</depends>
+
+	<resource-bundle>org.fest.util.FestBundle</resource-bundle>
+
+	<application-components>
+		<component>
+			<implementation-class>org.fest.FestApplicationComponent</implementation-class>
+		</component>
+	</application-components>
+
+	<project-components>
+		<component>
+			<implementation-class>org.fest.FestProjectComponent</implementation-class>
+		</component>
+	</project-components>
+
+	<actions>
+	</actions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<syntaxHighlighter key="XML" implementationClass="org.fest.highlighter.FestFileHighlighter"/>
+		<colorSettingsPage implementation="org.fest.highlighter.FestColorsPage"/>
+		<standardResourceProvider implementation="org.fest.lang.FestInternalResourceProvider"/>
+		<!--<fileTemplateGroup implementation="org.fest.FestFileTemplateGroupDescriptorFactory"/>-->
+	</extensions>
+
+	<module-components>
+		<component>
+			<implementation-class>org.fest.FestModuleComponent</implementation-class>
+		</component>
+	</module-components>
+
+</idea-plugin>
