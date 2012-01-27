@@ -299,11 +299,11 @@ person.xml
   <fest:set name="new">sentmsg?compose</fest:set>
 
   <fest:set name="all_link">
-    <fest:get name="host"/>/cgibin/<fest:get name="all"/>
+    <fest:get name="host"/>/<fest:get name="all"/>
   </fest:set>
 
   <fest:set name="new_link">
-    <fest:get name="host"/>/cgibin/<fest:get name="new"/>
+    <fest:get name="host"/>/<fest:get name="new"/>
   </fest:set>
 
   <ul>
@@ -330,7 +330,7 @@ person.xml
 
 ```html
 <ul>
-  <li><a href="http://e.mail.ru/cgibin/msglist">Все сообщения</a></li>
-  <li><a href="http://e.mail.ru/cgibin/sentmsg?compose">Написать письмо</a></li>
+  <li><a href="http://e.mail.ru/msglist">Все сообщения</a></li>
+  <li><a href="http://e.mail.ru/sentmsg?compose">Написать письмо</a></li>
 </ul>
 ```
