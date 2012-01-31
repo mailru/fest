@@ -6,7 +6,7 @@ var
 ;
 
 
-request('/fest/if.js', function (res){
+request('/git/fest/tests/templates/if.js', function (res){
 	console.log(res);
 });
 
