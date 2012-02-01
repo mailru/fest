@@ -4,6 +4,9 @@ var fest = require('../lib/fest'),
     assert = require('assert');
 
 function transform(file, json,  promise, strict, options){
+    options = options || {};
+    options.xmllint = true;
+
     var template = (new Function('return ' + fest.compile(__dirname + file, options)))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
@@ -190,11 +193,11 @@ vows.describe('Fast tests').addBatch({
     'first attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
-        transform('/templates/first_attributes.xml', {}, promise);
+        transform('/templates/first_attributes.xml', {}, promise, true, {nothrow: true});
         return promise;
       },
       'result':function(result) {
-        assert.equal(result, '<input/>text<a><b>text</b></a><button name="btn"></button>');
+        assert.equal(result, '');
       }
     },
     'document.write': {
