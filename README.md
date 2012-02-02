@@ -19,10 +19,10 @@
 Для ```fest:set``` можно использовать атрибут ```test```. Операция выполнится, если его значение (js-выражение) истинно.
 
 ```xml
-<fest:set name="count" test="false">should not be set</fest:set>
+<fest:set name="name" test="false">should not be set</fest:set>
 ```
 
-Внутри ```set``` доступен контекст ```params```, передаваемый через ```get```.
+Внутри ```fest:set``` доступен контекст ```params```, передаваемый через ```fest:get```.
 
 ```xml
 <fest:set name="line">
