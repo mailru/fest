@@ -207,7 +207,7 @@ vows.describe('Fast tests').addBatch({
         return promise;
       },
       'result':function(result) {
-        assert.equal(result, '');
+        assert.equal(result, 'At line 5: <fest:attributes> fest:attributes must be the first child');
       }
     },
     'document.write': {
