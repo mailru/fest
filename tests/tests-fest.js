@@ -150,6 +150,16 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result[7], 'eight');
         }
     },
+    'params': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/params.xml', {}, promise);
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, 'Hello, John');
+        }
+    },
     'include':{
         topic:function(){
             var promise = new(events.EventEmitter);
