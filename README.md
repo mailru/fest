@@ -16,12 +16,33 @@
 </fest:set>
 ```
 
+Для ```fest:set``` можно использовать атрибут ```test```. Операция выполнится, если его значение (js-выражение) истинно.
+
+```xml
+<fest:set name="name" test="false">should not be set</fest:set>
+```
+
+Внутри ```fest:set``` доступен контекст ```params```, передаваемый через ```fest:get```.
+
+```xml
+<fest:set name="line">
+  Hello,<fest:space/><fest:value>params.username</fest:value>
+</fest:set>
+<fest:get name="line">{username: "John"}</fest:get>
+```
+
 ### fest:get
 
 Получить переменную, объявленную через ```fest:set```
 
 ```xml
 <fest:get name="name"/>
+```
+
+
+
+```xml
+<fest:get name="name">{'some': 'data'}</fest:get>
 ```
 
 ### fest:attributes, fest:attribute
