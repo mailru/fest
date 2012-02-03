@@ -208,7 +208,7 @@ vows.describe('Fast tests').addBatch({
       },
       'result':function(result) {
         var res = [
-            '/Users/tema/Fest/tests/templates/first_attributes.xml',
+            __dirname + '/templates/first_attributes.xml',
             '4: text',
             '5: <fest:attributes>',
             '6:   <fest:attribute name="name">text1</fest:attribute>',
@@ -236,7 +236,7 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result) {
           var res = [
-              '/Users/tema/Fest/tests/templates/template.xml',
+              __dirname + '/templates/template.xml',
               '1: <?xml version="1.0"?>',
               '2: <fest:template xmlns:fest="http://fest.mail.ru" context_name="bad">',
               'At line 2: fest:template is not closed'
