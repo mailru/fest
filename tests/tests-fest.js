@@ -207,8 +207,8 @@ vows.describe('Fast tests').addBatch({
         return promise;
       },
       'result':function(result) {
-        var res = '\n' +
-        [
+        var res = [
+            '/Users/tema/Fest/tests/templates/first_attributes.xml',
             '4: text',
             '5: <fest:attributes>',
             '6:   <fest:attribute name="name">text1</fest:attribute>',
@@ -226,6 +226,23 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, 'foobarbar');
+        }
+    },
+    'unclosed template': {
+        topic:function(){
+          var promise = new(events.EventEmitter);
+          transform('/templates/template.xml', {}, promise, true, {nothrow: true});
+          return promise;
+        },
+        'result':function(result) {
+          var res = [
+              '/Users/tema/Fest/tests/templates/template.xml',
+              '1: <?xml version="1.0"?>',
+              '2: <fest:template xmlns:fest="http://fest.mail.ru" context_name="bad">',
+              'At line 2: fest:template is not closed'
+          ].join('\n');
+
+          assert.equal(result, escape(res));
         }
     }
 }).run();
