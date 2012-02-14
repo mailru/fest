@@ -9,4 +9,7 @@
     <fest:if test="false">
         false
     </fest:if>
+    <fest:if test="true &amp;&amp; true">
+        &amp;
+    </fest:if>
 </fest:template>

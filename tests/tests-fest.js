@@ -5,8 +5,6 @@ var fest = require('../lib/fest'),
 
 function transform(file, json,  promise, strict, options){
     options = options || {};
-    options.xmllint = true;
-
     var template = (new Function('return ' + fest.compile(__dirname + file, options)))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
@@ -69,7 +67,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'truetrue');
+            assert.equal(result, 'truetrue&');
         }
     },
     'choose':{
@@ -208,14 +206,14 @@ vows.describe('Fast tests').addBatch({
       },
       'result':function(result) {
         var res = [
-            __dirname + '/templates/first_attributes.xml',
-            '4: text',
-            '5: <fest:attributes>',
-            '6:   <fest:attribute name="name">text1</fest:attribute>',
-            'At line 5: fest:attributes must be the first child'
+            __dirname + "/templates/first_attributes.xml",
+            "4: text",
+            "5: <fest:attributes>",
+            "6:   <fest:attribute name=\"name\">text1</fest:attribute>",
+            "At line 5: fest:attributes must be the first child"
         ].join('\n');
-          
-        assert.equal(result, escape(res));
+
+        assert.equal(result, res);
       }
     },
     'document.write': {
@@ -236,13 +234,13 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result) {
           var res = [
-              __dirname + '/templates/template.xml',
-              '1: <?xml version="1.0"?>',
-              '2: <fest:template xmlns:fest="http://fest.mail.ru" context_name="bad">',
-              'At line 2: fest:template is not closed'
+              __dirname + "/templates/template.xml",
+              "1: <?xml version=\"1.0\"?>",
+              "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\">",
+              "At line 2: fest:template is not closed"
           ].join('\n');
 
-          assert.equal(result, escape(res));
+          assert.equal(result, res);
         }
     }
 }).run();
