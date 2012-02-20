@@ -4,8 +4,10 @@ var fest = require('../lib/fest'),
     assert = require('assert');
 
 function transform(file, json,  promise, strict, options){
-    options = options || {};
-    var template = (new Function('return ' + fest.compile(__dirname + file, options)))();
+    options = options || null;
+    var template = fest.compile(__dirname + file, options);
+    //console.log(template)
+    template = (new Function('return ' + template))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
 
@@ -57,7 +59,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'value<script/>\\"|\\\'');
+            assert.equal(result, 'valuevalue<script/>\\"|\\\'');
         }
     },
     'if':{
