@@ -216,6 +216,24 @@ vows.describe('Fast tests').addBatch({
         assert.equal(result, res);
       }
     },
+    'nested attributes': {
+      topic:function(){
+        var promise = new(events.EventEmitter);
+        transform('/templates/nested_attributes.xml', {}, promise, true, {nothrow: true});
+        return promise;
+      },
+      'result':function(result) {
+        var res = [
+            __dirname + "/templates/nested_attributes.xml",
+            "4: <fest:attributes>",
+            "5:   <fest:attributes>",
+            "6:     <fest:attribute name='href'>#</fest:attribute>",
+            "At line 5: fest:attributes cannot be nested"
+        ].join('\n');
+
+        assert.equal(result, res);
+      }
+    },
     'document.write': {
         topic:function(){
             var promise = new(events.EventEmitter);
