@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:script>
+        var block = 'b-block';
+        var element = '__element';
+        var modifier = '_modifier';
+    </fest:script>
+
+    <fest:set name="modify">
+        <fest:value>params.block</fest:value>
+        <fest:value>params.element</fest:value>
+        <fest:value>modifier</fest:value>
+    </fest:set>
+
+    <div class="{block}">
+        <div class="{block + modifier}"/>
+        <div class="{block + element}">
+            <span class="{'name'}">
+                <fest:get name="modify">{ "block": block, "element": element }</fest:get>
+            </span>
+        </div>
+    </div>
+</fest:template>
