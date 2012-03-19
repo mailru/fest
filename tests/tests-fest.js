@@ -243,7 +243,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<div class="b-block"><div class="b-block_modifier"></div><div class="b-block__element"><span class="name">b-block__element_modifier</span></div></div>');
+            assert.equal(result, '<div class="b-block" data-spec-chars="{&quot;&apos;<&>}"><div class="b-block_modifier"></div><div class="b-block__element"><span class="name">b-block__element_modifier</span></div></div>');
         }
     },
     'document.write': {

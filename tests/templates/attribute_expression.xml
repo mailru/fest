@@ -12,7 +12,7 @@
         <fest:value>modifier</fest:value>
     </fest:set>
 
-    <div class="{block}">
+    <div class="{block}" data-spec-chars="{'&#x7b;&amp;quot;&amp;apos;&lt;&amp;&gt;&#x7d;'}">
         <div class="{block + modifier}"/>
         <div class="{block + element}">
             <span class="{'name'}">
