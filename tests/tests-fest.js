@@ -6,7 +6,7 @@ var fest = require('../lib/fest'),
 function transform(file, json,  promise, strict, options){
     options = options || null;
     var template = fest.compile(__dirname + file, options);
-    console.log(template)
+    //console.log(template)
     template = (new Function('return ' + template))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
@@ -126,7 +126,7 @@ vows.describe('Fast tests').addBatch({
     'use strict':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/strict.xml', {}, promise);
+            transform('/templates/strict.xml', {}, promise, true, {debug:true});
             return promise;
         },
         'result':function(result){
@@ -261,6 +261,16 @@ vows.describe('Fast tests').addBatch({
           ].join('\n');
 
           assert.equal(result, res);
+        }
+    },
+    'errors': {
+        topic:function(){
+          var promise = new(events.EventEmitter);
+          transform('/templates/errors.xml', null, promise, true, {debug:true});
+          return promise;
+        },
+        'result':function(result) {
+          assert.equal(result, '');
         }
     }
 }).run();
