@@ -243,7 +243,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<div class="b-block" data-spec-chars="{&quot;&apos;<&>}"><div class="b-block_modifier"></div><div class="b-block__element"><span class="name">b-block__element_modifier</span></div></div>');
+            assert.equal(result, '<div class="b-block" data-amp="&" data-lt="<" data-gt=">" data-apos="\'" data-quot=""" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{{}}" data-crazy="{{}{}}" data-crazy-again="{{{{}}{{}}}}" data-crazy-too="{{}{}}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="\'value\'"><span class="name" data-spec-chars="{<"\'&>}">b-block__element_modifier</span></div></div>');
         }
     },
     'document.write': {

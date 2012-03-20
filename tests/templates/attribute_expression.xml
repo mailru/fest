@@ -12,10 +12,25 @@
         <fest:value>modifier</fest:value>
     </fest:set>
 
-    <div class="{block}" data-spec-chars="{'&#x7b;&amp;quot;&amp;apos;&lt;&amp;&gt;&#x7d;'}">
-        <div class="{block + modifier}"/>
-        <div class="{block + element}">
-            <span class="{'name'}">
+    <div class="{block}"
+        data-amp="{'&amp;'}"
+        data-lt="{'&lt;'}"
+        data-gt="{'&gt;'}"
+        data-apos="{'\&apos;'}"
+        data-quot="{'\&quot;'}"
+        data-elcb="{'{{'}"
+        data-ercb="{'}}'}"
+        data-lcb="{"
+        data-rcb="}"
+        data-ecb="{'{{}}'}"
+        data-dcb="{{}}"
+        data-crazy="{'{{{{}}{{}}}}'}"
+        data-crazy-again="{{{{}}{{}}}}"
+        data-crazy-too="{{}{}}"
+    >
+        <div class="{block}{modifier}" data-has-modifier="{!!(block && modifier)}"/>
+        <div class="{block + element}" data-obj-value="{ {{ 'key': '\&apos;value\&apos;' }}['key'] }">
+            <span class="{'name'}" data-spec-chars="{'{{&lt;\&quot;\&apos;&amp;&gt;}}'}">
                 <fest:get name="modify">{ "block": block, "element": element }</fest:get>
             </span>
         </div>
