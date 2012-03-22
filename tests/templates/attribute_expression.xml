@@ -29,8 +29,8 @@
         data-crazy-too="{{}{}}"
     >
         <div class="{block}{modifier}" data-has-modifier="{!!(block && modifier)}"/>
-        <div class="{block + element}" data-obj-value="{ {{ 'key': '\&apos;value\&apos;' }}['key'] }">
-            <span class="{'name'}" data-spec-chars="{'{{&lt;\&quot;\&apos;&amp;&gt;}}'}">
+        <div class="{block + element}" data-obj-value="{ {{ 'key': 'value' }}['key'] }" data-obj-json="{{ \&quot;key\&quot;: \&quot;value\&quot; }}">
+            <span class="{'name'}" data-spec-chars="{{&lt;\&quot;\&apos;&amp;&gt;}}" data-espec-chars="{'{{&lt;\&quot;\&apos;&amp;&gt;}}'}">
                 <fest:get name="modify">{ "block": block, "element": element }</fest:get>
             </span>
         </div>
