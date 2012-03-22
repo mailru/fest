@@ -6,7 +6,6 @@ var fest = require('../lib/fest'),
 function transform(file, json,  promise, strict, options){
     options = options || null;
     var template = fest.compile(__dirname + file, options);
-    //console.log(template)
     template = (new Function('return ' + template))();
     setTimeout(function(){promise.emit('success', template(json));}, 0);
 }
@@ -235,6 +234,16 @@ vows.describe('Fast tests').addBatch({
 
         assert.equal(result, res);
       }
+    },
+    'expression in attribute value': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/attribute_expression.xml', {}, promise);
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, '<div class="b-block" data-amp="&" data-lt="<" data-gt=">" data-apos="\'" data-quot=""" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{<"\'&>}">b-block__element_modifier</span></div></div>');
+        }
     },
     'document.write': {
         topic:function(){
