@@ -89,9 +89,9 @@
 Итерация по объекту
 
 ```xml
-<fest:script>var itrerate = {"foo": "bar"}</fest:script>
-<fest:for iterate="itrerate" index="i">
-  <fest:value>i</fest:value>=<fest:value>itrerate[i]</fest:value>
+<fest:script>var obj = {"foo": "bar"}</fest:script>
+<fest:for iterate="obj" index="i">
+  <fest:value>i</fest:value>=<fest:value>obj[i]</fest:value>
 </fest:for>
 ```
 
