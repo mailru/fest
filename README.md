@@ -214,7 +214,7 @@ var fest = require('../lib/fest');
 var data = {name: 'Jack "The Ripper"'},
     template = './templates/basic.xml';
 
-var compiled = fest.compile(template, {beatify: false}),
+var compiled = fest.compile(template, {beautify: false}),
     template = (new Function('return ' + compiled))();
 
 console.log(template(data));
