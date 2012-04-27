@@ -50,13 +50,18 @@
 Добавить атрибуты к родительскому тегу. Все ```fest:attribute``` должны быть внутри блока ```fest:attributes```, который должен быть первым внутри тега.
 
 ```xml
-<fest:set name="link">http://mail.ru</fest:set>
 <a>
   <fest:attributes>
-    <fest:attribute name="href"><fest:get name="link"/></fest:attribute>
+    <fest:attribute name="href"><fest:value>json.href</fest:value></fest:attribute>
   </fest:attributes>
   Some link
 </a>
+```
+
+Быстрый способ вставить значение в аттрибут
+
+```xml
+<a href="{json.href}">Some link</a>
 ```
 
 ### fest:value
