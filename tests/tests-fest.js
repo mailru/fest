@@ -81,20 +81,20 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, 'truechoose');
         }
     },
-    'for':{
+    'each':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/for.xml', {}, promise);
+            transform('/templates/each.xml', {}, promise);
             return promise;
         },
         'result':function(result){
             assert.equal(result, 'foo=bar');
         }
     },
-    'foreach':{
+    'for':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/foreach.xml', {items: [1, 2], subitems:[[1, 2], [1, 2]]}, promise);
+            transform('/templates/for.xml', {items: [1, 2], subitems:[[1, 2], [1, 2]]}, promise);
             return promise;
         },
         'result':function(result){
