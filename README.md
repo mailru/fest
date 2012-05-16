@@ -89,29 +89,35 @@
 
 ## Управляющие конструкции
 
-### fest:for
+### fest:each
 
 Итерация по объекту
 
 ```xml
 <fest:script>var obj = {"foo": "bar"}</fest:script>
-<fest:for iterate="obj" index="i">
+<fest:each iterate="obj" index="i">
   <fest:value>i</fest:value>=<fest:value>obj[i]</fest:value>
-</fest:for>
+</fest:each>
+<fest:each iterate="obj" index="i" value="v">
+  <fest:value>i</fest:value>=<fest:value>v</fest:value>
+</fest:each>
 ```
 
-### fest:foreach
+### fest:for
 
 Итерация по массиву или по числовому ряду
 
 ```xml
 <fest:script>json.items = ['a', 'b', 'c']</fest:script>
-<fest:foreach iterate="json.items" index="i">
+<fest:for iterate="json.items" index="i">
   <fest:value>json.items[i]</fest:value>
-</fest:foreach>
-<fest:foreach from="1" to="5" index="i">
+</fest:for>
+<fest:for iterate="json.items" index="i" value="v">
+  <fest:value>v</fest:value>
+</fest:for>
+<fest:for from="1" to="5" index="i">
   <fest:value>i</fest:value>
-</fest:foreach>
+</fest:for>
 ```
 
 ### fest:if

@@ -88,7 +88,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'foo=bar');
+            assert.equal(result, 'foo=barfoo=bar');
         }
     },
     'for':{
@@ -98,8 +98,8 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result.substr(0, 2), '12');
-            assert.equal(result.substr(2, result.length - 1), '0102111245');
+            assert.equal(result.substr(0, 4), '1212');
+            assert.equal(result.substr(4, result.length - 1), '0102111245');
         }
     },
     'script':{
