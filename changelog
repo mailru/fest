@@ -1,3 +1,4 @@
+	* add value attribute in "for" and "each"
 	* foreach deprecated
 	* for === foreach, iterate arrays
 	* each iterate objects
