@@ -242,7 +242,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<div class="b-block" data-amp="&" data-lt="<" data-gt=">" data-apos="\'" data-quot=""" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{<"\'&>}">b-block__element_modifier</span></div></div>1245');
+            assert.equal(result, '<div class="b-block" data-amp="&" data-lt="<" data-gt=">" data-apos="\'" data-quot=""" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{<"\'&>}">b-block__element_modifier</span></div></div>1245<div class="a\nb"></div>');
         }
     },
     'document.write': {

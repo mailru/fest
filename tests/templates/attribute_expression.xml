@@ -38,4 +38,8 @@
     <fest:for iterate="[1,2,3,4,5].filter(function(item){return item !== 3})" index="item" value="value">
         <fest:value>value</fest:value>
     </fest:for>
+
+	<div class="a
+b">
+	</div>
 </fest:template>
