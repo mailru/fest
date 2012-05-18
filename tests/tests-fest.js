@@ -112,6 +112,16 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, '"true""true"');
         }
     },
+    'call':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/call.xml', 'call', promise);
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, 'call');
+        }
+    },
     'insert':{
         topic:function(){
             var promise = new(events.EventEmitter);
