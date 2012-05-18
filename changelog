@@ -1,3 +1,4 @@
+	* added __fest_self = this for blocks
 	* add value attribute in "for" and "each"
 	* foreach deprecated
 	* for === foreach, iterate arrays
