@@ -58,7 +58,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'valuevalue<script/>\\"|\\\'');
+            assert.equal(result, 'valuevalue<script/>\\"|\\\'\\u003Cscript\\/\\u003E');
         }
     },
     'if':{
