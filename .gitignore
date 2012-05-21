@@ -1,6 +1,6 @@
 .settings.xml
 *.fest.js
-bench*
+benchget
 .idea
 *.iml
 out
