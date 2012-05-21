@@ -38,5 +38,7 @@
             <fest:otherwise/>
         </fest:choose>
     </fest:foreach>
+    <fest:set name="nine"><fest:value>this.nine</fest:value>|</fest:set>
+    <fest:get name="nine"/>
     finish
 </fest:template>
