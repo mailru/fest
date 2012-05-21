@@ -1,3 +1,4 @@
+	* auto escape attributes expressions
 	* added __fest_self = this for blocks
 	* add bench test
 	* add value attribute in "for" and "each"

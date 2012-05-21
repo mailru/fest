@@ -7,7 +7,7 @@ function transform(file, json, thisArg, promise, strict, options){
     options = options || null;
     var template = fest.compile(__dirname + file, options);
     template = (new Function('return ' + template))();
-    setTimeout(function(){promise.emit('success', template.call(thisArg || {}, json));}, 0);
+    setTimeout(function(){promise.emit('success', template.call(thisArg, json));}, 0);
 }
 
 vows.describe('Fast tests').addBatch({
