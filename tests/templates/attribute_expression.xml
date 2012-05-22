@@ -20,17 +20,17 @@
         data-quot="{'\&quot;'}"
         data-elcb="{'{{'}"
         data-ercb="{'}}'}"
-        data-lcb="{"
-        data-rcb="}"
+        data-lcb="{{"
+        data-rcb="}}"
         data-ecb="{'{{}}'}"
         data-dcb="{{}}"
         data-crazy="{'{{{{}}{{}}}}'}"
         data-crazy-again="{{{{}}{{}}}}"
-        data-crazy-too="{{}{}}"
+        data-crazy-too="{{}}{{}}"
     >
         <div class="{block}{modifier}" data-has-modifier="{!!(block && modifier)}"/>
-        <div class="{block + element}" data-obj-value="{ {{ 'key': 'value' }}['key'] }" data-obj-json="{{ \&quot;key\&quot;: \&quot;value\&quot; }}">
-            <span class="{'name'}" data-spec-chars="{{&lt;\&quot;\&apos;&amp;&gt;}}" data-espec-chars="{'{{&lt;\&quot;\&apos;&amp;&gt;}}'}">
+        <div class="{block + element}" data-obj-value="{ {{ 'key': 'value' }}['key'] }" data-obj-json="{{ &quot;key&quot;: &quot;value&quot; }}">
+            <span class="{'name'}" data-spec-chars="{{&lt;&quot;&apos;&amp;&gt;}}" data-espec-chars="{'{{&lt;&quot;\&apos;&amp;&gt;}}'}">
                 <fest:get name="modify">{ "block": block, "element": element }</fest:get>
             </span>
         </div>
@@ -39,7 +39,9 @@
         <fest:value>value</fest:value>
     </fest:for>
 
-	<div class="a
-b">
-	</div>
+    <fest:script>
+        var a = 'A';
+        var b = 'B';
+    </fest:script>
+	<div data-lf="a&#x0A;b" data-backslash="\" data-apos="&apos;" data-quot="&quot;" data-block="{a}{" data-block-with-text="}a{b}{{c}}"></div>
 </fest:template>
