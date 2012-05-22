@@ -3,18 +3,18 @@ var fest = require('../lib/fest'),
     events = require('events'),
     assert = require('assert');
 
-function transform(file, json,  promise, strict, options){
+function transform(file, json, thisArg, promise, strict, options){
     options = options || null;
     var template = fest.compile(__dirname + file, options);
     template = (new Function('return ' + template))();
-    setTimeout(function(){promise.emit('success', template(json));}, 0);
+    setTimeout(function(){promise.emit('success', template.call(thisArg, json));}, 0);
 }
 
 vows.describe('Fast tests').addBatch({
     'doctype':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/doctype.xml', {}, promise);
+            transform('/templates/doctype.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -24,7 +24,7 @@ vows.describe('Fast tests').addBatch({
     'text':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/text.xml', {}, promise);
+            transform('/templates/text.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -34,7 +34,7 @@ vows.describe('Fast tests').addBatch({
     'shorttag':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/shorttag.xml', {}, promise);
+            transform('/templates/shorttag.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -44,7 +44,7 @@ vows.describe('Fast tests').addBatch({
     'comment':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/comment.xml', {}, promise);
+            transform('/templates/comment.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -54,17 +54,17 @@ vows.describe('Fast tests').addBatch({
     'value':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/value.xml', {"value":"value"}, promise);
+            transform('/templates/value.xml', {"value":"value"}, {}, promise);
             return promise;
         },
         'result':function(result){
-            assert.equal(result, 'valuevalue<script/>\\"|\\\'');
+            assert.equal(result, 'valuevalue<script/>\\"|\\\'\\u003Cscript\\/\\u003E');
         }
     },
     'if':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/if.xml', {}, promise);
+            transform('/templates/if.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -74,7 +74,7 @@ vows.describe('Fast tests').addBatch({
     'choose':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/choose.xml', {}, promise);
+            transform('/templates/choose.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -84,7 +84,7 @@ vows.describe('Fast tests').addBatch({
     'each':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/each.xml', {}, promise);
+            transform('/templates/each.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -94,7 +94,7 @@ vows.describe('Fast tests').addBatch({
     'for':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/for.xml', {items: [1, 2], subitems:[[1, 2], [1, 2]]}, promise);
+            transform('/templates/for.xml', {items: [1, 2], subitems:[[1, 2], [1, 2]]}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -105,7 +105,7 @@ vows.describe('Fast tests').addBatch({
     'script':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/script.xml', {}, promise);
+            transform('/templates/script.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -115,7 +115,7 @@ vows.describe('Fast tests').addBatch({
     'call':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/call.xml', 'call', promise);
+            transform('/templates/call.xml', 'call', {}, promise);
             return promise;
         },
         'result':function(result){
@@ -125,7 +125,7 @@ vows.describe('Fast tests').addBatch({
     'insert':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/insert.xml', {}, promise);
+            transform('/templates/insert.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -135,7 +135,7 @@ vows.describe('Fast tests').addBatch({
     'use strict':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/strict.xml', {}, promise, true, {debug:true});
+            transform('/templates/strict.xml', {}, {}, promise, true, {debug:true});
             return promise;
         },
         'result':function(result){
@@ -145,11 +145,12 @@ vows.describe('Fast tests').addBatch({
     'blocks':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/blocks.xml', {}, promise);
+            transform('/templates/blocks.xml', {}, {nine: 'nine'}, promise);
             return promise;
         },
         'result':function(result){
             result = result.split('|');
+            assert.equal(result.length, 10);
             assert.equal(result[1], 'one');
             assert.equal(result[2], 'two2');
             assert.equal(result[3], 'three1');
@@ -157,12 +158,13 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result[5], 'six');
             assert.equal(result[6], 'seven');
             assert.equal(result[7], 'eight');
+            assert.equal(result[8], 'nine');
         }
     },
     'params': {
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/params.xml', {}, promise);
+            transform('/templates/params.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -172,7 +174,7 @@ vows.describe('Fast tests').addBatch({
     'include':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/include.xml', {list:[1, 2]}, promise);
+            transform('/templates/include.xml', {list:[1, 2]}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -182,7 +184,7 @@ vows.describe('Fast tests').addBatch({
     'CDATA':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/cdata.xml', {}, promise);
+            transform('/templates/cdata.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -192,7 +194,7 @@ vows.describe('Fast tests').addBatch({
     'setparams': {
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/setparams.xml', {}, promise);
+            transform('/templates/setparams.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -202,7 +204,7 @@ vows.describe('Fast tests').addBatch({
     'attribute': {
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/attribute.xml', {}, promise);
+            transform('/templates/attribute.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -212,7 +214,7 @@ vows.describe('Fast tests').addBatch({
     'first attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
-        transform('/templates/first_attributes.xml', {}, promise, true, {nothrow: true});
+        transform('/templates/first_attributes.xml', {}, {}, promise, true, {nothrow: true});
         return promise;
       },
       'result':function(result) {
@@ -223,14 +225,14 @@ vows.describe('Fast tests').addBatch({
             "6:   <fest:attribute name=\"name\">text1</fest:attribute>",
             "At line 5: fest:attributes must be the first child"
         ].join('\n');
-
+    
         assert.equal(result, res);
       }
     },
     'nested attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
-        transform('/templates/nested_attributes.xml', {}, promise, true, {nothrow: true});
+        transform('/templates/nested_attributes.xml', {}, {}, promise, true, {nothrow: true});
         return promise;
       },
       'result':function(result) {
@@ -241,24 +243,24 @@ vows.describe('Fast tests').addBatch({
             "6:     <fest:attribute name='href'>#</fest:attribute>",
             "At line 5: fest:attributes cannot be nested"
         ].join('\n');
-
+    
         assert.equal(result, res);
       }
     },
     'expression in attribute value': {
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/attribute_expression.xml', {}, promise);
+            transform('/templates/attribute_expression.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<div class="b-block" data-amp="&" data-lt="<" data-gt=">" data-apos="\'" data-quot=""" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{<"\'&>}">b-block__element_modifier</span></div></div>1245');
+            assert.equal(result, '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div class="a\nb"></div>');
         }
     },
     'document.write': {
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/document.xml', {}, promise);
+            transform('/templates/document.xml', {}, {}, promise);
             return promise;
         },
         'result':function(result){
@@ -268,7 +270,7 @@ vows.describe('Fast tests').addBatch({
     'unclosed template': {
         topic:function(){
           var promise = new(events.EventEmitter);
-          transform('/templates/template.xml', {}, promise, true, {nothrow: true});
+          transform('/templates/template.xml', {}, {}, promise, true, {nothrow: true});
           return promise;
         },
         'result':function(result) {
@@ -278,14 +280,14 @@ vows.describe('Fast tests').addBatch({
               "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\">",
               "At line 2: fest:template is not closed"
           ].join('\n');
-
+    
           assert.equal(result, res);
         }
     },
     'errors': {
         topic:function(){
           var promise = new(events.EventEmitter);
-          transform('/templates/errors.xml', null, promise, true, {debug:true});
+          transform('/templates/errors.xml', null, {}, promise, true, {debug:true});
           return promise;
         },
         'result':function(result) {
