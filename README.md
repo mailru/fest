@@ -45,6 +45,28 @@
 <fest:get name="name">{'some': 'data'}</fest:get>
 ```
 
+### fest:element
+
+Вывод ноды с переменным именем
+
+```xml
+<fest:script>
+    var variable = 'table';
+</fest:script>
+<fest:element name="variable" default="div">
+    fest code
+</fest:element>
+<fest:element name="variable2" default="div">
+    fest code
+</fest:element>
+```
+
+Выведет
+
+```xml
+<table>fest code</table><div>fest code</div>
+```
+
 ### fest:attributes, fest:attribute
 
 Добавить атрибуты к родительскому тегу. Все ```fest:attribute``` должны быть внутри блока ```fest:attributes```, который должен быть первым внутри тега.

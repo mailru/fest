@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<fest:script>
+		nameE = true;
+	</fest:script>
+	<fest:script>
+		var name = 'div';
+	</fest:script>
+	<fest:element name="name" default="div">
+        <fest:attributes>
+            <fest:attribute name="class">
+                foo
+                <fest:if test="true">
+                    <fest:text value=" "/>bar
+                </fest:if>
+            </fest:attribute>
+        </fest:attributes>
+    </fest:element>
+
+	<fest:element name="name" default="div">
+        <i />
+    </fest:element>
+
+    <fest:element name="name" default="div">foo</fest:element>
+
+	<fest:script>
+		var name = 'hr';
+	</fest:script>
+	<fest:element name="name" default="xxx"/>
+
+	<fest:script>
+		var name = 'img';
+	</fest:script>
+	<fest:element name="name" default="div">
+		<fest:attributes>
+			<fest:attribute name="src">foo</fest:attribute>
+		</fest:attributes>
+	</fest:element>
+
+	<fest:script>
+		var name1 = 'div';
+		var name2 = 'span';
+		var name3 = 'br';
+		var nameX2 = function(){};
+	</fest:script>
+	<fest:element name="name1" default="div">
+		<fest:element name="name2" default="div">
+			foo
+		</fest:element>
+		bar
+		<fest:element name="name3" default="div"/>
+		<fest:element name="name4" default="img">
+			<fest:attributes>
+				<fest:attribute name="src">foo</fest:attribute>
+			</fest:attributes>
+		</fest:element>
+	</fest:element>
+
+	<fest:element name="nameX" default="noindex"/>
+	<fest:element name="nameX2" default="wbr"/>
+</fest:template>

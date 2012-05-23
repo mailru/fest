@@ -211,6 +211,17 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true"></div><div>foo</div>');
         }
     },
+	'element': {
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			transform('/templates/element.xml', {}, {}, promise, true, {debug:true});
+			return promise;
+		},
+		'result':function(result){
+			assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><img src="foo"/></div><noindex></noindex><wbr/>');
+			//assert.equal(result, '<div></div>');
+		}
+	},
     'first attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
@@ -225,7 +236,7 @@ vows.describe('Fast tests').addBatch({
             "6:   <fest:attribute name=\"name\">text1</fest:attribute>",
             "At line 5: fest:attributes must be the first child"
         ].join('\n');
-    
+
         assert.equal(result, res);
       }
     },
