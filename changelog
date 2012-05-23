@@ -1,3 +1,4 @@
+	* conditional definition of __fest_pushstr deleted
 	* auto escape attributes expressions
 	* added __fest_self = this for blocks
 	* add bench test
