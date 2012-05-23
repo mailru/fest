@@ -1,3 +1,5 @@
+	* escape attributes text values in compiler
+	* auto escape attributes expressions for HTML entities
 	* conditional definition of __fest_pushstr deleted
 	* auto escape attributes expressions
 	* added __fest_self = this for blocks
