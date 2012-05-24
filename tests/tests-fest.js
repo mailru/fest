@@ -235,7 +235,7 @@ vows.describe('Fast tests').addBatch({
             "6:   <fest:attribute name=\"name\">text1</fest:attribute>",
             "At line 5: fest:attributes must be the first child"
         ].join('\n');
-
+    
         assert.equal(result, res);
       }
     },
