@@ -219,7 +219,6 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
-            //assert.equal(result, '<div></div>');
         }
     },
     'first attributes': {
