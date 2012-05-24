@@ -218,7 +218,7 @@ vows.describe('Fast tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><img src="foo"/></div><noindex></noindex><wbr/>');
+			assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
 			//assert.equal(result, '<div></div>');
 		}
 	},

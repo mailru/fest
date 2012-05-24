@@ -53,10 +53,10 @@
 <fest:script>
     var variable = 'table';
 </fest:script>
-<fest:element name="variable" default="div">
+<fest:element name="variable">
     fest code
 </fest:element>
-<fest:element name="variable2" default="div">
+<fest:element name="variable2">
     fest code
 </fest:element>
 ```
