@@ -49,6 +49,7 @@
                     <fest:attribute name="otherwise">true</fest:attribute>
                 </fest:otherwise>
             </fest:choose>
+            <fest:attribute name="&quot;">&quot;</fest:attribute>
         </fest:attributes>
     </div>
     <fest:set name="class">foo</fest:set>

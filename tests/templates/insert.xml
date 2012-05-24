@@ -3,4 +3,7 @@
     <style>
         <fest:insert src="style.css"/>
     </style>
+    <script>
+        <fest:insert src="script.js"/>
+    </script>
 </fest:template>

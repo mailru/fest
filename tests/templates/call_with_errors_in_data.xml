@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:call name="call" data="'"/>
+</fest:template>

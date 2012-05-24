@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:choose>
+        <fest:when test="'">
+            <fest:text>true</fest:text>
+        </fest:when>
+        <fest:otherwise>
+            <fest:text>false</fest:text>
+        </fest:otherwise>
+    </fest:choose>
+</fest:template>
