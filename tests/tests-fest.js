@@ -211,17 +211,17 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true"></div><div>foo</div>');
         }
     },
-	'element': {
-		topic:function(){
-			var promise = new(events.EventEmitter);
-			transform('/templates/element.xml', {}, {}, promise, true, {debug:true});
-			return promise;
-		},
-		'result':function(result){
-			assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
-			//assert.equal(result, '<div></div>');
-		}
-	},
+    'element': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/element.xml', {}, {}, promise, true, {debug:true});
+            return promise;
+        },
+        'result':function(result){
+            assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
+            //assert.equal(result, '<div></div>');
+        }
+    },
     'first attributes': {
       topic:function(){
         var promise = new(events.EventEmitter);
