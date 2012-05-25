@@ -1,1 +1,1 @@
-var include_script = true + '';
+var include_script = true + '\"';

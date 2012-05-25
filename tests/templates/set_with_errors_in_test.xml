@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:text value=" "/>
-    <fest:space/>
-    <fest:text value="\"/>
+    <fest:set name="\" test="'"></fest:set>
 </fest:template>
