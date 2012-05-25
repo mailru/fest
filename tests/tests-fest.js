@@ -128,7 +128,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.include(result, 'At line 3: attribute "index" has SyntaxError: Unexpected number');
+            assert.include(result, 'At line 3: attribute "index" has an invalid identifier');
         }
     },
     'each with syntax errors in value attribute':{
@@ -138,7 +138,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.include(result, 'At line 3: attribute "value" has SyntaxError: Unexpected number');
+            assert.include(result, 'At line 3: attribute "value" has an invalid identifier');
         }
     },
     'for':{
@@ -189,7 +189,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.include(result, 'At line 3: attribute "index" has SyntaxError: Unexpected number');
+            assert.include(result, 'At line 3: attribute "index" has an invalid identifier');
         }
     },
     'for with syntax errors in value attribute':{
@@ -199,7 +199,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.include(result, 'At line 3: attribute "value" has SyntaxError: Unexpected number');
+            assert.include(result, 'At line 3: attribute "value" has an invalid identifier');
         }
     },
     'set with syntax errors in test attribute':{
@@ -471,7 +471,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result) {
-            assert.include(result, 'At line 2: attribute "context_name" has SyntaxError: Unexpected number');
+            assert.include(result, 'At line 2: attribute "context_name" has an invalid identifier');
         }
     },
     'errors': {
