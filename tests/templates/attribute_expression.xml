@@ -43,5 +43,5 @@
         var a = 'A';
         var b = 'B';
     </fest:script>
-	<div data-lf="a&#x0A;b" data-backslash="\" data-apos="&apos;" data-quot="&quot;" data-block="{a}{" data-block-with-text="}a{b}{{c}}"></div>
+	<div data-lf="a&#x0A;&#x0D;b" data-backslash="\" data-apos="&apos;" data-quot="&quot;" data-block="{a}{" data-block-with-text="}a{b}{{c}}"></div>
 </fest:template>
