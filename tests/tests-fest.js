@@ -28,7 +28,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '  ');
+            assert.equal(result, '  \\');
         }
     },
     'shorttag':{
@@ -71,6 +71,16 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, 'truetrue&');
         }
     },
+    'if with syntax errors in test attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/if_with_errors_in_test.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result) {
+            assert.include(result, 'At line 3: attribute "test" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
     'choose':{
         topic:function(){
             var promise = new(events.EventEmitter);
@@ -81,6 +91,16 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, 'truechoose');
         }
     },
+    'choose with syntax errors in when attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/choose_with_errors_in_test.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 4: attribute "test" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
     'each':{
         topic:function(){
             var promise = new(events.EventEmitter);
@@ -89,6 +109,36 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, 'foo=barfoo=bar');
+        }
+    },
+    'each with syntax errors in itarate attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/each_with_errors_in_iterate.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "iterate" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'each with syntax errors in index attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/each_with_errors_in_index.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "index" has an invalid identifier');
+        }
+    },
+    'each with syntax errors in value attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/each_with_errors_in_value.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "value" has an invalid identifier');
         }
     },
     'for':{
@@ -102,6 +152,66 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result.substr(4, result.length - 1), '0102111245');
         }
     },
+    'for with syntax errors in from attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/for_with_errors_in_from.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "from" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'for with syntax errors in to attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/for_with_errors_in_to.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "to" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'for with syntax errors in iterate attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/for_with_errors_in_iterate.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "iterate" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'for with syntax errors in index attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/for_with_errors_in_index.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "index" has an invalid identifier');
+        }
+    },
+    'for with syntax errors in value attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/for_with_errors_in_value.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "value" has an invalid identifier');
+        }
+    },
+    'set with syntax errors in test attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/set_with_errors_in_test.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "test" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
     'script':{
         topic:function(){
             var promise = new(events.EventEmitter);
@@ -109,7 +219,17 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '"true""true"');
+            assert.equal(result, '"true""true&quot;"');
+        }
+    },
+    'script with syntax errors in file':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/script_with_errors_in_file.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'node has SyntaxError: Unexpected number');
         }
     },
     'call':{
@@ -122,6 +242,36 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, 'call');
         }
     },
+    'call with syntax errors in name attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/call_with_errors_in_name.xml', 'call', {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "name" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'call with syntax errors in data attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/call_with_errors_in_data.xml', 'call', {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "data" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
+    'include with syntax errors in context attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/include_with_errors_in_context.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: attribute "context" has SyntaxError: Unexpected token ILLEGAL');
+        }
+    },
     'insert':{
         topic:function(){
             var promise = new(events.EventEmitter);
@@ -129,7 +279,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<style>.foo{ont: 18px/18px "Helvetica Neue", Arial;}\n.bar{\\"\\"}</style>');
+            assert.equal(result, '<style>.foo{ont: 18px/18px "Helvetica Neue", Arial;}\n.bar{\\"\\"}</style><script>var include_script = true + \'\\"\';\n</script>');
         }
     },
     'use strict':{
@@ -208,7 +358,7 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true"></div><div>foo</div>');
+            assert.equal(result, '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true" \"=\"\"\"></div><div>foo</div>');
         }
     },
     'element': {
@@ -219,6 +369,16 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
+        }
+    },
+    'element with syntax errors in name attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/element_with_errors_in_name.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result) {
+            assert.include(result, 'At line 3: attribute "name" has SyntaxError: Unexpected token ILLEGAL');
         }
     },
     'first attributes': {
@@ -235,7 +395,7 @@ vows.describe('Fast tests').addBatch({
             "6:   <fest:attribute name=\"name\">text1</fest:attribute>",
             "At line 5: fest:attributes must be the first child"
         ].join('\n');
-    
+
         assert.equal(result, res);
       }
     },
@@ -253,7 +413,7 @@ vows.describe('Fast tests').addBatch({
             "6:     <fest:attribute name='href'>#</fest:attribute>",
             "At line 5: fest:attributes cannot be nested"
         ].join('\n');
-    
+
         assert.equal(result, res);
       }
     },
@@ -265,6 +425,16 @@ vows.describe('Fast tests').addBatch({
         },
         'result':function(result){
             assert.equal(result, '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div data-lf="a\nb" data-backslash="\\" data-apos="\'" data-quot=""" data-block="A" data-block-with-text="aB{c}"></div>');
+        }
+    },
+    'expression in attribute value with syntax errors': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/attribute_expression_with_errors.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 3: expression #1 in attribute "class" has SyntaxError: Unexpected token ILLEGAL');
         }
     },
     'document.write': {
@@ -290,8 +460,18 @@ vows.describe('Fast tests').addBatch({
               "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\">",
               "At line 2: fest:template is not closed"
           ].join('\n');
-    
+
           assert.equal(result, res);
+        }
+    },
+    'template with syntax errors in context_name attribute':{
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/template_with_errors_in_context_name.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result) {
+            assert.include(result, 'At line 2: attribute "context_name" has an invalid identifier');
         }
     },
     'errors': {
