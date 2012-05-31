@@ -3,7 +3,7 @@
     <fest:script>
         var name = 'div';
     </fest:script>
-    <fest:element name="name">
+    <fest:element select="name">
         <fest:attributes>
             <fest:attribute name="class">
                 foo
@@ -14,21 +14,21 @@
         </fest:attributes>
     </fest:element>
 
-    <fest:element name="name">
+    <fest:element select="name">
         <i />
     </fest:element>
 
-    <fest:element name="name">foo</fest:element>
+    <fest:element select="name">foo</fest:element>
 
     <fest:script>
         var name = 'hr';
     </fest:script>
-    <fest:element name="name"/>
+    <fest:element select="name"/>
 
     <fest:script>
         var name = 'img';
     </fest:script>
-    <fest:element name="name">
+    <fest:element select="name">
         <fest:attributes>
             <fest:attribute name="src">foo</fest:attribute>
         </fest:attributes>
@@ -40,20 +40,20 @@
         var name3 = 'br';
         var nameX2 = function(){};
     </fest:script>
-    <fest:element name="name1">
-        <fest:element name="name2">
+    <fest:element select="name1">
+        <fest:element select="name2">
             foo
         </fest:element>
         bar
-        <fest:element name="name3"/>
-        <fest:element name="name4">
+        <fest:element select="name3"/>
+        <fest:element select="name4">
             <fest:attributes>
                 <fest:attribute name="class">foo</fest:attribute>
             </fest:attributes>
         </fest:element>
     </fest:element>
 
-    <fest:element name="nameX"/>
-    <fest:element name="nameX2"/>
+    <fest:element select="nameX"/>
+    <fest:element select="nameX2"/>
 
 </fest:template>

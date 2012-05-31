@@ -40,5 +40,21 @@
     </fest:foreach>
     <fest:set name="&quot;"><fest:value>this.nine</fest:value>|</fest:set>
     <fest:get name="&quot;"/>
+
+    <fest:script>
+        var name="ten";
+    </fest:script>
+    <fest:get select="name"/>
+    <fest:set name="ten">ten|</fest:set>
+
+    <fest:set name="block">
+        <fest:get select="params.callback">params.data</fest:get>
+    </fest:set>
+
+    <fest:set name="block2">
+        <fest:value>params.text</fest:value>|
+    </fest:set>
+
+    <fest:get name="block">{callback: "block2", data: {text: "eleven"}}</fest:get>
     finish
 </fest:template>

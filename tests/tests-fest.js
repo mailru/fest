@@ -299,8 +299,9 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
+            console.log(result);
             result = result.split('|');
-            assert.equal(result.length, 10);
+            assert.equal(result.length, 12);
             assert.equal(result[1], 'one');
             assert.equal(result[2], 'two2');
             assert.equal(result[3], 'three1');
@@ -309,6 +310,8 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result[6], 'seven');
             assert.equal(result[7], 'eight');
             assert.equal(result[8], 'nine');
+            assert.equal(result[9], 'ten');
+            assert.equal(result[10], 'eleven');
         }
     },
     'params': {
@@ -371,14 +374,14 @@ vows.describe('Fast tests').addBatch({
             assert.equal(result, '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div>');
         }
     },
-    'element with syntax errors in name attribute':{
+    'element with syntax errors in select attribute':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/element_with_errors_in_name.xml', {}, {}, promise, true, {nothrow: true});
+            transform('/templates/element_with_errors_in_select.xml', {}, {}, promise, true, {nothrow: true});
             return promise;
         },
         'result':function(result) {
-            assert.include(result, 'At line 3: attribute "name" has SyntaxError: Unexpected token ILLEGAL');
+            assert.include(result, 'At line 3: attribute "select" has SyntaxError: Unexpected token ILLEGAL');
         }
     },
     'first attributes': {

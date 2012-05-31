@@ -53,10 +53,10 @@
 <fest:script>
     var variable = 'table';
 </fest:script>
-<fest:element name="variable">
+<fest:element select="variable">
     fest code
 </fest:element>
-<fest:element name="variable2">
+<fest:element select="variable2">
     fest code
 </fest:element>
 ```
@@ -296,11 +296,11 @@ foreach.xml (основной шаблон)
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
-  <!-- Контекст можно передавать во вложенные шаблоны -->
-  <fest:include context_name="json" src="./person.xml"/>
+    <!-- Контекст можно передавать во вложенные шаблоны -->
+    <fest:include context_name="json" src="./person.xml"/>
 
-  <!-- Значением iterate может быть любое js-выражение -->
-  <fest:foreach iterate="json.people.reverse()" index="i">
+    <!-- Значением iterate может быть любое js-выражение -->
+    <fest:foreach iterate="json.people.reverse()" index="i">
 
     <!-- Передаваемые значения будут доступны в контексте params -->
     <fest:get name="person">json.people[i]</fest:get>
