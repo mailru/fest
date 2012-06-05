@@ -8,7 +8,6 @@ function transform(file, json, thisArg, promise, strict, options){
     var template = fest.compile(__dirname + file, options);
     template = (new Function('return ' + template))();
     setTimeout(function(){promise.emit('success', template.call(thisArg, json));}, 0);
-    return template;
 }
 
 vows.describe('Fast tests').addBatch({
@@ -487,14 +486,25 @@ vows.describe('Fast tests').addBatch({
           assert.equal(result, '');
         }
     },
+    'nested set blocks': {
+        topic:function(){
+            var promise = new(events.EventEmitter);
+            transform('/templates/set_nested.xml', {}, {}, promise, true, {nothrow: true});
+            return promise;
+        },
+        'result':function(result){
+            assert.include(result, 'At line 5: fest:set cannot be nested');
+        }
+    },
     'useless set blocks': {
         topic:function(){
             return fest.compile(__dirname + '/templates/useless_set.xml');
         },
         'result':function(result){
+            assert.isTrue(result.indexOf('__fest_blocks.foo') > -1);
             assert.isTrue(result.indexOf('__fest_blocks.bar') == -1);
-            assert.isTrue(result.indexOf('__fest_blocks.baz') > -1);
-            assert.isTrue(result.indexOf('__fest_blocks.bax') == -1);
+            assert.isTrue(result.indexOf('__fest_blocks.baz') == -1);
+            assert.isTrue(result.indexOf('__fest_blocks.qux') == -1);
         }
     },
     'useless set blocks when get block with select is defined': {
@@ -502,9 +512,10 @@ vows.describe('Fast tests').addBatch({
             return fest.compile(__dirname + '/templates/useless_set_select.xml');
         },
         'result':function(result){
+            assert.isTrue(result.indexOf('__fest_blocks.foo') > -1);
             assert.isTrue(result.indexOf('__fest_blocks.bar') > -1);
             assert.isTrue(result.indexOf('__fest_blocks.baz') > -1);
-            assert.isTrue(result.indexOf('__fest_blocks.bax') > -1);
+            assert.isTrue(result.indexOf('__fest_blocks.qux') > -1);
         }
     }
 }).run();
