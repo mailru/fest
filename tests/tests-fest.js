@@ -506,5 +506,5 @@ vows.describe('Fast tests').addBatch({
             assert.isTrue(result.indexOf('__fest_blocks.baz') > -1);
             assert.isTrue(result.indexOf('__fest_blocks.bax') > -1);
         }
-    },
+    }
 }).run();

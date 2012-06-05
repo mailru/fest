@@ -2,7 +2,7 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
     <fest:set name="quz">
         quz
-        <fest:set name="bax"> <!-- useless because "bar" is useless -->
+        <fest:set name="bax"> <!-- useless because "quz" is useless -->
             bax
         </fest:set>
     </fest:set>
