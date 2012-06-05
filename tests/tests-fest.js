@@ -8,6 +8,7 @@ function transform(file, json, thisArg, promise, strict, options){
     var template = fest.compile(__dirname + file, options);
     template = (new Function('return ' + template))();
     setTimeout(function(){promise.emit('success', template.call(thisArg, json));}, 0);
+    return template;
 }
 
 vows.describe('Fast tests').addBatch({
@@ -299,7 +300,6 @@ vows.describe('Fast tests').addBatch({
             return promise;
         },
         'result':function(result){
-            console.log(result);
             result = result.split('|');
             assert.equal(result.length, 12);
             assert.equal(result[1], 'one');
@@ -486,5 +486,25 @@ vows.describe('Fast tests').addBatch({
         'result':function(result) {
           assert.equal(result, '');
         }
-    }
+    },
+    'useless set blocks': {
+        topic:function(){
+            return fest.compile(__dirname + '/templates/useless_set.xml');
+        },
+        'result':function(result){
+            assert.isTrue(result.indexOf('__fest_blocks.bar') == -1);
+            assert.isTrue(result.indexOf('__fest_blocks.baz') > -1);
+            assert.isTrue(result.indexOf('__fest_blocks.bax') == -1);
+        }
+    },
+    'useless set blocks when get block with select is defined': {
+        topic:function(){
+            return fest.compile(__dirname + '/templates/useless_set_select.xml');
+        },
+        'result':function(result){
+            assert.isTrue(result.indexOf('__fest_blocks.bar') > -1);
+            assert.isTrue(result.indexOf('__fest_blocks.baz') > -1);
+            assert.isTrue(result.indexOf('__fest_blocks.bax') > -1);
+        }
+    },
 }).run();
