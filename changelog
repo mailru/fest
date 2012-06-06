@@ -1,3 +1,4 @@
+        * set/get optimizations
 	* rename name in fest:element to select
 	* add select in fest:get
 	* fest:element added
