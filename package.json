@@ -1,16 +1,23 @@
 {
-  "author": "Andrew Sumin <AndrewSumin@gmail.com> (http://jsx.ru/)",
-  "name": "fest",
-  "description": "JS Templates",
-  "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/AndrewSumin/Fest.git"
-  },
-  "main": "./lib/fest",
-  "engines": {
-    "node": "*"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+    "name": "fest",
+    "description": "JS Templates",
+    "keywords": ["template", "templating", "html", "xml"],
+    "version": "0.3.0",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/mailru/fest.git"
+    },
+    "author": "Andrew Sumin <AndrewSumin@gmail.com> (http://jsx.ru/)",
+    "contributors": [
+        "Anton Eprev <a.eprev@gmail.com> (http://eprev.me)",
+        "Lebedev Konstantin <bnrubaxa@gmail.com>",
+        "Max Maximov <max.maximov@gmail.com> (http://maxmaximov.com)",
+        "Artem Tyurin <artem.tyurin@corp.mail.ru>"
+    ],
+    "main": "./lib/fest",
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {},
+    "devDependencies": {}
 }
