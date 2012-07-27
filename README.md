@@ -239,10 +239,16 @@ HTML комментарий
 
 # Примеры
 
+## Установка
+
+```
+npm install fest
+```
+
 ## Как использовать
 
 ```javascript
-var fest = require('../lib/fest');
+var fest = require('fest');
 
 var data = {name: 'Jack "The Ripper"'},
     template = './templates/basic.xml';
