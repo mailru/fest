@@ -1,5 +1,11 @@
 # Fest
 
+## Установка
+
+```
+npm install fest
+```
+
 ## Данные и вывод
 
 ### fest:set
