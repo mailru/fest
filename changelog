@@ -1,3 +1,5 @@
+v 0.3.1
+	* fix js escape inside html script tag
 v 0.3.0
 	* make package.json
 	* escape <fest:value> inside <script> with jsEscape by default
