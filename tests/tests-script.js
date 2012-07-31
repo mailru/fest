@@ -11,7 +11,7 @@ vows.describe('Fest tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '"true""true\\""');
+            assert.equal(result, '"true""true&quot;"');
         }
     },
     'script with syntax errors in file':{
