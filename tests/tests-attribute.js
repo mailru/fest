@@ -43,7 +43,7 @@ vows.describe('Fest tests').addBatch({
             __dirname + "/templates/nested_attributes.xml",
             "4: <fest:attributes>",
             "5:   <fest:attributes>",
-            "6:     <fest:attribute name='href'>#</fest:attribute>",
+            "6:     <fest:attribute name=\"href\">#</fest:attribute>",
             "At line 5: fest:attributes cannot be nested"
         ].join('\n');
 

@@ -3,7 +3,7 @@
   <a>
   <fest:attributes>
     <fest:attributes>
-      <fest:attribute name='href'>#</fest:attribute>
+      <fest:attribute name="href">#</fest:attribute>
     </fest:attributes>
   </fest:attributes>
   </a>
