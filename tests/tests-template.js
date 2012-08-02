@@ -14,7 +14,7 @@ vows.describe('Fest tests').addBatch({
           var res = [
               __dirname + "/templates/template.xml",
               "1: <?xml version=\"1.0\"?>",
-              "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\">",
+              "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\"",
               "At line 2: fest:template is not closed"
           ].join('\n');
 
