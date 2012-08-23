@@ -1,5 +1,6 @@
-    * render() in fest API
-    * fest-watch and fest-proxy commands
+	* copy watch.js to build.js, watch.js will be demonized in future
+	* render() in fest API
+	* fest-watch and fest-proxy commands
 	* not recursive and named templates added to watch
 v 0.3.1
 	* fix js escape inside html script tag
