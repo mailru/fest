@@ -239,10 +239,18 @@ HTML комментарий
 
 # Примеры
 
+## Установка
+
+```
+npm install fest
+```
+
 ## Как использовать
 
+compile():
+
 ```javascript
-var fest = require('../lib/fest');
+var fest = require('fest');
 
 var data = {name: 'Jack "The Ripper"'},
     template = './templates/basic.xml';
@@ -252,6 +260,18 @@ var compiled = fest.compile(template, {beautify: false}),
 
 console.log(template(data));
 ```
+
+render():
+
+```javascript
+var fest = require('fest');
+
+var data = {name: 'Jack "The Ripper"'},
+    template = './templates/basic.xml';
+
+console.log(fest.render(template, data, {beautify: false}));
+```
+
 
 basic.xml
 
