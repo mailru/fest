@@ -22,7 +22,7 @@ vows.describe('Fest tests').addBatch({
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '|text1||text2||text3||text4|');
+            assert.equal(result, '|text1||text2||text3||text4||set in inner|');
         }
     },
     'nested set blocks': {

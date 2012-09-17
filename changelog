@@ -1,26 +1,28 @@
-	* copy watch.js to build.js, watch.js will be demonized in future
-	* render() in fest API
-	* fest-watch and fest-proxy commands
-	* not recursive and named templates added to watch
+    * wrapping fest:include in a closure
+    * improved the performance of escape functions
+    * copy watch.js to build.js, watch.js will be demonized in future
+    * render() in fest API
+    * fest-watch and fest-proxy commands
+    * not recursive and named templates added to watch
 v 0.3.1
-	* fix js escape inside html script tag
+    * fix js escape inside html script tag
 v 0.3.0
-	* make package.json
-	* escape <fest:value> inside <script> with jsEscape by default
-	* sync watch.js and proxy.js formats
-	* set/get optimizations
-	* rename name in fest:element to select
-	* add select in fest:get
-	* fest:element added
+    * make package.json
+    * escape <fest:value> inside <script> with jsEscape by default
+    * sync watch.js and proxy.js formats
+    * set/get optimizations
+    * rename name in fest:element to select
+    * add select in fest:get
+    * fest:element added
 v 0.2.0
-	* escape attributes text values in compiler
-	* auto escape attributes expressions for HTML entities
-	* conditional definition of __fest_pushstr deleted
-	* added __fest_self = this for blocks
-	* add bench test
-	* add value attribute in "for" and "each"
-	* foreach deprecated
-	* for === foreach, iterate arrays
-	* each iterate objects
+    * escape attributes text values in compiler
+    * auto escape attributes expressions for HTML entities
+    * conditional definition of __fest_pushstr deleted
+    * added __fest_self = this for blocks
+    * add bench test
+    * add value attribute in "for" and "each"
+    * foreach deprecated
+    * for === foreach, iterate arrays
+    * each iterate objects
 
 v 0.1.0

@@ -7,11 +7,11 @@ vows.describe('Fest tests').addBatch({
     'include':{
         topic:function(){
             var promise = new(events.EventEmitter);
-            transform('/templates/include.xml', {list:[1, 2]}, {}, promise);
+            transform('/templates/include.xml', {list:[[1, 2, 3], [4, 5, 6]]}, {}, promise);
             return promise;
         },
         'result':function(result){
-            assert.equal(result, '12');
+            assert.equal(result, '123456');
         }
     },
     'include with syntax errors in context attribute':{
