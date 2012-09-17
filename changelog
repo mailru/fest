@@ -1,4 +1,6 @@
 	* replace spaces to tabs
+	* wrapping fest:include in a closure
+	* improved the performance of escape functions
 	* copy watch.js to build.js, watch.js will be demonized in future
 	* render() in fest API
 	* fest-watch and fest-proxy commands

@@ -11,4 +11,8 @@
 
 	<fest:get name="one">{text:'text4'}</fest:get>
 	<fest:set name="one">|<fest:value>params.text</fest:value>|</fest:set>
+
+	<fest:set name="two">|<fest:value>params.text</fest:value>main|</fest:set>
+	<fest:get name="two">{text:'set in '}</fest:get>
+	<fest:include src="setparams_inner.xml" context="{}" />
 </fest:template>
