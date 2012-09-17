@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:include context="json.list" src="./include_foreach.xml"/>
-    <fest:include context="json.list" src="./nofile.xml"/>
+	<fest:include context="json.list" src="./include_foreach.xml"/>
+	<fest:include context="json.list" src="./nofile.xml"/>
 </fest:template>

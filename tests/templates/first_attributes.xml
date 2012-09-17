@@ -1,24 +1,22 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-<input>
-  text
-  <fest:attributes>
-    <fest:attribute name="name">text1</fest:attribute>
-  </fest:attributes>
-</input>
+	<input>
+		text
+		<fest:attributes>
+			<fest:attribute name="name">text1</fest:attribute>
+		</fest:attributes>
+	</input>
 
-<a>
-  <b>text</b>
-  <fest:attributes>
-    <fest:attribute name="name"><![CDATA[<text1>]]></fest:attribute>
-  </fest:attributes>
-</a>
+	<a>
+		<b>text</b>
+		<fest:attributes>
+			<fest:attribute name="name"><![CDATA[<text1>]]></fest:attribute>
+		</fest:attributes>
+	</a>
 
-<button>
-  <fest:attributes>
-    <fest:attribute name="name">btn</fest:attribute>
-  </fest:attributes>
-</button>
-
-
+	<button>
+		<fest:attributes>
+			<fest:attribute name="name">btn</fest:attribute>
+		</fest:attributes>
+	</button>
 </fest:template>

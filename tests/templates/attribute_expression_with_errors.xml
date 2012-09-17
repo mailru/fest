@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <div class="{'}"></div>
+	<div class="{'}"></div>
 </fest:template>

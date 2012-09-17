@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:set name="list">
-        <div class="messagelist-wrapper">
-            <div class="messagelist messagelist_simple">
-                <fest:for iterate="json.messages" index="_m" value="message">
-                    <div id="msglist-{message.Id}" class="js-msg messageline ">
-                        <label class="messageline__checkbox">
-                    		<input title="выбрать" type="checkbox" name="id" value="{message.Id}" id="chb13208443130000000461"/>
-                    	</label>
-                    	<span class="js-ico messageline__status">
-                            <i class="messageline__status__icon icon icon_message-status icon_message-status_0" title=""></i>
-                        </span>
-                    	<span class="js-flag messageline__flag">
-                    		<i class="js-flag-icon messageline__flag__icon icon icon_message-flag  " title="пометить флажком"></i>
-                    	</span>
-                    	<span class="js-attach messageline__attach">
-                            <span class="js-attach-icon messageline__attach__icon icon icon_attach"></span>
-                            <span class="messageline__attach__arrow"></span>
-                        </span>
-                    	<span class="messageline__body">
-                    		<span class="messageline__microformat-buttons"></span>
-                    		<a  class="messageline__body__link"
-                                rel="history"
-                                href="/cgi-bin/readmsg?id={message.Id}&amp;folder={message.FolderId}"
-                                title="{message.From}">
-                                <i class="messageline__picture"></i>
-                                <span class="messageline__body__name" title="{message.From}">
-                                    <fest:value>message.From</fest:value>
-                                </span>
-                    			<span class="messageline__body__subject" title="{message.Subject}">
-                                    <fest:value>message.Subject</fest:value>
-                                </span>
-                    			<span class="messageline__body__text"></span>
-                                <span class="messageline__date"
-                                    title="{message.DateUTS}">
-                                    <fest:value>message.Date</fest:value>
-                                </span>
-                    			<i class="messageline__fade messageline__fade_name"></i>
-                    			<i class="messageline__fade messageline__fade_date"></i>
-                    		</a>
-                    	</span>
-                    </div>
-                </fest:for>
-            </div>
-        </div>
-    </fest:set>
+	<fest:set name="list">
+		<div class="messagelist-wrapper">
+			<div class="messagelist messagelist_simple">
+				<fest:for iterate="json.messages" index="_m" value="message">
+					<div id="msglist-{message.Id}" class="js-msg messageline ">
+						<label class="messageline__checkbox">
+							<input title="выбрать" type="checkbox" name="id" value="{message.Id}" id="chb13208443130000000461"/>
+						</label>
+						<span class="js-ico messageline__status">
+							<i class="messageline__status__icon icon icon_message-status icon_message-status_0" title=""></i>
+						</span>
+						<span class="js-flag messageline__flag">
+							<i class="js-flag-icon messageline__flag__icon icon icon_message-flag  " title="пометить флажком"></i>
+						</span>
+						<span class="js-attach messageline__attach">
+							<span class="js-attach-icon messageline__attach__icon icon icon_attach"></span>
+							<span class="messageline__attach__arrow"></span>
+						</span>
+						<span class="messageline__body">
+							<span class="messageline__microformat-buttons"></span>
+							<a	class="messageline__body__link"
+								rel="history"
+								href="/cgi-bin/readmsg?id={message.Id}&amp;folder={message.FolderId}"
+								title="{message.From}">
+								<i class="messageline__picture"></i>
+								<span class="messageline__body__name" title="{message.From}">
+									<fest:value>message.From</fest:value>
+								</span>
+								<span class="messageline__body__subject" title="{message.Subject}">
+									<fest:value>message.Subject</fest:value>
+								</span>
+								<span class="messageline__body__text"></span>
+								<span class="messageline__date"
+									title="{message.DateUTS}">
+									<fest:value>message.Date</fest:value>
+								</span>
+								<i class="messageline__fade messageline__fade_name"></i>
+								<i class="messageline__fade messageline__fade_date"></i>
+							</a>
+						</span>
+					</div>
+				</fest:for>
+			</div>
+		</div>
+	</fest:set>
 </fest:template>
