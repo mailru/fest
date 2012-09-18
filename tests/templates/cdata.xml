@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <script>
-        <fest:cdata>
-            <![CDATA[alert ("2" < 3);]]>
-        </fest:cdata>
-    </script>
+	<script>
+		<fest:cdata>
+			<![CDATA[alert ("2" < 3);]]>
+		</fest:cdata>
+	</script>
 </fest:template>

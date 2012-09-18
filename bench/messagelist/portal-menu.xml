@@ -1,83 +1,80 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:set name="headline-menu">
-    <div class="portal-menu  portal-menu_mail">
-        <div class="portal-menu__width">
-    		<div class="portal-menu__logo__mailru">
-    	<a href="/" class="portal-menu__logo__mailru__link">
-    		<img class="portal-menu__logo__mailru__link_img" src="http://img.imgsmail.ru/r/portal/portal-menu/logo-mailru.png" width="142" height="30" alt="mail.ru"/>
-    	</a>
-    </div>
+	<fest:set name="headline-menu">
+		<div class="portal-menu	 portal-menu_mail">
+			<div class="portal-menu__width">
+				<div class="portal-menu__logo__mailru">
+					<a href="/" class="portal-menu__logo__mailru__link">
+						<img class="portal-menu__logo__mailru__link_img" src="http://img.imgsmail.ru/r/portal/portal-menu/logo-mailru.png" width="142" height="30" alt="mail.ru"/>
+					</a>
+				</div>
 
-			<div class="portal-menu__buttons" id="ddbuttons">
-	<div class="portal-menu__buttons__item">
-		<span class="dd-sentmsg portal-menu__buttons__cont">
-			<a class="portal-menu__buttons__link portal-menu__buttons__link_mail portal-menu__buttons__link_mail_send" href="/cgi-bin/sentmsg?compose" onmousedown="__rc(this, 8984);" rel="history" id="HeaderBtnSentMsg">
-				Написать
-			</a>
-		</span>
-	</div>
-	<div class="portal-menu__buttons__item">
-		<span class="dd-msglist portal-menu__buttons__cont">
-			<a class="portal-menu__buttons__link  portal-menu__buttons__link_mail portal-menu__buttons__link_mail_reload" href="http://e.mail.ru/cgi-bin/msglist?folder=0" onmousedown="__rc(this, 8985);" rel="history" id="HeaderBtnCheckNewMsg">
-				Проверить
-			</a>
-		</span>
-	</div>
-	<div class="portal-menu__buttons__item">
-		<span class="dd-addressbook portal-menu__buttons__cont">
-			<a class="portal-menu__buttons__link portal-menu__buttons__link_mail portal-menu__buttons__link_mail_addressbook" href="/cgi-bin/addressbook" onmousedown="__rc(this, 8986);">
-				Адреса
-			</a>
-		</span>
-	</div>
-	<div class="portal-menu__buttons__item" id="portal-menu__dropdown">
-		<span class="js-link portal-menu__buttons__cont" id="portal-menu__buttons__cont">
-			<a class="portal-menu__buttons__link  portal-menu__buttons__link_mail portal-menu__buttons__link_mail_more" href="#">
-				Ещё
-			</a>
-		</span>
-		<div class="js-menu portal-menu__dropdown" style="display: none; ">
-
-				<!--[if gte IE 7]><!-->
-					<div class="portal-menu__dropdown__list__item">
-						<a class="portal-menu__dropdown__list__link" href="/cgi-bin/themes" onmousedown="__rc(this, 9689);">
-							<span class="portal-menu__dropdown__list__text">Темы<span class="marker marker_new">new</span></span>
-						</a>
+				<div class="portal-menu__buttons" id="ddbuttons">
+					<div class="portal-menu__buttons__item">
+						<span class="dd-sentmsg portal-menu__buttons__cont">
+							<a class="portal-menu__buttons__link portal-menu__buttons__link_mail portal-menu__buttons__link_mail_send" href="/cgi-bin/sentmsg?compose" onmousedown="__rc(this, 8984);" rel="history" id="HeaderBtnSentMsg">
+								Написать
+							</a>
+						</span>
 					</div>
-				<!--<![endif]-->
+					<div class="portal-menu__buttons__item">
+						<span class="dd-msglist portal-menu__buttons__cont">
+							<a class="portal-menu__buttons__link  portal-menu__buttons__link_mail portal-menu__buttons__link_mail_reload" href="http://e.mail.ru/cgi-bin/msglist?folder=0" onmousedown="__rc(this, 8985);" rel="history" id="HeaderBtnCheckNewMsg">
+								Проверить
+							</a>
+						</span>
+					</div>
+					<div class="portal-menu__buttons__item">
+						<span class="dd-addressbook portal-menu__buttons__cont">
+							<a class="portal-menu__buttons__link portal-menu__buttons__link_mail portal-menu__buttons__link_mail_addressbook" href="/cgi-bin/addressbook" onmousedown="__rc(this, 8986);">
+								Адреса
+							</a>
+						</span>
+					</div>
+					<div class="portal-menu__buttons__item" id="portal-menu__dropdown">
+						<span class="js-link portal-menu__buttons__cont" id="portal-menu__buttons__cont">
+							<a class="portal-menu__buttons__link  portal-menu__buttons__link_mail portal-menu__buttons__link_mail_more" href="#">
+								Ещё
+							</a>
+						</span>
+						<div class="js-menu portal-menu__dropdown" style="display: none; ">
+							<!--[if gte IE 7]><!-->
+								<div class="portal-menu__dropdown__list__item">
+									<a class="portal-menu__dropdown__list__link" href="/cgi-bin/themes" onmousedown="__rc(this, 9689);">
+										<span class="portal-menu__dropdown__list__text">Темы<span class="marker marker_new">new</span></span>
+									</a>
+								</div>
+							<!--<![endif]-->
 
-			<div class="portal-menu__dropdown__list__item">
-				<a class="portal-menu__dropdown__list__link" href="/cgi-bin/options" onmousedown="__rc(this, 8987);">
-					<span class="portal-menu__dropdown__list__text">Настройки</span>
-				</a>
-			</div>
-			<div class="portal-menu__dropdown__list__item">
-				<a class="portal-menu__dropdown__list__link" href="/cgi-bin/view_organizer" target="_blank" onmousedown="__rc(this, 8988);">
-					<span class="portal-menu__dropdown__list__text">Ежедневник</span>
-				</a>
-			</div>
-			<div class="portal-menu__dropdown__list__item">
-				<a class="portal-menu__dropdown__list__link" href="http://my.mail.ru/community/mailru/" target="_blank" onmousedown="__rc(this, 9063);">
-					<span class="portal-menu__dropdown__list__text">Сообщество</span>
-				</a>
-			</div>
-			<div class="portal-menu__dropdown__list__item">
-				<a class="portal-menu__dropdown__list__link" href="http://help.mail.ru/mail-help" target="_blank" onmousedown="__rc(this, 8990);">
-					<span class="portal-menu__dropdown__list__text">Помощь</span>
-				</a>
+							<div class="portal-menu__dropdown__list__item">
+								<a class="portal-menu__dropdown__list__link" href="/cgi-bin/options" onmousedown="__rc(this, 8987);">
+									<span class="portal-menu__dropdown__list__text">Настройки</span>
+								</a>
+							</div>
+							<div class="portal-menu__dropdown__list__item">
+								<a class="portal-menu__dropdown__list__link" href="/cgi-bin/view_organizer" target="_blank" onmousedown="__rc(this, 8988);">
+									<span class="portal-menu__dropdown__list__text">Ежедневник</span>
+								</a>
+							</div>
+							<div class="portal-menu__dropdown__list__item">
+								<a class="portal-menu__dropdown__list__link" href="http://my.mail.ru/community/mailru/" target="_blank" onmousedown="__rc(this, 9063);">
+									<span class="portal-menu__dropdown__list__text">Сообщество</span>
+								</a>
+							</div>
+							<div class="portal-menu__dropdown__list__item">
+								<a class="portal-menu__dropdown__list__link" href="http://help.mail.ru/mail-help" target="_blank" onmousedown="__rc(this, 8990);">
+									<span class="portal-menu__dropdown__list__text">Помощь</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="portal-menu__banner" id="header__banner">
+				</div>
+				<!-- Количество показов новой шапки -->
+				<script type="text/javascript">new Image().src = 'http://rs.mail.ru/d413519.gif?' + Math.random();</script>
+				<noscript><img src="http://rs.mail.ru/d413519.gif?1583319330" alt="" style="position: absolute;" width="1" height="1"/></noscript>
 			</div>
 		</div>
-	</div>
-</div>
-			<div class="portal-menu__banner" id="header__banner">
-
-</div>
-<!-- Количество показов новой шапки -->
-<script type="text/javascript">new Image().src = 'http://rs.mail.ru/d413519.gif?' + Math.random();</script>
-<noscript><img src="http://rs.mail.ru/d413519.gif?1583319330" alt="" style="position: absolute;" width="1" height="1"/></noscript>
-
-	</div>
-</div>
-    </fest:set>
+	</fest:set>
 </fest:template>

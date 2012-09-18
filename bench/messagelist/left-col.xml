@@ -1,11 +1,11 @@
 <?xml varsion="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:include src="folders.xml"/>
-    <fest:set name="left-col">
-        <div class="page__leftcol">
-            <div id="leftcol__msglist" class="leftcol">
-                <fest:get name="folders"/>
-            </div>
-        </div>
-    </fest:set>
+	<fest:include src="folders.xml"/>
+	<fest:set name="left-col">
+		<div class="page__leftcol">
+			<div id="leftcol__msglist" class="leftcol">
+				<fest:get name="folders"/>
+			</div>
+		</div>
+	</fest:set>
 </fest:template>

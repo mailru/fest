@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:for iterate="json.items" index="i">
-        <fest:value>json.items[i]</fest:value>
-    </fest:for>
-    <fest:for iterate="json.items" index="i" value="v">
-        <fest:value>v</fest:value>
-    </fest:for>
-    <fest:for iterate="json.subitems" index="i">
-        <fest:for iterate="json.subitems[i]" index="j">
-            <fest:value>i</fest:value><fest:value>json.subitems[i][j]</fest:value>
-        </fest:for>
-    </fest:for>
-    <fest:for from="4" to="5" index="i">
-        <fest:value>i</fest:value>
-    </fest:for>
+	<fest:for iterate="json.items" index="i">
+		<fest:value>json.items[i]</fest:value>
+	</fest:for>
+	<fest:for iterate="json.items" index="i" value="v">
+		<fest:value>v</fest:value>
+	</fest:for>
+	<fest:for iterate="json.subitems" index="i">
+		<fest:for iterate="json.subitems[i]" index="j">
+			<fest:value>i</fest:value><fest:value>json.subitems[i][j]</fest:value>
+		</fest:for>
+	</fest:for>
+	<fest:for from="4" to="5" index="i">
+		<fest:value>i</fest:value>
+	</fest:for>
 </fest:template>
