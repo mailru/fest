@@ -1,3 +1,6 @@
+v 0.3.2
+	* fix opera
+	* fix each for objects with chenged prototype
 	* replace spaces to tabs
 	* wrapping fest:include in a closure
 	* improved the performance of escape functions
