@@ -39,7 +39,15 @@
 <fest:get name="name"/>
 ```
 
-
+Если указать тег select, то выражение внутри выполнится и результирующая строка будет именем блока set.
+```xml
+<fest:script>
+    var name = 'foo'
+</fest:srcipt>
+<fest:get select="name"/>
+<fest:set name="foo">foo</fest:set>
+<fest:set name="bar">bar</fest:set>
+```
 
 ```xml
 <fest:get name="name">{'some': 'data'}</fest:get>
