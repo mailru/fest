@@ -1,3 +1,5 @@
+	* add support to compile options in fest-build
+	* add bin/fest-build
 	* move compileTmpl to fest object;
 	* add postcompile wrappers;
 	* replace watch.js code to require build.js
