@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:script>
-        <![CDATA[
-        json.not_strict = true;
-        ]]>
-    </fest:script>
-    <fest:script>
-        <![CDATA[
-        g = true;
-        json.not_strict = false;
-        ]]>
-    </fest:script>
-    <fest:value>json.not_strict</fest:value>
+	<fest:script>
+		<![CDATA[
+		json.not_strict = true;
+		]]>
+	</fest:script>
+	<fest:script>
+		<![CDATA[
+		g = true;
+		json.not_strict = false;
+		]]>
+	</fest:script>
+	<fest:value>json.not_strict</fest:value>
 </fest:template>

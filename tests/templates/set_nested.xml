@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:set name="foo">
-        foo
-        <fest:set name="bar">
-            bar
-        </fest:set>
-    </fest:set>
+	<fest:set name="foo">
+		foo
+		<fest:set name="bar">
+			bar
+		</fest:set>
+	</fest:set>
 </fest:template>

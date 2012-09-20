@@ -1,0 +1,1 @@
+;(function(){var x=Function("return this")();if(!x.fest)x.fest={};x.fest["##file##"]=##source##})();jsLoader.loaded('{festTemplate}##file##');

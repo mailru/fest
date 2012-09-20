@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:script>
-        var call = function(json){
-            return json;
-        }
-    </fest:script>
-    <fest:call name="call" data="json"/>
+	<fest:script>
+		var call = function(json){
+			return json;
+		}
+	</fest:script>
+	<fest:call name="call" data="json"/>
 </fest:template>
