@@ -1,3 +1,4 @@
+	* test.js refactoring
 	* added `mode` option to the compiler
 	* improved the performance of compiled code
 v 0.3.3
