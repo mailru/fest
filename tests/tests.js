@@ -22,7 +22,7 @@ fs.readdir(dir, function(err, files){
 					string += data;
 				})
 				child.on('exit', function(){
-					console.log(file, string.trim());
+					console.log(file + ' [' + mode + ']', string.trim());
 					children.splice(children.indexOf(file), 1);
 					if (children.length === 0){
 						process.exit();
