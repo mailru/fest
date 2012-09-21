@@ -25,7 +25,7 @@ vows.describe('Fest tests').addBatch({
 			__dirname + "/templates/first_attributes.xml",
 			"4: text",
 			"5: <fest:attributes>",
-			"6: 	<fest:attribute name="name">text1</fest:attribute>",
+			"6: 	<fest:attribute name=\"name\">text1</fest:attribute>",
 			"At line 5: fest:attributes must be the first child"
 		].join('\n');
 		assert.equal(result, res);
@@ -55,7 +55,7 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div data-lf="a\nb" data-backslash="\\" data-apos="\'" data-quot=""" data-block="A" data-block-with-text="aB{c}"></div>');
+			assert.equal(result, '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div data-lf="a\n\rb" data-backslash="\\" data-apos="\'" data-quot=""" data-block="A" data-block-with-text="aB{c}"></div>');
 		}
 	},
 	'expression in attribute value with syntax errors': {
