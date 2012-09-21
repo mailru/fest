@@ -1,3 +1,5 @@
+	* added `mode` option to the compiler
+	* improved the performance of compiled code
 v 0.3.3
 	* choose wrapper type in build
 	* choose exclude dirs in build

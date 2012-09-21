@@ -328,11 +328,11 @@ foreach.xml (основной шаблон)
     <fest:include context_name="json" src="./person.xml"/>
 
     <!-- Значением iterate может быть любое js-выражение -->
-    <fest:foreach iterate="json.people.reverse()" index="i">
+    <fest:for iterate="json.people.reverse()" index="i">
 
     <!-- Передаваемые значения будут доступны в контексте params -->
     <fest:get name="person">json.people[i]</fest:get>
-  </fest:foreach>
+  </fest:for>
 </fest:template>
 ```
 

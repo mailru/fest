@@ -27,7 +27,7 @@
 	<fest:set name="seven">seven|</fest:set>
 	<fest:set name="eight">eight|</fest:set>
 
-	<fest:foreach iterate="[7, 8]" index="i">
+	<fest:for iterate="[7, 8]" index="i">
 		<fest:choose>
 			<fest:when test="i == 0">
 				<fest:get name="seven"/>
@@ -37,7 +37,7 @@
 			</fest:when>
 			<fest:otherwise/>
 		</fest:choose>
-	</fest:foreach>
+	</fest:for>
 	<fest:set name="&quot;"><fest:value>this.nine</fest:value>|</fest:set>
 	<fest:get name="&quot;"/>
 
