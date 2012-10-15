@@ -11,7 +11,7 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, 'Hello, John');
+			assert.equal(result, 'Hello, John\n---');
 		}
 	}
 }).run();
