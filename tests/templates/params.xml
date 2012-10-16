@@ -3,6 +3,8 @@
 
 	<fest:set name="line">
 		Hello,<fest:space/><fest:value>params.username</fest:value>
+		<fest:lf/>
+		---
 	</fest:set>
 	<fest:get name="line">{username: "John"}</fest:get>
 
