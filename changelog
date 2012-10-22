@@ -1,3 +1,5 @@
+	* refactoring compile templates
+	* rename jsLoader to loader
 v 0.4.0
 	* test.js refactoring
 	* added `mode` option to the compiler
