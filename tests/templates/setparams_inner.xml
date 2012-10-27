@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-	<fest:for iterate="json" index="i" value="0" />
+    <fest:set name="two">|<fest:value>params.text</fest:value>inner|</fest:set>
 </fest:template>

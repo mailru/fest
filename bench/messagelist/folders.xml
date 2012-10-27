@@ -1,23 +1,23 @@
 <?xml varsion="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:set name="folders">
-        <fest:for iterate="json.folders" index="f" value="folder">
-            <div class="menu" id="foldersStartId">
-                <div class="menu__item" title="Всего {folder.Messages} писем, {folder.Unread} непрочитанное'">
-                    <a  id="folder{folder.Id}"
-                        class="js-folder icon-wrap icon-wrap_left menu__item__link" rel="history"
-                        href="msglist?folder=0&amp;604168000"
-                        title="Всего {folder.Messages} писем">
-        				<span class="js-folder-b-unread js-folder-unread menu__item__link__qnt">
-                            <fest:value>folder.Unread</fest:value>
-                        </span>
-        				<i class="js-folder-ico icon icon_left icon_folders icon_inbox_act"></i>
-                        <span class="menu__item__link__text menu__item__link__text_linear">
-                            <fest:value>folder.Name</fest:value>
-                        </span>
-        			</a>
-        		</div>
-            </div>
-        </fest:for>
-    </fest:set>
+	<fest:set name="folders">
+		<fest:for iterate="json.folders" index="f" value="folder">
+			<div class="menu" id="foldersStartId">
+				<div class="menu__item" title="Всего {folder.Messages} писем, {folder.Unread} непрочитанное'">
+					<a	id="folder{folder.Id}"
+						class="js-folder icon-wrap icon-wrap_left menu__item__link" rel="history"
+						href="msglist?folder=0&amp;604168000"
+						title="Всего {folder.Messages} писем">
+						<span class="js-folder-b-unread js-folder-unread menu__item__link__qnt">
+							<fest:value>folder.Unread</fest:value>
+						</span>
+						<i class="js-folder-ico icon icon_left icon_folders icon_inbox_act"></i>
+						<span class="menu__item__link__text menu__item__link__text_linear">
+							<fest:value>folder.Name</fest:value>
+						</span>
+					</a>
+				</div>
+			</div>
+		</fest:for>
+	</fest:set>
 </fest:template>

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:get name="foo" />
-    <fest:set name="foo">
-        foo
-    </fest:set>
-    <fest:set name="bar">
-        bar
-    </fest:set>
-    <fest:set name="baz" test="true">
-        baz
-    </fest:set>
-    <fest:include src="useless_set_include.xml" />
+	<fest:get name="foo" />
+	<fest:set name="foo">
+		foo
+	</fest:set>
+	<fest:set name="bar">
+		bar
+	</fest:set>
+	<fest:set name="baz" test="true">
+		baz
+	</fest:set>
+	<fest:include src="useless_set_include.xml" />
 </fest:template>

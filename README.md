@@ -39,10 +39,18 @@
 <fest:get name="name"/>
 ```
 
-
-
 ```xml
 <fest:get name="name">{'some': 'data'}</fest:get>
+```
+
+Если указать тег select, то выражение внутри выполнится и результирующая строка будет именем блока set.
+```xml
+<fest:script>
+    var name = 'foo'
+</fest:srcipt>
+<fest:get select="name"/>
+<fest:set name="foo">foo</fest:set>
+<fest:set name="bar">bar</fest:set>
 ```
 
 ### fest:element
@@ -247,6 +255,8 @@ npm install fest
 
 ## Как использовать
 
+compile():
+
 ```javascript
 var fest = require('fest');
 
@@ -258,6 +268,18 @@ var compiled = fest.compile(template, {beautify: false}),
 
 console.log(template(data));
 ```
+
+render():
+
+```javascript
+var fest = require('fest');
+
+var data = {name: 'Jack "The Ripper"'},
+    template = './templates/basic.xml';
+
+console.log(fest.render(template, data, {beautify: false}));
+```
+
 
 basic.xml
 
@@ -306,11 +328,11 @@ foreach.xml (основной шаблон)
     <fest:include context_name="json" src="./person.xml"/>
 
     <!-- Значением iterate может быть любое js-выражение -->
-    <fest:foreach iterate="json.people.reverse()" index="i">
+    <fest:for iterate="json.people.reverse()" index="i">
 
     <!-- Передаваемые значения будут доступны в контексте params -->
     <fest:get name="person">json.people[i]</fest:get>
-  </fest:foreach>
+  </fest:for>
 </fest:template>
 ```
 

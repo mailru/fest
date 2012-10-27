@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
-    <fest:set name="line">
-      Hello,<fest:space/><fest:value>params.username</fest:value>
-    </fest:set>
-    <fest:get name="line">{username: "John"}</fest:get>
+	<fest:set name="line">
+		Hello,<fest:space/><fest:value>params.username</fest:value>
+		<fest:lf/>
+		---
+	</fest:set>
+	<fest:get name="line">{username: "John"}</fest:get>
 
 </fest:template>

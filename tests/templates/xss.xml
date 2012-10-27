@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <script>
-        document.write('&lt;script id="<fest:value>json.xss</fest:value>"&gt;');
-    </script>
+	<script>
+		document.write('&lt;script id="<fest:value>json.xss</fest:value>"&gt;');
+	</script>
 </fest:template>

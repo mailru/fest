@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:if test="true">
-        true
-    </fest:if>
-    <fest:if test="true">
-        <fest:value>true</fest:value>
-    </fest:if>
-    <fest:if test="false">
-        false
-    </fest:if>
-    <fest:if test="true &amp;&amp; true">
-        &amp;
-    </fest:if>
+	<fest:if test="true">
+		true
+	</fest:if>
+	<fest:if test="true">
+		<fest:value>true</fest:value>
+	</fest:if>
+	<fest:if test="false">
+		false
+	</fest:if>
+	<fest:if test="true &amp;&amp; true">
+		&amp;
+	</fest:if>
 </fest:template>

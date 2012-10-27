@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="setParams">
-    <fest:get name="one">'' || {text:'text1'}</fest:get>
-    <fest:set name="one">|<fest:script>params.text2 = params.text;</fest:script><fest:value>params.text2</fest:value>|</fest:set>
+	<fest:get name="one">'' || {text:'text1'}</fest:get>
+	<fest:set name="one">|<fest:script>params.text2 = params.text;</fest:script><fest:value>params.text2</fest:value>|</fest:set>
 
-    <fest:get name="one">{text:'text2'}</fest:get>
-    <fest:set name="one">|<fest:script>params.text2 = params.text;</fest:script><fest:value>params.text2</fest:value>|</fest:set>
+	<fest:get name="one">{text:'text2'}</fest:get>
+	<fest:set name="one">|<fest:script>params.text2 = params.text;</fest:script><fest:value>params.text2</fest:value>|</fest:set>
 
 	<fest:get name="one">'' || {text:'text3'}</fest:get>
-    <fest:set name="one">|<fest:value>params.text</fest:value>|</fest:set>
+	<fest:set name="one">|<fest:value>params.text</fest:value>|</fest:set>
 
 	<fest:get name="one">{text:'text4'}</fest:get>
-    <fest:set name="one">|<fest:value>params.text</fest:value>|</fest:set>
+	<fest:set name="one">|<fest:value>params.text</fest:value>|</fest:set>
+
+	<fest:set name="two">|<fest:value>params.text</fest:value>main|</fest:set>
+	<fest:get name="two">{text:'set in '}</fest:get>
+	<fest:include src="setparams_inner.xml" context="{}" />
 </fest:template>
