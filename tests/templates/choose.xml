@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:choose>
-        <fest:when test="true">
-            <fest:text>true</fest:text>
-        </fest:when>
-        <fest:when test="false">
-            <fest:text>false</fest:text>
-        </fest:when>
-    </fest:choose>
-    <fest:choose>
-        <fest:when test="false">
-            <fest:text>true</fest:text>
-        </fest:when>
-        <fest:when test="false">
-            <fest:text>false</fest:text>
-        </fest:when>
-        <fest:otherwise>
-            <fest:text>choose</fest:text>
-        </fest:otherwise>
-    </fest:choose>
+	<fest:choose>
+		<fest:when test="true">
+			<fest:text>true</fest:text>
+		</fest:when>
+		<fest:when test="false">
+			<fest:text>false</fest:text>
+		</fest:when>
+	</fest:choose>
+	<fest:choose>
+		<fest:when test="false">
+			<fest:text>true</fest:text>
+		</fest:when>
+		<fest:when test="false">
+			<fest:text>false</fest:text>
+		</fest:when>
+		<fest:otherwise>
+			<fest:text>choose</fest:text>
+		</fest:otherwise>
+	</fest:choose>
 </fest:template>

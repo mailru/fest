@@ -1,32 +1,33 @@
 {
-    "name": "fest",
-    "description": "JavaScript Templates",
-    "keywords": ["template", "templating", "html", "xml"],
-    "version": "0.3.1",
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/mailru/fest.git"
-    },
-    "author": "Andrew Sumin <AndrewSumin@mail.ru>",
-    "contributors": [
-        "Anton Eprev <a.eprev@gmail.com>",
-        "Lebedev Konstantin <ibnrubaxa@gmail.com>",
-        "Max Maximov <max.maximov@gmail.com> (http://maxmaximov.com)",
-        "Artem Tyurin"
-    ],
-    "main": "./lib/fest",
-    "bin": {
-        "fest-proxy": "./bin/fest-proxy",
-        "fest-watch": "./bin/fest-watch"
-    },
-    "engines": {
-        "node": "*"
-    },
-    "scripts": {
-        "test": "node tests/tests.js"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "vows": "*"
-    }
+	"name": "fest",
+	"description": "JavaScript Templates",
+	"keywords": ["template", "templating", "html", "xml"],
+	"version": "0.4.2",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/mailru/fest.git"
+	},
+	"author": "Andrew Sumin <AndrewSumin@mail.ru>",
+	"contributors": [
+		"Anton Eprev <a.eprev@gmail.com>",
+		"Lebedev Konstantin <ibnrubaxa@gmail.com>",
+		"Max Maximov <max.maximov@gmail.com> (http://maxmaximov.com)",
+		"Artem Tyurin"
+	],
+	"main": "./lib/fest",
+	"bin": {
+		"fest-proxy": "./bin/fest-proxy",
+		"fest-build": "./bin/fest-build",
+		"fest-watch": "./bin/fest-watch"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"scripts": {
+		"test": "node tests/tests.js"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"vows": "*"
+	}
 }

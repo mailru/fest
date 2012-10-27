@@ -1,351 +1,351 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:set name="headline">
-        <style type="text/css">
-            .portal-headline {
-              position: relative;
-              z-index: 1003;
-              padding-top: 7px;
-              padding-bottom: 7px;
-              font-family: Arial, sans-serif;
-              font-size: 12px;
-              text-align: left;
-              background: #fff;
-              *zoom: 1; }
+	<fest:set name="headline">
+		<style type="text/css">
+			.portal-headline {
+			  position: relative;
+			  z-index: 1003;
+			  padding-top: 7px;
+			  padding-bottom: 7px;
+			  font-family: Arial, sans-serif;
+			  font-size: 12px;
+			  text-align: left;
+			  background: #fff;
+			  *zoom: 1; }
 
-            .portal-headline__link,
-            .portal-headline__link:link,
-            .portal-headline__link:visited,
-            .portal-headline__link:hover,
-            .portal-headline__link:active,
-            .portal-headline__link:focus {
-              display: inline;
-              margin-right: 18px;
-              color: #0857a6;
-              font-size: 12px;
-              line-height: 14px;
-              text-decoration: none;
-              white-space: nowrap;
-              *zoom: 1; }
+			.portal-headline__link,
+			.portal-headline__link:link,
+			.portal-headline__link:visited,
+			.portal-headline__link:hover,
+			.portal-headline__link:active,
+			.portal-headline__link:focus {
+			  display: inline;
+			  margin-right: 18px;
+			  color: #0857a6;
+			  font-size: 12px;
+			  line-height: 14px;
+			  text-decoration: none;
+			  white-space: nowrap;
+			  *zoom: 1; }
 
-            .portal-headline__link:hover,
-            .portal-headline__link:active {
-              color: #f26d00; }
+			.portal-headline__link:hover,
+			.portal-headline__link:active {
+			  color: #f26d00; }
 
-            .portal-headline__link_first,
-            .portal-headline__link_first:link,
-            .portal-headline__link_first:visited,
-            .portal-headline__link_first:hover,
-            .portal-headline__link_first:active,
-            .portal-headline__link_first:focus {
-              margin-left: 18px; }
+			.portal-headline__link_first,
+			.portal-headline__link_first:link,
+			.portal-headline__link_first:visited,
+			.portal-headline__link_first:hover,
+			.portal-headline__link_first:active,
+			.portal-headline__link_first:focus {
+			  margin-left: 18px; }
 
-            .portal-headline__link_ext,
-            .portal-headline__link_ext:link,
-            .portal-headline__link_ext:visited,
-            .portal-headline__link_ext:hover,
-            .portal-headline__link_ext:active,
-            .portal-headline__link_ext:focus {
-              margin-right: 5px;
-              text-decoration: none; }
+			.portal-headline__link_ext,
+			.portal-headline__link_ext:link,
+			.portal-headline__link_ext:visited,
+			.portal-headline__link_ext:hover,
+			.portal-headline__link_ext:active,
+			.portal-headline__link_ext:focus {
+			  margin-right: 5px;
+			  text-decoration: none; }
 
-            .portal-headline__link_selected {
-              font-weight: bold; }
+			.portal-headline__link_selected {
+			  font-weight: bold; }
 
-            .portal-headline__link__text {
-              font-style: normal;
-              text-decoration: none;
-              cursor: pointer; }
+			.portal-headline__link__text {
+			  font-style: normal;
+			  text-decoration: none;
+			  cursor: pointer; }
 
-            .portal-headline__link:hover .portal-headline__link__text {
-              color: #f26d00;
-              text-decoration: none; }
+			.portal-headline__link:hover .portal-headline__link__text {
+			  color: #f26d00;
+			  text-decoration: none; }
 
-            .portal-headline__link__balloon {
-              display: none;
-              min-width: 9px;
-              margin-right: 5px;
-              margin-left: 3px;
-              padding-right: 4px;
-              padding-left: 4px;
-              color: #fff;
-              font-weight: bold;
-              font-style: normal;
-              font-size: 11px;
-              line-height: 12px;
-              text-align: center;
-              background-color: #fa0;
-              -webkit-border-radius: 2px;
-              -moz-border-radius: 2px;
-              border-radius: 2px;
-              cursor: pointer; }
+			.portal-headline__link__balloon {
+			  display: none;
+			  min-width: 9px;
+			  margin-right: 5px;
+			  margin-left: 3px;
+			  padding-right: 4px;
+			  padding-left: 4px;
+			  color: #fff;
+			  font-weight: bold;
+			  font-style: normal;
+			  font-size: 11px;
+			  line-height: 12px;
+			  text-align: center;
+			  background-color: #fa0;
+			  -webkit-border-radius: 2px;
+			  -moz-border-radius: 2px;
+			  border-radius: 2px;
+			  cursor: pointer; }
 
-            .portal-headline__link_ext .portal-headline__link__balloon {
-              display: inline-block;
-              *display: inline;
-              *zoom: 1; }
+			.portal-headline__link_ext .portal-headline__link__balloon {
+			  display: inline-block;
+			  *display: inline;
+			  *zoom: 1; }
 
-            .portal-headline__projects {
-              position: relative;
-              display: inline-block;
-              *display: inline;
-              *zoom: 1;
-              font-size: 12px;
-              line-height: 1; }
+			.portal-headline__projects {
+			  position: relative;
+			  display: inline-block;
+			  *display: inline;
+			  *zoom: 1;
+			  font-size: 12px;
+			  line-height: 1; }
 
-            .portal-headline__projects__link,
-            .portal-headline__projects__link:link,
-            .portal-headline__projects__link:visited,
-            .portal-headline__projects__link:hover,
-            .portal-headline__projects__link:active,
-            .portal-headline__projects__link:focus {
-              text-decoration: none;
-              outline: 0;
-              cursor: pointer;
-              *zoom: 1; }
+			.portal-headline__projects__link,
+			.portal-headline__projects__link:link,
+			.portal-headline__projects__link:visited,
+			.portal-headline__projects__link:hover,
+			.portal-headline__projects__link:active,
+			.portal-headline__projects__link:focus {
+			  text-decoration: none;
+			  outline: 0;
+			  cursor: pointer;
+			  *zoom: 1; }
 
-            .portal-headline__projects__link__text,
-            .portal-headline__projects_open .portal-headline__projects__link:hover .portal-headline__projects__link__text {
-              display: inline-block;
-              *display: inline;
-              *zoom: 1;
-              border-bottom: 1px dotted #fff;
-              color: #0857a6;
-              font-style: normal;
-              text-decoration: none;
-              *margin-bottom: 1px;
-              *padding-bottom: 1px;
-              *vertical-align: bottom; }
+			.portal-headline__projects__link__text,
+			.portal-headline__projects_open .portal-headline__projects__link:hover .portal-headline__projects__link__text {
+			  display: inline-block;
+			  *display: inline;
+			  *zoom: 1;
+			  border-bottom: 1px dotted #fff;
+			  color: #0857a6;
+			  font-style: normal;
+			  text-decoration: none;
+			  *margin-bottom: 1px;
+			  *padding-bottom: 1px;
+			  *vertical-align: bottom; }
 
-            .portal-headline__projects__link:hover .portal-headline__projects__link__text {
-              border-bottom: 1px dotted #fff;
-              color: #f26d00; }
+			.portal-headline__projects__link:hover .portal-headline__projects__link__text {
+			  border-bottom: 1px dotted #fff;
+			  color: #f26d00; }
 
-            .portal-headline__projects__link__icon,
-            .portal-headline__projects_open .portal-headline__projects__link:hover .portal-headline__projects__link__icon {
-              position: relative;
-              top: 3px;
-              display: inline-block;
-              *display: inline;
-              *zoom: 1;
-              width: 0;
-              height: 0;
-              font: 0/0 a;
-              border-width: 4px;
-              border-style: solid;
-              border-color: #0857a6 #fff #fff; }
+			.portal-headline__projects__link__icon,
+			.portal-headline__projects_open .portal-headline__projects__link:hover .portal-headline__projects__link__icon {
+			  position: relative;
+			  top: 3px;
+			  display: inline-block;
+			  *display: inline;
+			  *zoom: 1;
+			  width: 0;
+			  height: 0;
+			  font: 0/0 a;
+			  border-width: 4px;
+			  border-style: solid;
+			  border-color: #0857a6 #fff #fff; }
 
-            .portal-headline__projects__link:hover .portal-headline__projects__link__icon {
-              border-color: #f26d00 #fff #fff; }
+			.portal-headline__projects__link:hover .portal-headline__projects__link__icon {
+			  border-color: #f26d00 #fff #fff; }
 
-            .portal-headline__projects_open {
-              margin-top: -2px;
-              margin-right: -6px;
-              margin-bottom: -6px;
-              margin-left: -6px;
-              *margin-bottom: -7px; }
+			.portal-headline__projects_open {
+			  margin-top: -2px;
+			  margin-right: -6px;
+			  margin-bottom: -6px;
+			  margin-left: -6px;
+			  *margin-bottom: -7px; }
 
-            .portal-headline__projects_open .portal-headline__projects__link {
-              position: relative;
-              z-index: 1005;
-              display: inline-block;
-              padding-top: 1px;
-              padding-right: 5px;
-              padding-bottom: 6px;
-              padding-left: 5px;
-              *padding-bottom: 4px;
-              border: 1px solid #9fc1eb;
-              border-bottom: none;
-              -webkit-border-radius: 2px 2px 0 0;
-              -moz-border-radius: 2px 2px 0 0;
-              border-radius: 2px 2px 0 0;
-              background: #fff; }
+			.portal-headline__projects_open .portal-headline__projects__link {
+			  position: relative;
+			  z-index: 1005;
+			  display: inline-block;
+			  padding-top: 1px;
+			  padding-right: 5px;
+			  padding-bottom: 6px;
+			  padding-left: 5px;
+			  *padding-bottom: 4px;
+			  border: 1px solid #9fc1eb;
+			  border-bottom: none;
+			  -webkit-border-radius: 2px 2px 0 0;
+			  -moz-border-radius: 2px 2px 0 0;
+			  border-radius: 2px 2px 0 0;
+			  background: #fff; }
 
-            .portal-headline__projects__wrap {
-              position: absolute;
-              z-index: 1004;
-              top: 20px;
-              left: 0;
-              display: none;
-              width: 380px;
-              border: 1px solid #9fc1eb;
-              -webkit-border-radius: 2px;
-              -moz-border-radius: 2px;
-              border-radius: 2px;
-              box-shadow: 0 4px 4px #656972;
-              background: #fff; }
+			.portal-headline__projects__wrap {
+			  position: absolute;
+			  z-index: 1004;
+			  top: 20px;
+			  left: 0;
+			  display: none;
+			  width: 380px;
+			  border: 1px solid #9fc1eb;
+			  -webkit-border-radius: 2px;
+			  -moz-border-radius: 2px;
+			  border-radius: 2px;
+			  box-shadow: 0 4px 4px #656972;
+			  background: #fff; }
 
-            .portal-headline__projects_open .portal-headline__projects__wrap {
-              display: block;
-              -webkit-animation-duration: 0.5s;
-              -moz-animation-duration: 0.5s;
-              animation-duration: 0.5s;
-              -webkit-animation-name: slidein;
-              -moz-animation-name: slidein;
-              animation-name: slidein; }
+			.portal-headline__projects_open .portal-headline__projects__wrap {
+			  display: block;
+			  -webkit-animation-duration: 0.5s;
+			  -moz-animation-duration: 0.5s;
+			  animation-duration: 0.5s;
+			  -webkit-animation-name: slidein;
+			  -moz-animation-name: slidein;
+			  animation-name: slidein; }
 
-            @-webkit-keyframes slidein {
-              0% {
-                opacity: 0;
-                box-shadow: none; }
+			@-webkit-keyframes slidein {
+			  0% {
+				opacity: 0;
+				box-shadow: none; }
 
-              100% {
-                opacity: 1;
-                box-shadow: 0 4px 4px #656972; } }
+			  100% {
+				opacity: 1;
+				box-shadow: 0 4px 4px #656972; } }
 
-            @-moz-keyframes slidein {
-              0% {
-                opacity: 0;
-                box-shadow: none; }
+			@-moz-keyframes slidein {
+			  0% {
+				opacity: 0;
+				box-shadow: none; }
 
-              100% {
-                opacity: 1;
-                box-shadow: 0 4px 4px #656972; } }
+			  100% {
+				opacity: 1;
+				box-shadow: 0 4px 4px #656972; } }
 
-            @keyframes slidein {
-              0% {
-                opacity: 0;
-                box-shadow: none; }
+			@keyframes slidein {
+			  0% {
+				opacity: 0;
+				box-shadow: none; }
 
-              100% {
-                opacity: 1;
-                box-shadow: 0 4px 4px #656972; } }
+			  100% {
+				opacity: 1;
+				box-shadow: 0 4px 4px #656972; } }
 
-            .portal-headline__projects__column {
-              float: left;
-              width: 120px;
-              padding-top: 4px;
-              padding-bottom: 4px;
-              padding-left: 4px; }
+			.portal-headline__projects__column {
+			  float: left;
+			  width: 120px;
+			  padding-top: 4px;
+			  padding-bottom: 4px;
+			  padding-left: 4px; }
 
-            .portal-headline__projects__column_separator {
-              margin-bottom: 10px;
-              padding-bottom: 10px;
-              border-bottom: 1px solid #d9deed; }
+			.portal-headline__projects__column_separator {
+			  margin-bottom: 10px;
+			  padding-bottom: 10px;
+			  border-bottom: 1px solid #d9deed; }
 
-            .portal-headline__project__link,
-            .portal-headline__project__link:link,
-            .portal-headline__project__link:visited,
-            .portal-headline__project__link:hover,
-            .portal-headline__project__link:active,
-            .portal-headline__project__link:focus {
-              display: block;
-              padding-top: 4px;
-              padding-right: 8px;
-              padding-bottom: 4px;
-              padding-left: 8px;
-              border-bottom: 1px solid #fff;
-              color: #0857a6;
-              text-align: left;
-              text-decoration: none;
-              white-space: nowrap;
-              cursor: pointer;
-              *zoom: 1; }
+			.portal-headline__project__link,
+			.portal-headline__project__link:link,
+			.portal-headline__project__link:visited,
+			.portal-headline__project__link:hover,
+			.portal-headline__project__link:active,
+			.portal-headline__project__link:focus {
+			  display: block;
+			  padding-top: 4px;
+			  padding-right: 8px;
+			  padding-bottom: 4px;
+			  padding-left: 8px;
+			  border-bottom: 1px solid #fff;
+			  color: #0857a6;
+			  text-align: left;
+			  text-decoration: none;
+			  white-space: nowrap;
+			  cursor: pointer;
+			  *zoom: 1; }
 
-            .portal-headline__project__link:hover,
-            .portal-headline__project__link:active {
-              color: #0857a6;
-              background: #e7efff; }
+			.portal-headline__project__link:hover,
+			.portal-headline__project__link:active {
+			  color: #0857a6;
+			  background: #e7efff; }
 
-            .portal-headline__project__link_icon,
-            .portal-headline__project__link_icon:link,
-            .portal-headline__project__link_icon:visited,
-            .portal-headline__project__link_icon:hover,
-            .portal-headline__project__link_icon:active,
-            .portal-headline__project__link_icon:focus {
-              padding-left: 30px; }
+			.portal-headline__project__link_icon,
+			.portal-headline__project__link_icon:link,
+			.portal-headline__project__link_icon:visited,
+			.portal-headline__project__link_icon:hover,
+			.portal-headline__project__link_icon:active,
+			.portal-headline__project__link_icon:focus {
+			  padding-left: 30px; }
 
-            .portal-headline__project__link_icon__pic {
-              position: absolute;
-              width: 18px;
-              height: 18px;
-              margin-top: -2px;
-              margin-left: -22px;
-              background-image: url(http://img.imgsmail.ru/r/portal/portal-headline/portal-headline__project__link_icon.png);
-              background-repeat: no-repeat; }
+			.portal-headline__project__link_icon__pic {
+			  position: absolute;
+			  width: 18px;
+			  height: 18px;
+			  margin-top: -2px;
+			  margin-left: -22px;
+			  background-image: url(http://img.imgsmail.ru/r/portal/portal-headline/portal-headline__project__link_icon.png);
+			  background-repeat: no-repeat; }
 
-            .portal-headline__project__link_icon__pic_agent {
-              background-position: 0 2px; }
+			.portal-headline__project__link_icon__pic_agent {
+			  background-position: 0 2px; }
 
-            .portal-headline__project__link_icon__pic_sputnik {
-              background-position: 0 -18px; }
+			.portal-headline__project__link_icon__pic_sputnik {
+			  background-position: 0 -18px; }
 
-            .portal-headline__project__link_icon__pic_icq {
-              background-position: 0 -39px; }
+			.portal-headline__project__link_icon__pic_icq {
+			  background-position: 0 -39px; }
 
-            .portal-headline__login {
-              position: absolute;
-              top: 7px;
-              *top: 8px;
-              right: 18px;
-              font-size: 12px;
-              line-height: 14px; }
+			.portal-headline__login {
+			  position: absolute;
+			  top: 7px;
+			  *top: 8px;
+			  right: 18px;
+			  font-size: 12px;
+			  line-height: 14px; }
 
-            .portal-headline__login__link,
-            .portal-headline__login__link:link,
-            .portal-headline__login__link:visited,
-            .portal-headline__login__link:hover,
-            .portal-headline__login__link:active,
-            .portal-headline__login__link:focus {
-              margin-left: 10px;
-              color: #0857a6;
-              text-decoration: none; }
+			.portal-headline__login__link,
+			.portal-headline__login__link:link,
+			.portal-headline__login__link:visited,
+			.portal-headline__login__link:hover,
+			.portal-headline__login__link:active,
+			.portal-headline__login__link:focus {
+			  margin-left: 10px;
+			  color: #0857a6;
+			  text-decoration: none; }
 
-            .portal-headline__login__link:hover,
-            .portal-headline__login__link:active {
-              color: #f26d00;
-              text-decoration: none; }
-        </style>
-        <div class="portal-headline">
-            <a class="portal-headline__link portal-headline__link_first" href="http://r.mail.ru/n77699977?sz=1">Mail.Ru</a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n77699978?sz=1"><span class="portal-headline__link__text portal-headline__link_selected">Почта</span><i class="portal-headline__link__balloon" id="g_mail_events">0</i></a>
-        	<a class="portal-headline__link  portal-headline__link_ext" href="http://r.mail.ru/n77699979?sz=1"><span class="portal-headline__link__text">Мой Мир</span><i class="portal-headline__link__balloon" id="g_my_events">22</i></a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n79065000?sz=1"><span class="portal-headline__link__text">Одноклассники</span><i class="portal-headline__link__balloon" id="g_ok_events"></i></a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n77699980?sz=1">Игры</a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n77699981?sz=1">Знакомства</a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n77699982?sz=1">Новости</a>
-        	<a class="portal-headline__link" href="http://r.mail.ru/n77699983?sz=1">Поиск в Интернете</a>
-        	<div class="portal-headline__projects" id="portal-headline__box">
-        		<a class="portal-headline__projects__link" id="portal-headline__menulink" href="#">
-        			<i class="portal-headline__projects__link__text">Все проекты</i>&amp;nbsp;<i class="portal-headline__projects__link__icon"></i>
-        		</a>
-        		<div class="portal-headline__projects__wrap" id="portal-headline__menu">
-        			<div class="portal-headline__projects__column">
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699984?sz=1">Авто</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699985?sz=1">Ответы</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699986?sz=1">Товары</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699987?sz=1">Работа</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699988?sz=1">Недвижимость</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699989?sz=1">HiTech</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699990?sz=1">Софт</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699991?sz=1">Файлы</a>
-        			</div>
-        			<div class="portal-headline__projects__column">
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699992?sz=1">Леди</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699993?sz=1">Дети</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699994?sz=1">Здоровье</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699995?sz=1">Путешествия</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699996?sz=1">Открытки</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699997?sz=1">Гороскопы</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699998?sz=1">Погода</a>
-        				<a class="portal-headline__project__link" href="http://r.mail.ru/n77699999?sz=1">Афиша</a>
-        			</div>
-        			<div class="portal-headline__projects__column">
-        				<div class="portal-headline__projects__column_separator">
-        					<a class="portal-headline__project__link" href="http://r.mail.ru/n77700000?sz=1">Видео</a>
-        					<a class="portal-headline__project__link" href="http://r.mail.ru/n77700001?sz=1">Деньги</a>
-        					<a class="portal-headline__project__link" href="http://r.mail.ru/n77700002?sz=1">Словари</a>
-        					<a class="portal-headline__project__link" href="http://r.mail.ru/n77700003?sz=1">Карты</a>
-        				</div>
-        			<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_agent" href="http://r.mail.ru/n77700004?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_agent"></i>Mail.ru Агент</a>
-        				<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_sputnik" href="http://r.mail.ru/n77700005?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_sputnik"></i>Спутник</a>
-        				<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_icq" href="http://r.mail.ru/n78510419?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_icq "></i>ICQ</a>
-        			</div>
-        		</div>
-        	</div>
-            <script type="text/javascript">
-            document.write('<span id="portal-headline_logout"  class="portal-headline__login"><span id="portal-menu__user-email">a.sumin@corp.mail.ru</span><a class="portal-headline__login__link" href="/cgi-bin/logout' + encodeURIComponent('') + '">выход</a> </span><span id="portal-headline_login" style="display:none;" class="portal-headline__login"><a class="portal-headline__login__link" href="/cgi-bin/login' + encodeURIComponent('') + '">Вход</a></span>');
-            </script><span id="portal-headline_logout" class="portal-headline__login"><span id="portal-menu__user-email">a.sumin@corp.mail.ru</span><a class="portal-headline__login__link" href="/cgi-bin/logout">выход</a> </span><span id="portal-headline_login" style="display:none;" class="portal-headline__login"><a class="portal-headline__login__link" href="/cgi-bin/login">Вход</a></span>
-        </div>
-    </fest:set>
+			.portal-headline__login__link:hover,
+			.portal-headline__login__link:active {
+			  color: #f26d00;
+			  text-decoration: none; }
+		</style>
+		<div class="portal-headline">
+			<a class="portal-headline__link portal-headline__link_first" href="http://r.mail.ru/n77699977?sz=1">Mail.Ru</a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n77699978?sz=1"><span class="portal-headline__link__text portal-headline__link_selected">Почта</span><i class="portal-headline__link__balloon" id="g_mail_events">0</i></a>
+			<a class="portal-headline__link	 portal-headline__link_ext" href="http://r.mail.ru/n77699979?sz=1"><span class="portal-headline__link__text">Мой Мир</span><i class="portal-headline__link__balloon" id="g_my_events">22</i></a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n79065000?sz=1"><span class="portal-headline__link__text">Одноклассники</span><i class="portal-headline__link__balloon" id="g_ok_events"></i></a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n77699980?sz=1">Игры</a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n77699981?sz=1">Знакомства</a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n77699982?sz=1">Новости</a>
+			<a class="portal-headline__link" href="http://r.mail.ru/n77699983?sz=1">Поиск в Интернете</a>
+			<div class="portal-headline__projects" id="portal-headline__box">
+				<a class="portal-headline__projects__link" id="portal-headline__menulink" href="#">
+					<i class="portal-headline__projects__link__text">Все проекты</i>&amp;nbsp;<i class="portal-headline__projects__link__icon"></i>
+				</a>
+				<div class="portal-headline__projects__wrap" id="portal-headline__menu">
+					<div class="portal-headline__projects__column">
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699984?sz=1">Авто</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699985?sz=1">Ответы</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699986?sz=1">Товары</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699987?sz=1">Работа</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699988?sz=1">Недвижимость</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699989?sz=1">HiTech</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699990?sz=1">Софт</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699991?sz=1">Файлы</a>
+					</div>
+					<div class="portal-headline__projects__column">
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699992?sz=1">Леди</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699993?sz=1">Дети</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699994?sz=1">Здоровье</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699995?sz=1">Путешествия</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699996?sz=1">Открытки</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699997?sz=1">Гороскопы</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699998?sz=1">Погода</a>
+						<a class="portal-headline__project__link" href="http://r.mail.ru/n77699999?sz=1">Афиша</a>
+					</div>
+					<div class="portal-headline__projects__column">
+						<div class="portal-headline__projects__column_separator">
+							<a class="portal-headline__project__link" href="http://r.mail.ru/n77700000?sz=1">Видео</a>
+							<a class="portal-headline__project__link" href="http://r.mail.ru/n77700001?sz=1">Деньги</a>
+							<a class="portal-headline__project__link" href="http://r.mail.ru/n77700002?sz=1">Словари</a>
+							<a class="portal-headline__project__link" href="http://r.mail.ru/n77700003?sz=1">Карты</a>
+						</div>
+					<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_agent" href="http://r.mail.ru/n77700004?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_agent"></i>Mail.ru Агент</a>
+						<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_sputnik" href="http://r.mail.ru/n77700005?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_sputnik"></i>Спутник</a>
+						<a class="portal-headline__project__link portal-headline__project__link_icon portal-headline__project__link_icq" href="http://r.mail.ru/n78510419?sz=1"><i class="portal-headline__project__link_icon__pic portal-headline__project__link_icon__pic_icq "></i>ICQ</a>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+			document.write('<span id="portal-headline_logout"  class="portal-headline__login"><span id="portal-menu__user-email">a.sumin@corp.mail.ru</span><a class="portal-headline__login__link" href="/cgi-bin/logout' + encodeURIComponent('') + '">выход</a> </span><span id="portal-headline_login" style="display:none;" class="portal-headline__login"><a class="portal-headline__login__link" href="/cgi-bin/login' + encodeURIComponent('') + '">Вход</a></span>');
+			</script><span id="portal-headline_logout" class="portal-headline__login"><span id="portal-menu__user-email">a.sumin@corp.mail.ru</span><a class="portal-headline__login__link" href="/cgi-bin/logout">выход</a> </span><span id="portal-headline_login" style="display:none;" class="portal-headline__login"><a class="portal-headline__login__link" href="/cgi-bin/login">Вход</a></span>
+		</div>
+	</fest:set>
 </fest:template>

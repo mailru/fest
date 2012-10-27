@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:script>
-        var block = 'b-block';
-        var element = '__element';
-        var modifier = '_modifier';
-    </fest:script>
+	<fest:script>
+		var block = 'b-block';
+		var element = '__element';
+		var modifier = '_modifier';
+	</fest:script>
 
-    <fest:set name="modify">
-        <fest:value>params.block</fest:value>
-        <fest:value>params.element</fest:value>
-        <fest:value>modifier</fest:value>
-    </fest:set>
+	<fest:set name="modify">
+		<fest:value>params.block</fest:value>
+		<fest:value>params.element</fest:value>
+		<fest:value>modifier</fest:value>
+	</fest:set>
 
-    <div class="{block}"
-        data-amp="{'&amp;'}"
-        data-lt="{'&lt;'}"
-        data-gt="{'&gt;'}"
-        data-apos="{'\&apos;'}"
-        data-quot="{'\&quot;'}"
-        data-elcb="{'{{'}"
-        data-ercb="{'}}'}"
-        data-lcb="{{"
-        data-rcb="}}"
-        data-ecb="{'{{}}'}"
-        data-dcb="{{}}"
-        data-crazy="{'{{{{}}{{}}}}'}"
-        data-crazy-again="{{{{}}{{}}}}"
-        data-crazy-too="{{}}{{}}"
-    >
-        <div class="{block}{modifier}" data-has-modifier="{!!(block && modifier)}"/>
-        <div class="{block + element}" data-obj-value="{ {{ 'key': 'value' }}['key'] }" data-obj-json="{{ &quot;key&quot;: &quot;value&quot; }}">
-            <span class="{'name'}" data-spec-chars="{{&lt;&quot;&apos;&amp;&gt;}}" data-espec-chars="{'{{&lt;&quot;\&apos;&amp;&gt;}}'}">
-                <fest:get name="modify">{ "block": block, "element": element }</fest:get>
-            </span>
-        </div>
-    </div>
-    <fest:for iterate="[1,2,3,4,5].filter(function(item){return item !== 3})" index="item" value="value">
-        <fest:value>value</fest:value>
-    </fest:for>
+	<div class="{block}"
+		data-amp="{'&amp;'}"
+		data-lt="{'&lt;'}"
+		data-gt="{'&gt;'}"
+		data-apos="{'\&apos;'}"
+		data-quot="{'\&quot;'}"
+		data-elcb="{'{{'}"
+		data-ercb="{'}}'}"
+		data-lcb="{{"
+		data-rcb="}}"
+		data-ecb="{'{{}}'}"
+		data-dcb="{{}}"
+		data-crazy="{'{{{{}}{{}}}}'}"
+		data-crazy-again="{{{{}}{{}}}}"
+		data-crazy-too="{{}}{{}}"
+	>
+		<div class="{block}{modifier}" data-has-modifier="{!!(block && modifier)}"/>
+		<div class="{block + element}" data-obj-value="{ {{ 'key': 'value' }}['key'] }" data-obj-json="{{ &quot;key&quot;: &quot;value&quot; }}">
+			<span class="{'name'}" data-spec-chars="{{&lt;&quot;&apos;&amp;&gt;}}" data-espec-chars="{'{{&lt;&quot;\&apos;&amp;&gt;}}'}">
+				<fest:get name="modify">{ "block": block, "element": element }</fest:get>
+			</span>
+		</div>
+	</div>
+	<fest:for iterate="[1,2,3,4,5].filter(function(item){return item !== 3})" index="item" value="value">
+		<fest:value>value</fest:value>
+	</fest:for>
 
-    <fest:script>
-        var a = 'A';
-        var b = 'B';
-    </fest:script>
+	<fest:script>
+		var a = 'A';
+		var b = 'B';
+	</fest:script>
 	<div data-lf="a&#x0A;&#x0D;b" data-backslash="\" data-apos="&apos;" data-quot="&quot;" data-block="{a}{" data-block-with-text="}a{b}{{c}}"></div>
 </fest:template>

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:value>json.value</fest:value>
-    <fest:value safe="true">json.value</fest:value>
-    <fest:value output="text"><![CDATA["<script/>"]]></fest:value>
-    <fest:value output="js">'"'</fest:value>|<fest:value output="js">"'"</fest:value>
-    <fest:value output="js"><![CDATA["<script/>"]]></fest:value>
-    <fest:value>json.undefined</fest:value>
+	<fest:value>json.value</fest:value>
+	<fest:value safe="true">json.value</fest:value>
+	<fest:value output="text"><![CDATA["<script/>"]]></fest:value>
+	<fest:value output="js">'"'</fest:value>|<fest:value output="js">"'"</fest:value>
+	<fest:value output="js"><![CDATA["<script/>"]]></fest:value>
+	<fest:value>json.undefined</fest:value>
 </fest:template>

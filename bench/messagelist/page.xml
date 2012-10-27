@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <!--fest:script>
-        <![CDATA[
-            var __get = function(json){
-                console.time('prepare');
-                var index = {}, tmp, i, l, json = json.split('\n');
-                for (i = 0, l = json.length; i < l; i++){
-                    tmp = json[i].split('=', 2);
-                    index[tmp[0]] = tmp[1];
-                }
-                console.timeEnd('prepare');
-                return function(key){
-                    return index[key];
-                }
-            }(json)
-        ]]>
-    </fest:script-->
-    <fest:doctype>html</fest:doctype>
-    <html id="nojs" lang="ru">
-        <head>
-            <title>
-                <fest:get name="title"/>
-                <fest:set name="title">Mail.ru</fest:set>
-            </title>
-            <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-            <link href="http://img.imgsmail.ru/mail/ru/css/neo/pages/main.css?3.95.2" rel="stylesheet" type="text/css"/>
-            <fest:set name="title">Message list</fest:set>
-        </head>
-        <body>
-            <fest:get name="content"/>
-            <fest:set name="content"></fest:set>
-        </body>
-    </html>
+	<!--fest:script>
+		<![CDATA[
+			var __get = function(json){
+				console.time('prepare');
+				var index = {}, tmp, i, l, json = json.split('\n');
+				for (i = 0, l = json.length; i < l; i++){
+					tmp = json[i].split('=', 2);
+					index[tmp[0]] = tmp[1];
+				}
+				console.timeEnd('prepare');
+				return function(key){
+					return index[key];
+				}
+			}(json)
+		]]>
+	</fest:script-->
+	<fest:doctype>html</fest:doctype>
+	<html id="nojs" lang="ru">
+		<head>
+			<title>
+				<fest:get name="title"/>
+				<fest:set name="title">Mail.ru</fest:set>
+			</title>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+			<link href="http://img.imgsmail.ru/mail/ru/css/neo/pages/main.css?3.95.2" rel="stylesheet" type="text/css"/>
+			<fest:set name="title">Message list</fest:set>
+		</head>
+		<body>
+			<fest:get name="content"/>
+			<fest:set name="content"></fest:set>
+		</body>
+	</html>
 </fest:template>

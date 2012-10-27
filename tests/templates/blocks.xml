@@ -1,60 +1,60 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="foreach">
-    start
-    <fest:get name="one-one"/>
-    <fest:set name="one-one">|one|</fest:set>
+	start
+	<fest:get name="one-one"/>
+	<fest:set name="one-one">|one|</fest:set>
 
 
-    <fest:get name="two"/>
-    <fest:set name="two">two1|</fest:set>
-    <fest:set name="two">two2|</fest:set>
+	<fest:get name="two"/>
+	<fest:set name="two">two1|</fest:set>
+	<fest:set name="two">two2|</fest:set>
 
 
-    <fest:get name="three"/>
-    <fest:set name="three">three1|</fest:set>
-    <fest:set name="three" test="false">three2|</fest:set>
+	<fest:get name="three"/>
+	<fest:set name="three">three1|</fest:set>
+	<fest:set name="three" test="false">three2|</fest:set>
 
 
-    <fest:get name="four"/>
-    <fest:set name="four">
-        <fest:get name="five"/>
-    </fest:set>
-    <fest:set name="five">five|</fest:set>
+	<fest:get name="four"/>
+	<fest:set name="four">
+		<fest:get name="five"/>
+	</fest:set>
+	<fest:set name="five">five|</fest:set>
 
-    <fest:set name="six">six|</fest:set>
-    <fest:get name="six"/>
+	<fest:set name="six">six|</fest:set>
+	<fest:get name="six"/>
 
-    <fest:set name="seven">seven|</fest:set>
-    <fest:set name="eight">eight|</fest:set>
+	<fest:set name="seven">seven|</fest:set>
+	<fest:set name="eight">eight|</fest:set>
 
-    <fest:foreach iterate="[7, 8]" index="i">
-        <fest:choose>
-            <fest:when test="i == 0">
-                <fest:get name="seven"/>
-            </fest:when>
-            <fest:when test="i == 1">
-                <fest:get name="eight"/>
-            </fest:when>
-            <fest:otherwise/>
-        </fest:choose>
-    </fest:foreach>
-    <fest:set name="&quot;"><fest:value>this.nine</fest:value>|</fest:set>
-    <fest:get name="&quot;"/>
+	<fest:for iterate="[7, 8]" index="i">
+		<fest:choose>
+			<fest:when test="i == 0">
+				<fest:get name="seven"/>
+			</fest:when>
+			<fest:when test="i == 1">
+				<fest:get name="eight"/>
+			</fest:when>
+			<fest:otherwise/>
+		</fest:choose>
+	</fest:for>
+	<fest:set name="&quot;"><fest:value>this.nine</fest:value>|</fest:set>
+	<fest:get name="&quot;"/>
 
-    <fest:script>
-        var name="ten";
-    </fest:script>
-    <fest:get select="name"/>
-    <fest:set name="ten">ten|</fest:set>
+	<fest:script>
+		var name="ten";
+	</fest:script>
+	<fest:get select="name"/>
+	<fest:set name="ten">ten|</fest:set>
 
-    <fest:set name="block">
-        <fest:get select="params.callback">params.data</fest:get>
-    </fest:set>
+	<fest:set name="block">
+		<fest:get select="params.callback">params.data</fest:get>
+	</fest:set>
 
-    <fest:set name="block2">
-        <fest:value>params.text</fest:value>|
-    </fest:set>
+	<fest:set name="block2">
+		<fest:value>params.text</fest:value>|
+	</fest:set>
 
-    <fest:get name="block">{callback: "block2", data: {text: "eleven"}}</fest:get>
-    finish
+	<fest:get name="block">{callback: "block2", data: {text: "eleven"}}</fest:get>
+	finish
 </fest:template>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-  <a>
-  <fest:attributes>
-    <fest:attributes>
-      <fest:attribute name='href'>#</fest:attribute>
-    </fest:attributes>
-  </fest:attributes>
-  </a>
+	<a>
+		<fest:attributes>
+			<fest:attributes>
+				<fest:attribute name='href'>#</fest:attribute>
+			</fest:attributes>
+		</fest:attributes>
+	</a>
 </fest:template>

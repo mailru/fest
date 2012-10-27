@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:include src="messagelist/page.xml"/>
-    <fest:include src="messagelist/portal-headline.xml"/>
-    <fest:include src="messagelist/portal-menu.xml"/>
-    <fest:include src="messagelist/left-col.xml"/>
-    <fest:include src="messagelist/list.xml"/>
+	<fest:include src="messagelist/page.xml"/>
+	<fest:include src="messagelist/portal-headline.xml"/>
+	<fest:include src="messagelist/portal-menu.xml"/>
+	<fest:include src="messagelist/left-col.xml"/>
+	<fest:include src="messagelist/list.xml"/>
 
-    <fest:set name="content">
-        <fest:get name="headline"/>
-        <fest:get name="headline-menu"/>
-        <div class="page minwidth">
-            <fest:get name="left-col"/>
-            <div class="page__content">
-                <div class="page__content__wrapper">
-                    <fest:get name="list"/>
-                </div>
-            </div>
-        </div>
-    </fest:set>
+	<fest:set name="content">
+		<fest:get name="headline"/>
+		<fest:get name="headline-menu"/>
+		<div class="page minwidth">
+			<fest:get name="left-col"/>
+			<div class="page__content">
+				<div class="page__content__wrapper">
+					<fest:get name="list"/>
+				</div>
+			</div>
+		</div>
+	</fest:set>
 </fest:template>

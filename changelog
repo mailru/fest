@@ -1,3 +1,23 @@
+	* refactoring compile templates
+	* rename jsLoader to loader
+v 0.4.0
+	* test.js refactoring
+	* added `mode` option to the compiler
+	* improved the performance of compiled code
+v 0.3.3
+	* choose wrapper type in build
+	* choose exclude dirs in build
+	* add support to compile options in fest-build
+	* add bin/fest-build
+	* move compileTmpl to fest object;
+	* add postcompile wrappers;
+	* replace watch.js code to require build.js
+v 0.3.2
+	* fix opera
+	* fix each for objects with chenged prototype
+	* replace spaces to tabs
+	* wrapping fest:include in a closure
+	* improved the performance of escape functions
 	* copy watch.js to build.js, watch.js will be demonized in future
 	* render() in fest API
 	* fest-watch and fest-proxy commands
