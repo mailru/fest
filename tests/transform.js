@@ -6,7 +6,7 @@ module.exports = function(mode) {
 		options = options || {};
 		options.beautify = true;
 		options.mode = mode;
-		var template = fest.compile(__dirname + file, options, lang, callbacks);
+		var template = fest.compile(__dirname + file, options, undefined, lang, callbacks);
 		// console.log(template);
 		template = (new Function('return ' + template))();
 		setTimeout(function(){promise.emit('success', template.call(thisArg, json));}, 0);

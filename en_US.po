@@ -1,0 +1,29 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: 2012-11-08 10:16+0400\n"
+"Last-Translator: Anton Eprev <>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: message.xml:7 message.xml:12
+msgctxt "row"
+msgid "Строка"
+msgstr "Строка"
+
+#: message.xml:8
+msgid ""
+"Строка со\n"
+"\t\t<a href=\"#\">ссылкой</a>"
+msgstr ""
+"Строка со\n"
+"\t\t<a href=\"#\">ссылкой</a>"
+
+#: message.xml:13
+msgid "Строка"
+msgstr "Строка"
