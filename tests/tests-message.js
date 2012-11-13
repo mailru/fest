@@ -22,7 +22,7 @@ vows.describe('Fest tests').addBatch({
 					return n != 1 ? 1 : 0;
 				},
 				messages: messages,
-				callbacks: {
+				events: {
 					message: function (id, context, reference) {
                         // console.log(arguments);
 					}
