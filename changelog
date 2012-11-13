@@ -1,3 +1,4 @@
+	* fixed recursion bug
 	* refactoring compile templates
 	* rename jsLoader to loader
 v 0.4.0
