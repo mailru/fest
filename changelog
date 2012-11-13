@@ -1,3 +1,4 @@
+	* fix refactoring compile templates
 	* fixed recursion bug
 	* refactoring compile templates
 	* rename jsLoader to loader
