@@ -5,3 +5,4 @@ benchget
 *.iml
 out
 node_modules
+tests-compiled
