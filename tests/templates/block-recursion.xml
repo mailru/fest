@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru">
+	<fest:script>var counter = 0</fest:script>
+	<fest:set name="main">
+		<fest:script>counter++</fest:script>
+		<fest:choose>
+			<fest:when test="counter == 1">
+				<fest:get select="undefined.undefined" /> <!-- ensure that block 'main' won't be invoked (commit eec81bb58d8d2eab8a8c650922588d456ccee533) -->
+			</fest:when>
+			<fest:otherwise>
+				recursion!
+			</fest:otherwise>
+		</fest:choose>
+	</fest:set>
+	<fest:get name="main" />
+</fest:template>

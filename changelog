@@ -1,3 +1,5 @@
+v 0.4.3
+	* fixed recursion bug
 v 0.4.0
 	* test.js refactoring
 	* added `mode` option to the compiler
