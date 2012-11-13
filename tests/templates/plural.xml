@@ -2,6 +2,5 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 	<fest:value>json.n1</fest:value><fest:space/><fest:plural select="json.n1">рубль|рубля|рублей</fest:plural>|
 	<fest:value>json.n2</fest:value><fest:space/><fest:plural select="json.n2"><![CDATA[рубль|рубля|рублей]]></fest:plural>|
-	<fest:value>json.n3</fest:value><fest:space/><fest:plural select="json.n3">%s рубль|%s рубля|%s рублей</fest:plural>|
-	<fest:value>json.n4</fest:value><fest:space/><fest:plural select="json.n4">рубль|рубля|рублей|денег нет</fest:plural>
+	<fest:value>json.n3</fest:value><fest:space/><fest:plural select="json.n3">рубль|рубля|рублей</fest:plural>
 </fest:template>

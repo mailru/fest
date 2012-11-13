@@ -53,6 +53,10 @@ msgstr ""
 msgid "\""
 msgstr ""
 
+#: block-recursion.xml:12
+msgid "recursion!"
+msgstr ""
+
 #: blocks.xml:4
 msgid "start"
 msgstr ""
@@ -95,6 +99,8 @@ msgstr ""
 
 #: blocks.xml:41
 #: blocks.xml:56
+#: plural-english.xml:4
+#: plural-english.xml:5
 #: plural.xml:4
 #: plural.xml:5
 #: setparams.xml:4
@@ -172,6 +178,12 @@ msgstr ""
 
 #: params.xml:8
 msgid "---"
+msgstr ""
+
+#: plural-english.xml:3
+#: plural-english.xml:4
+#: plural-english.xml:5
+msgid "ruble|rubles"
 msgstr ""
 
 #: setparams.xml:15
