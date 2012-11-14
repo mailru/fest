@@ -18,7 +18,8 @@
 	"bin": {
 		"fest-proxy": "./bin/fest-proxy",
 		"fest-build": "./bin/fest-build",
-		"fest-watch": "./bin/fest-watch"
+		"fest-render": "./bin/fest-render",
+		"po2js": "./bin/po2js"
 	},
 	"engines": {
 		"node": "*"
