@@ -1,4 +1,7 @@
 	* fix refactoring compile templates
+v 0.4.4
+	* fixed bug that occurs when __fest_error isn't defined
+v 0.4.3
 	* fixed recursion bug
 	* refactoring compile templates
 	* rename jsLoader to loader
