@@ -1,3 +1,5 @@
+v 0.3.5
+	* fixed bug that occurs when __fest_error isn't defined
 v 0.3.4
 	* fixed recursion bug
 v 0.3.3
