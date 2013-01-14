@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<html>
+	<head></head>
+	<body>
+	<table width="800">
+		<tbody>
+		<tr>
+			<td width="200">
+				<table bgcolor="#000000" border="0" cellpadding="4" cellspacing="2" width="100%">
+					<tbody>
+					<tr>
+						<td bgcolor="#ffffff"><h1>Lebowski benchmark</h1></td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+
+			<fest:for iterate="json.adverts" index="i" value="item">
+				<fest:get name="adv">item</fest:get>
+			</fest:for>
+		</tr>
+
+		<tr valign="top">
+			<td width="200">
+				<fest:if test="json.sections">
+					<table cellpadding="3"
+						   width="100%">
+						<tbody>
+						<fest:for iterate="json.sections" index="i" value="item">
+							<tr>
+								<td>
+									<fest:attributes>
+										<fest:attribute name="bgcolor"><fest:value output="text">i%2 ? '#dddddd' : '#eeeeee'</fest:value></fest:attribute>
+									</fest:attributes>
+									<fest:get name="sections">item</fest:get>
+								</td>
+							</tr>
+						</fest:for>
+						</tbody>
+					</table>
+				</fest:if>
+
+
+				<p>
+					<b>Users</b>:
+					<fest:space/>
+					<fest:value>json.total</fest:value>
+					<br/>
+
+					<b>Online</b>:
+					<fest:space/>
+					<fest:value>(json.online||[]).length</fest:value>
+					<br/>
+
+					<small>
+						<i>
+							<fest:for iterate="json.online" index="i" value="params">
+								<a>
+									<fest:attributes>
+										<fest:attribute name="href">http://lb/user.html?id=<fest:value>i</fest:value></fest:attribute>
+									</fest:attributes>
+									<fest:value>params.name</fest:value>
+								</a>
+								<fest:space/>
+							</fest:for>
+						</i>
+					</small>
+				</p>
+			</td>
+
+			<td colspan="3"
+				width="400">
+				<fest:for iterate="json.news" index="i" value="item">
+					<fest:get name="news">item</fest:get>
+				</fest:for>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"
+				align="center">
+				<hr/>
+				<small><i>This test based on "Big Lebowski" test by Alexey A. Rybak, 2005.<br/>Please send all questions and suggestions to<fest:space/><b>reki@reki.ru</b></i></small>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	</body>
+	</html>
+	
+	<fest:set name="adv">
+		<td valign="top" width="200">
+			<table bgcolor="#000000" border="0" cellpadding="2" cellspacing="2" width="100%">
+				<tbody>
+				<tr>
+					<td>
+						<font color="#ffffff"><b>
+							<fest:value>params.title</fest:value>
+						</b></font>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#ffffff">
+						<small>
+							<a>
+								<fest:attributes>
+									<fest:attribute name="href"><fest:value>params.url</fest:value></fest:attribute>
+								</fest:attributes>
+								<fest:value>params.text</fest:value>
+							</a>
+						</small>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</td>
+	</fest:set>
+
+	<fest:set name="sections">
+		<font color="#ffffff">
+			<b>
+				<a>
+					<fest:attributes>
+						<fest:attribute name="href">http://lb/section.html?id=<fest:value>params.id</fest:value></fest:attribute>
+					</fest:attributes>
+
+					<fest:value>params.title</fest:value>
+				</a>
+
+				<fest:if test="params.rip">
+					<font color="#999999">R.I.P.</font>
+				</fest:if>
+			</b>
+		</font>
+	</fest:set>
+
+	<fest:set name="news">
+		<b><fest:value>params.time+' '+params.title</fest:value></b>
+		<br/>
+
+		<small>
+			<fest:value>params.text</fest:value>
+			<a>
+				<fest:attributes>
+					<fest:attribute name="href">http://lb/news.html?id=<fest:value>params.id</fest:value></fest:attribute>
+				</fest:attributes>
+				<fest:text>[ read full story ]</fest:text>
+			</a>
+		</small>
+		<br/>
+	</fest:set>
+</fest:template>
