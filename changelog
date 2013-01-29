@@ -1,4 +1,5 @@
-	* fix refactoring compile templates
+	* fest:message and localization
+	* fest:plural
 	* fixed recursion bug
 	* refactoring compile templates
 	* rename jsLoader to loader
