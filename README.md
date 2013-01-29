@@ -43,6 +43,32 @@
 <fest:get name="name">{'some': 'data'}</fest:get>
 ```
 
+Через `fest:param` можно передавать в блок XML-данные:
+```xml
+<fest:get name="page">
+	<fest:param name="doctype">html</fest:param>
+	<fest:params>
+		{
+			title: json.title
+		}
+	</fest:params>
+	<fest:param name="content">
+		<article>
+			<fest:if test="json.title">
+				<h1><fest:value>json.title</fest:value></h1>
+			</fest:if>
+		</article>
+	</fest:param>
+</fest:get>
+<fest:set name="page">
+	<fest:doctype><fest:value>params.doctype</fest:value></fest:doctype>
+	<title><fest:value>params.title</fest:value></title>
+	<body>
+		<fest:value output="text">params.content</fest:value>
+	</body>
+</fest:set>
+```
+
 Если указать тег select, то выражение внутри выполнится и результирующая строка будет именем блока set.
 ```xml
 <fest:script>

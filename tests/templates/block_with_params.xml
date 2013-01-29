@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<fest:set name="status">500</fest:set>
+	<fest:get name="page">
+		<fest:param name="doctype">html</fest:param>
+		<fest:params>
+			{
+				title: json.title
+			}
+		</fest:params>
+		<fest:param name="content">
+			<article>
+				<fest:if test="json.title">
+					<h1><fest:value>json.title</fest:value></h1>
+				</fest:if>
+				<p><fest:get name="status" /></p>
+			</article>
+		</fest:param>
+	</fest:get>
+	<fest:set name="page">
+		<fest:doctype><fest:value>params.doctype</fest:value></fest:doctype>
+		<title><fest:value>params.title</fest:value></title>
+		<body>
+			<fest:value output="text">params.content</fest:value>
+		</body>
+	</fest:set>
+	<fest:set name="status">200</fest:set>
+</fest:template>
