@@ -17,6 +17,19 @@ vows.describe('Fest tests').addBatch({
 			assert.include(result, 'At line 4: inconsistent number of plural forms in "ruble|rubles" (expected 3 but got 2)');
 		}
 	},
+	'escape chars':{
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			transform('/templates/plural-escape.xml', {
+				n1: 1,
+				n2: 23,
+			}, {}, promise, true, {nothrow: true});
+			return promise;
+		},
+		'result':function(result){
+			assert.equal(result, '|%1%|,|%23%|');
+		}
+	},
 	'plural (russian)':{
 		topic:function(){
 			var promise = new(events.EventEmitter);
@@ -33,7 +46,7 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, '1 рубль|23 рубля|166 рублей');
+			assert.equal(result, 'один рубль|23 рубля|166 рублей');
 		}
 	},
 	'plural (english)':{
@@ -47,7 +60,7 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, '1 ruble|23 rubles|166 rubles');
+			assert.equal(result, 'one ruble|23 rubles|166 rubles');
 		}
 	}
 }).run();

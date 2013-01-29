@@ -6,3 +6,4 @@ benchget
 out
 node_modules
 tests-compiled
+benchmark
