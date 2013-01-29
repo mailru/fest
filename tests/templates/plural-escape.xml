@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <fest:plural select="json.n1">\|%%%s%%\||\|%%%s%%\|</fest:plural>,
-    <fest:plural select="json.n2">\|%%%s%%\||\|%%%s%%\|</fest:plural>
+    <fest:plural select="json.n1">\|%%%s%%s\||\|%%%s%%s\|</fest:plural>,
+    <fest:plural select="json.n2">\|%%%s%%s\||\|%%%s%%s\|</fest:plural>
 </fest:template>

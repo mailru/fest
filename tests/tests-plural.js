@@ -27,7 +27,7 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.equal(result, '|%1%|,|%23%|');
+			assert.equal(result, '|%1%s|,|%23%s|');
 		}
 	},
 	'plural (russian)':{

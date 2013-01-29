@@ -423,12 +423,18 @@ person.xml
 По умолчанию доступна поддержка плюрализации для русского и английского языка. В параметрах `fest.compile` можно передать любую другую функцию плюрализации.
 
 ```xml
-<fest:plural select="json.n">рубль|рубля|рублей</fest:plural>
+<fest:plural select="json.n">один рубль|%s рубля|%s рублей</fest:plural>
 ```
 Или англоязычный вариант:
 
 ```xml
-<fest:plural select="json.n">ruble|rubles</fest:plural>
+<fest:plural select="json.n">one ruble|%s rubles</fest:plural>
+```
+
+Чтобы вывести символ “%” внутри тега `fest:plural` используйте “%%”:
+
+```xml
+<fest:plural select="json.n">…1%%…|…%s%%…|…%s%%…</fest:plural>
 ```
 
 ### fest:message и fest:msg
