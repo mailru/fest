@@ -17,12 +17,12 @@ vows.describe('Fest tests').addBatch({
 	'first attributes': {
 	  topic:function(){
 		var promise = new(events.EventEmitter);
-		transform('/templates/first_attributes.xml', {}, {}, promise, true, {nothrow: true});
+		transform('/templates/attribute_with_first_attributes_error.xml', {}, {}, promise, true, {nothrow: true});
 		return promise;
 	  },
 	  'result':function(result) {
 		var res = [
-			__dirname + "/templates/first_attributes.xml",
+			__dirname + "/templates/attribute_with_first_attributes_error.xml",
 			"4: text",
 			"5: <fest:attributes>",
 			"6: 	<fest:attribute name=\"name\">text1</fest:attribute>",
@@ -34,15 +34,15 @@ vows.describe('Fest tests').addBatch({
 	'nested attributes': {
 	  topic:function(){
 		var promise = new(events.EventEmitter);
-		transform('/templates/nested_attributes.xml', {}, {}, promise, true, {nothrow: true});
+		transform('/templates/attribute_with_nested_attributes_error.xml', {}, {}, promise, true, {nothrow: true});
 		return promise;
 	  },
 	  'result':function(result) {
 		var res = [
-			__dirname + "/templates/nested_attributes.xml",
+			__dirname + "/templates/attribute_with_nested_attributes_error.xml",
 			"4: <fest:attributes>",
 			"5: 	<fest:attributes>",
-			"6: 		<fest:attribute name='href'>#</fest:attribute>",
+			"6: 		<fest:attribute name=\"href\">#</fest:attribute>",
 			"At line 5: fest:attributes cannot be nested"
 		].join('\n');
 		assert.equal(result, res);

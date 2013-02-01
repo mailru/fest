@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<fest:script>
+		var counts = [1, 2, 5],
+			n = 2;
+	</fest:script>
+	<a href="#"><img src="favicon.png" alt="Логотип {json.name}" /></a>
+	<fest:message context="row">Строка</fest:message>
+	<fest:msg>
+		Строка со
+		<a href="#" title="123">ссылкой</a>
+	</fest:msg>
+	<fest:message context="row">Строка</fest:message>
+	<!-- <fest:message>Строка</fest:message> -->
+	Строка
+	<fest:value>n</fest:value><fest:space/><fest:plural select="n">рубль|рубля|рублей</fest:plural>
+	<!-- <fest:message>
+		Строка со
+		<a href="">
+			<fest:attributes>
+				<fest:attribute name="title">заголовок</fest:attribute>
+			</fest:attributes>
+			ссылкой
+		</a>
+	</fest:message> -->
+</fest:template>

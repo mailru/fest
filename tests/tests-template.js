@@ -7,12 +7,12 @@ vows.describe('Fest tests').addBatch({
 	'unclosed template': {
 		topic:function(){
 		  var promise = new(events.EventEmitter);
-		  transform('/templates/template.xml', {}, {}, promise, true, {nothrow: true});
+		  transform('/templates/template_with_unclosed_error.xml', {}, {}, promise, true, {nothrow: true});
 		  return promise;
 		},
 		'result':function(result) {
 		  var res = [
-			  __dirname + "/templates/template.xml",
+			  __dirname + "/templates/template_with_unclosed_error.xml",
 			  "1: <?xml version=\"1.0\"?>",
 			  "2: <fest:template xmlns:fest=\"http://fest.mail.ru\" context_name=\"bad\">",
 			  "At line 2: fest:template is not closed"

@@ -28,7 +28,7 @@ vows.describe('Fest tests').addBatch({
 	'nested set blocks': {
 		topic:function(){
 			var promise = new(events.EventEmitter);
-			transform('/templates/set_nested.xml', {}, {}, promise, true, {nothrow: true});
+			transform('/templates/set_with_nested_error.xml', {}, {}, promise, true, {nothrow: true});
 			return promise;
 		},
 		'result':function(result){

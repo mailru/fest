@@ -1,0 +1,208 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: attribute.xml:6
+msgid "checked"
+msgstr ""
+
+#: attribute.xml:12
+#: attribute.xml:13
+#: attribute.xml:21
+#: attribute.xml:55
+#: element.xml:10
+#: element.xml:21
+#: element.xml:33
+#: element.xml:46
+#: element.xml:51
+#: useless_set.xml:6
+#: useless_set_select.xml:6
+msgid "foo"
+msgstr ""
+
+#: attribute.xml:23
+#: element.xml:12
+#: element.xml:48
+#: useless_set.xml:9
+#: useless_set_select.xml:9
+msgid "bar"
+msgstr ""
+
+#: attribute.xml:38
+#: attribute.xml:49
+#: choose.xml:5
+#: choose.xml:13
+#: if.xml:5
+msgid "true"
+msgstr ""
+
+#: attribute.xml:41
+#: attribute.xml:46
+#: choose.xml:8
+#: choose.xml:16
+#: if.xml:11
+msgid "false"
+msgstr ""
+
+#: attribute.xml:52
+#: script.xml:8
+#: script.xml:10
+#: script.xml:11
+#: script.xml:12
+msgid "\""
+msgstr ""
+
+#: block-recursion.xml:12
+msgid "recursion!"
+msgstr ""
+
+#: blocks.xml:4
+msgid "start"
+msgstr ""
+
+#: blocks.xml:5
+msgid "|one|"
+msgstr ""
+
+#: blocks.xml:9
+msgid "two1|"
+msgstr ""
+
+#: blocks.xml:10
+msgid "two2|"
+msgstr ""
+
+#: blocks.xml:14
+msgid "three1|"
+msgstr ""
+
+#: blocks.xml:15
+msgid "three2|"
+msgstr ""
+
+#: blocks.xml:22
+msgid "five|"
+msgstr ""
+
+#: blocks.xml:24
+msgid "six|"
+msgstr ""
+
+#: blocks.xml:27
+msgid "seven|"
+msgstr ""
+
+#: blocks.xml:28
+msgid "eight|"
+msgstr ""
+
+#: blocks.xml:41
+#: blocks.xml:56
+#: plural-english.xml:4
+#: plural-english.xml:5
+#: plural.xml:4
+#: plural.xml:5
+#: setparams.xml:4
+#: setparams.xml:4
+#: setparams.xml:7
+#: setparams.xml:7
+#: setparams.xml:10
+#: setparams.xml:10
+#: setparams.xml:13
+#: setparams.xml:13
+#: setparams.xml:15
+#: setparams_inner.xml:3
+#: setparams_inner.xml:3
+#: value.xml:6
+msgid "|"
+msgstr ""
+
+#: blocks.xml:48
+msgid "ten|"
+msgstr ""
+
+#: blocks.xml:60
+msgid "finish"
+msgstr ""
+
+#: cdata.xml:5
+msgid "alert (\"2\" < 3);"
+msgstr ""
+
+#: choose.xml:19
+msgid "choose"
+msgstr ""
+
+#: comment.xml:3
+msgid "comment"
+msgstr ""
+
+#: each.xml:5
+#: each.xml:8
+msgid "="
+msgstr ""
+
+#: if.xml:14
+msgid "&"
+msgstr ""
+
+#: message.xml:7
+msgid "Логотип {json.name}"
+msgstr ""
+
+#: message.xml:8
+#: message.xml:13
+msgctxt "row"
+msgid "Строка"
+msgstr ""
+
+#: message.xml:9
+msgid "Строка со\n		<a href=\"#\" title=\"123\">ссылкой</a>"
+msgstr ""
+
+#: message.xml:16
+msgid "Строка"
+msgstr ""
+
+#: message.xml:16
+#: plural.xml:3
+#: plural.xml:4
+#: plural.xml:5
+msgid "рубль|рубля|рублей"
+msgstr ""
+
+#: params.xml:5
+msgid "Hello,"
+msgstr ""
+
+#: params.xml:8
+msgid "---"
+msgstr ""
+
+#: plural-english.xml:3
+#: plural-english.xml:4
+#: plural-english.xml:5
+msgid "ruble|rubles"
+msgstr ""
+
+#: setparams.xml:15
+msgid "main|"
+msgstr ""
+
+#: setparams_inner.xml:3
+#: setparams_inner.xml:3
+msgid "inner|"
+msgstr ""
+
+#: useless_set.xml:12
+#: useless_set_select.xml:12
+msgid "baz"
+msgstr ""
+
+#: useless_set_include.xml:5
+#: useless_set_include.xml:5
+#: useless_set_include.xml:5
+msgid "qux"
+msgstr ""
+

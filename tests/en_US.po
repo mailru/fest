@@ -1,0 +1,28 @@
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1 ? 1 : 0;\n"
+
+#: message.xml:6
+msgid "Логотип {json.name}"
+msgstr "Logo of {json.name}"
+
+#: message.xml:7
+#: message.xml:12
+msgctxt "row"
+msgid "Строка"
+msgstr "Row"
+
+#: message.xml:8
+msgid "Строка со\n		<a href=\"#\" title=\"123\">ссылкой</a>"
+msgstr "Line with a\n		<a href=\"#\" title=\"123\">link</a>"
+
+#: message.xml:23
+msgid "Строка"
+msgstr "Line"
+
+#: message.xml:16
+msgid "рубль|рубля|рублей"
+msgstr "ruble|rubles"
