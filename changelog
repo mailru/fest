@@ -1,7 +1,9 @@
+v 0.5.1
+	* fest-proxy: compileDir used to be relative to templateDir
 v 0.5
 	* fest:message and localization
 	* fest:plural
-    * fest:param & fest:params
+	* fest:param & fest:params
 	* fix refactoring compile templates
 v 0.4.4
 	* fixed bug that occurs when __fest_error isn't defined

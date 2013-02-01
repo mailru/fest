@@ -6,6 +6,6 @@
 	},
 	"clientMask": "fest/",
 	"templateDir": "./templates/",
-    "compileDir": "../tests-compiled",
+    "compileDir": "../../tests-compiled",
 	"localeDir": "."
 }
