@@ -1,3 +1,4 @@
+v 0.5
 	* fest:message and localization
 	* fest:plural
     * fest:param & fest:params
