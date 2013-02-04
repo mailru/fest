@@ -20,6 +20,23 @@ vows.describe('Fest tests').addBatch({
 
 		  assert.equal(result, res);
 		}
+	},
+	'invalid xml': {
+		topic:function(){
+		  var promise = new(events.EventEmitter);
+		  transform('/templates/template_with_invalid_xml_error.xml', {}, {}, promise, true, {nothrow: true});
+		  return promise;
+		},
+		'result':function(result) {
+		  var res = [
+			  "Unexpected close tag",
+			  "Line: 6",
+			  "Column: 10",
+			  "Char: >"
+		  ].join('\n');
+
+		  assert.equal(result, res);
+		}
 	}
 }).run();
 
