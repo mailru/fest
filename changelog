@@ -1,3 +1,5 @@
+v 0.5.2
+	* handle sax parser errors in translate pre-processing
 v 0.5.1
 	* fest-proxy: compileDir used to be relative to templateDir
 v 0.5
