@@ -1,0 +1,9 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:set name="inner">
+        inner
+    </fest:set>
+    <fest:set name="outer">
+        <fest:include src="block_for_include.xml" />
+    </fest:set>
+    <fest:get name="outer" />
+</fest:template>
