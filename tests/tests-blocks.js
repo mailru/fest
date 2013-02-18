@@ -24,6 +24,16 @@ vows.describe('Fest tests').addBatch({
 			assert.equal(result[9], 'ten');
 			assert.equal(result[10], 'eleven');
 		}
+	},
+	'blocks and includes':{
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			transform('/templates/block_with_include.xml', {}, {}, promise);
+			return promise;
+		},
+		'result':function(result){
+			assert.equal(result, 'outerinner');
+		}
 	}
 }).run();
 
