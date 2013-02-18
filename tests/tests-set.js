@@ -32,7 +32,27 @@ vows.describe('Fest tests').addBatch({
 			return promise;
 		},
 		'result':function(result){
-			assert.include(result, 'At line 5: fest:set cannot be nested');
+			assert.include(result, 'At line 5: fest:set cannot be defined in another fest:set or fest:param');
+		}
+	},
+	'nested set blocks within include': {
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			transform('/templates/set_with_included_set_error.xml', {}, {}, promise, true, {nothrow: true});
+			return promise;
+		},
+		'result':function(result){
+			assert.include(result, 'At line 3: fest:set cannot be defined in another fest:set or fest:param');
+		}
+	},
+	'nested set blocks within param': {
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			transform('/templates/set_with_set_in_param_error.xml', {}, {}, promise, true, {nothrow: true});
+			return promise;
+		},
+		'result':function(result){
+			assert.include(result, 'At line 3: fest:set cannot be defined in another fest:set or fest:param');
 		}
 	},
 	'useless set blocks': {
