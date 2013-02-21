@@ -1,3 +1,6 @@
+v 0.5.4
+	* added support for x-fest-cfg http header in fest-proxy
+	* fixed bug: fest-proxy does not save compiled temlates when caching is disabled
 v 0.5.3
 	* fixed bug with included get-block inside set-block
 v 0.5.2
