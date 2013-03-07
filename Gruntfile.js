@@ -129,8 +129,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'jasmine_node']);
 
-    grunt.registerTask('travis', ['jshint', 'jasmine_node']);
-
     grunt.registerTask('default', ['test']);
 
 };

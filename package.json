@@ -25,7 +25,7 @@
 		"node": "*"
 	},
 	"scripts": {
-		"test": "grunt travis --verbose"
+		"test": "grunt test --verbose"
 	},
 	"dependencies": {},
 	"devDependencies": {
