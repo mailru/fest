@@ -1,0 +1,13 @@
+{
+    "expr"   : true,
+    "evil"   : true,
+    "node"   : true,
+    "undef"  : true,
+    "predef" : ["describe", "it", "expect", "beforeEach", "afterEach"],
+    "strict" : false,
+    "browser": true,
+    "sub"    : true,
+    "unused" : true,
+    "curly"  : true,
+    "indent" : 4
+}

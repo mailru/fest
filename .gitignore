@@ -7,3 +7,4 @@ out
 node_modules
 tests-compiled
 benchmark
+spec/tmp
