@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:var name="Answer">
+        <fest:if test="true">
+            42
+        </fest:if>
+    </fest:var>
+    <fest:var name="answer" select="Answer * 2" />
+    <fest:value>Answer</fest:value>
+    <fest:value>answer</fest:value>
+</fest:template>

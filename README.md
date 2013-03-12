@@ -130,6 +130,17 @@
 <fest:value output="js">'"'</fest:value>
 ```
 
+### fest:var
+
+Установить js-переменную
+
+```xml
+<fest:var name="question">Ultimate Question of Life, The Universe, and Everything</fest:value>
+<fest:value>question</fest:value>
+<fest:var name="answer" select="question.length - 13" />
+<fest:value>answer</fest:value>
+```
+
 ### fest:text
 
 Вывод неформатированного текста
@@ -472,4 +483,16 @@ person.xml
 <fest:message context="оружие">Лук</fest:message>
 ```
 
-Для каждого `fest:message`, `fest:msg`, обычного текста, заключенного между XML тегами, или текстового значения некоторых атрибутов компилятор вызывает функцию `events.message` (если такая была указана в параметрах). Данный механизм используется в `fest-build` утилите для построения оригинального PO-файла.
+Для каждого `fest:message`, `fest:msg`, обычного текста, заключенного между XML тегами (опция `auto_message`), или текстового значения некоторых атрибутов компилятор вызывает функцию `events.message` (если такая была указана в параметрах). Данный механизм используется в `fest-build` утилите для построения оригинального PO-файла.
+
+Пример вызова `fest-build` для создания PO-файла:
+
+```
+$ fest-build --dir=fest --po=ru_RU.po --compile.auto_message=true
+```
+
+Пример компиляции локализованных шаблонов:
+
+```
+$ fest-build --dir=fest --translate=en_US.po
+```

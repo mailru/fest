@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <fest:var name="answer">
+        <fest:include name="whatever" />
+    </fest:var>
+</fest:template>
