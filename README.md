@@ -130,6 +130,17 @@
 <fest:value output="js">'"'</fest:value>
 ```
 
+### fest:var
+
+Установить js-переменную
+
+```xml
+<fest:var name="question">Ultimate Question of Life, The Universe, and Everything</fest:value>
+<fest:value>question</fest:value>
+<fest:var name="answer" select="question.length - 13" />
+<fest:value>answer</fest:value>
+```
+
 ### fest:text
 
 Вывод неформатированного текста
