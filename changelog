@@ -1,3 +1,4 @@
+	* using TEXT_NODE for messages is disabled by default
 	* XML validator for messages in PO file [#59]
 v 0.5.4
 	* fest-build creates non-existent directories
