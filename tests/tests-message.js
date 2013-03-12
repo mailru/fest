@@ -12,6 +12,35 @@ vows.describe('Fest tests').addBatch({
 					'Строка': 'Line',
 					'Строкаrow': 'Row',
 					'Строка со\n\t\t<a href="#" title="123">ссылкой</a>': 'Line with a <a href="#" title="123">link</a>',
+				};
+			transform('/templates/message.xml', {
+				name: 'Fest'
+			}, {}, promise, false, {
+				nplurals: 2, // English
+				plural: function (n) {
+					return n != 1 ? 1 : 0;
+				},
+				messages: messages,
+				events: {
+					message: function (id, context, reference) {
+                        // console.log(arguments);
+					}
+				}
+			});
+			return promise;
+		},
+		'result':function(result){
+			assert.equal(result, '<a href="#"><img src="favicon.png" alt="Logo of Fest"/></a>Row\n\t\n\t\tLine with a<a href="#" title="123">link</a>RowСтрока2 рубля');
+		}
+	},
+	'message w/ auto_message':{
+		topic:function(){
+			var promise = new(events.EventEmitter);
+			var messages = {
+					'Логотип {json.name}': 'Logo of {json.name}',
+					'Строка': 'Line',
+					'Строкаrow': 'Row',
+					'Строка со\n\t\t<a href="#" title="123">ссылкой</a>': 'Line with a <a href="#" title="123">link</a>',
 					'рубль|рубля|рублей': 'ruble|rubles'
 				};
 			transform('/templates/message.xml', {
@@ -22,6 +51,7 @@ vows.describe('Fest tests').addBatch({
 					return n != 1 ? 1 : 0;
 				},
 				messages: messages,
+				auto_message: true,
 				events: {
 					message: function (id, context, reference) {
                         // console.log(arguments);
