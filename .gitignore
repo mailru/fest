@@ -1,9 +1,7 @@
 .settings.xml
 *.fest.js
-benchget
 .idea
 *.iml
-out
 node_modules
-tests-compiled
 benchmark
+spec/tmp

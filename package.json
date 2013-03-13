@@ -2,7 +2,7 @@
 	"name": "fest",
 	"description": "JavaScript Templates",
 	"keywords": ["template", "templating", "html", "xml"],
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"repository": {
 		"type": "git",
 		"url": "http://github.com/mailru/fest.git"
@@ -25,10 +25,14 @@
 		"node": "*"
 	},
 	"scripts": {
-		"test": "node tests/tests.js"
+		"test": "grunt test --verbose"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"vows": "*"
+		"grunt": "~0.4.0",
+        "grunt-contrib-clean": "~0.4.0",
+		"grunt-contrib-jshint": "~0.1.1",
+		"grunt-contrib-watch": "~0.2.0",
+		"jasmine-node": "~1.3.0"
 	}
 }
