@@ -23,8 +23,7 @@ module.exports = function (grunt) {
                 args: [
                     '--dir=spec/templates',
                     '--exclude=*error*',
-                    '--out=spec/tmp/initial',
-                    '--po=spec/tmp/initial/ru_RU.po'
+                    '--out=spec/tmp/initial'
                 ]
             },
             translated: {
@@ -94,9 +93,10 @@ module.exports = function (grunt) {
         }, function (error, result) {
             if (error) {
                 grunt.log.error(error);
+                grunt.log.write(result.stdout);
                 done(false);
             } else {
-                grunt.log.write(result.toString());
+                grunt.log.write(result.stdout);
                 done();
             }
         });
