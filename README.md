@@ -496,3 +496,17 @@ $ fest-build --dir=fest --po=ru_RU.po --compile.auto_message=true
 ```
 $ fest-build --dir=fest --translate=en_US.po
 ```
+
+## Contribution
+
+Необходимо установить [Grunt](http://gruntjs.com):
+
+```
+$ git clone git@github.com:mailru/fest.git
+$ cd fest
+$ sudo npm install -g grunt-cli
+$ npm install
+$ grunt
+```
+
+Grunt используется для валидации JS (тестов) и запуска тестов. Перед отправкой пулл-риквеста убедись, что успешно выполнены `git rebase master` и `grunt`.

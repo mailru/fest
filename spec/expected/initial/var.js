@@ -1,4 +1,4 @@
-;(function(){var x=Function('return this')();if(!x.fest)x.fest={};x.fest['comment.en_US']=function(__fest_context) {
+;(function(){var x=Function('return this')();if(!x.fest)x.fest={};x.fest['var']=function(__fest_context) {
     "use strict";
     var __fest_self = this,
         __fest_buf = "",
@@ -91,7 +91,31 @@
         return s;
     }
     var json = __fest_context;
-    __fest_buf += ("<!--comment-->");
+    var Answer = (function() {
+        var __fest_buf = "",
+            __fest_select, __fest_if, __fest_iterator, __fest_to, __fest_fn, __fest_params;
+        try {
+            __fest_if = true
+        } catch (e) {
+            __fest_if = false;
+            __fest_log_error(e.message);
+        }
+        if (__fest_if) {
+            __fest_buf += ("42");
+        }
+        return __fest_buf;
+    })();
+    var answer = Answer * 2;
+    try {
+        __fest_buf += (__fest_escapeHTML(Answer))
+    } catch (e) {
+        __fest_log_error(e.message + "8");
+    }
+    try {
+        __fest_buf += (__fest_escapeHTML(answer))
+    } catch (e) {
+        __fest_log_error(e.message + "9");
+    }
     __fest_to = __fest_chunks.length;
     if (__fest_to) {
         __fest_iterator = 0;

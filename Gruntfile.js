@@ -23,6 +23,7 @@ module.exports = function (grunt) {
                 args: [
                     '--dir=spec/templates',
                     '--exclude=*error*',
+                    '--compile.beautify=true',
                     '--out=spec/tmp/initial'
                 ]
             },
@@ -30,6 +31,7 @@ module.exports = function (grunt) {
                 args: [
                     '--dir=spec/templates',
                     '--exclude=*error*',
+                    '--compile.beautify=true',
                     '--out=spec/tmp/translated',
                     '--translate=spec/templates/en_US.po'
                 ]
