@@ -1,3 +1,5 @@
+v 0.6.3
+	* Windows support
 v 0.6.2
 	* fixed determination of the default plural function
 v 0.6.1
