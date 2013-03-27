@@ -22,14 +22,14 @@
 		"po2js": "./bin/po2js"
 	},
 	"engines": {
-		"node": "*"
+		"node": ">= 0.8"
 	},
 	"scripts": {
 		"test": "grunt test --verbose"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"grunt": "~0.4.0",
+		"grunt": "~0.4.1",
         "grunt-contrib-clean": "~0.4.0",
 		"grunt-contrib-jshint": "~0.1.1",
 		"grunt-contrib-watch": "~0.2.0",
