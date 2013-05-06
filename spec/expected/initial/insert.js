@@ -10,6 +10,7 @@
         __fest_debug_line = "",
         __fest_debug_block = "",
         __fest_htmlchars = /[&<>"]/g,
+        __fest_htmlchars_test = /[&<>"]/,
         __fest_short_tags = {
             "area": true,
             "base": true,
@@ -35,6 +36,7 @@
             "\"": "&quot;"
         },
         __fest_jschars = /[\\'"\/\n\r\t\b\f<>]/g,
+        __fest_jschars_test = /[\\'"\/\n\r\t\b\f<>]/,
         __fest_jshash = {
             "\"": "\\\"",
             "\\": "\\\\",
@@ -80,13 +82,13 @@
     }
     function __fest_escapeJS(s) {
         if (typeof s === "string") {
-            if (__fest_jschars.test(s)) return s.replace(__fest_jschars, __fest_replaceJS);
+            if (__fest_jschars_test.test(s)) return s.replace(__fest_jschars, __fest_replaceJS);
         } else if (typeof s === "undefined") return "";
         return s;
     }
     function __fest_escapeHTML(s) {
         if (typeof s === "string") {
-            if (__fest_htmlchars.test(s)) return s.replace(__fest_htmlchars, __fest_replaceHTML);
+            if (__fest_htmlchars_test.test(s)) return s.replace(__fest_htmlchars, __fest_replaceHTML);
         } else if (typeof s === "undefined") return "";
         return s;
     }
