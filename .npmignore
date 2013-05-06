@@ -1,4 +1,11 @@
 node_modules
 tests-compiled
 benchmark
+bench
+
 spec
+npm-shrinkwrap.json
+Gruntfile.js
+.travis.yml
+.npmignore
+.jshintrc
