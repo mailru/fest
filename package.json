@@ -22,7 +22,7 @@
 		"po2js": "./bin/po2js"
 	},
 	"engines": {
-		"node": "*"
+		"node": ">= 0.8"
 	},
 	"scripts": {
 		"test": "node tests/tests.js"
