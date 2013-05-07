@@ -213,7 +213,7 @@
         __fest_attrs[1] = "";
         __fest_log_error(e.message);
     }
-    __fest_buf += ("<div class=\"" + __fest_attrs[0] + "\" data-obj-value=\"" + __fest_attrs[1] + "\" data-obj-json=\"{ \"key\": \"value\" }\">");
+    __fest_buf += ("<div class=\"" + __fest_attrs[0] + "\" data-obj-value=\"" + __fest_attrs[1] + "\" data-obj-json=\"{ &quot;key&quot;: &quot;value&quot; }\">");
     try {
         __fest_attrs[0] = __fest_escapeHTML('name')
     } catch (e) {
@@ -226,7 +226,7 @@
         __fest_attrs[1] = "";
         __fest_log_error(e.message);
     }
-    __fest_buf += ("<span class=\"" + __fest_attrs[0] + "\" data-spec-chars=\"{\u003C\"\'&\u003E}\" data-espec-chars=\"" + __fest_attrs[1] + "\">");
+    __fest_buf += ("<span class=\"" + __fest_attrs[0] + "\" data-spec-chars=\"{&lt;&quot;\'&amp;&gt;}\" data-espec-chars=\"" + __fest_attrs[1] + "\">");
     __fest_select = "modify";
     __fest_params = {};
     try {
@@ -281,7 +281,7 @@
         __fest_attrs[1] = "";
         __fest_log_error(e.message);
     }
-    __fest_buf += ("<div data-lf=\"a\n\rb\" data-backslash=\"\\\" data-apos=\"\'\" data-quot=\"\"\" data-block=\"" + __fest_attrs[0] + "\" data-block-with-text=\"a" + __fest_attrs[1] + "{c}\"></div>");
+    __fest_buf += ("<div data-lf=\"a\n\rb\" data-backslash=\"\\\" data-apos=\"\'\" data-quot=\"&quot;\" data-block=\"" + __fest_attrs[0] + "\" data-block-with-text=\"a" + __fest_attrs[1] + "{c}\"></div>");
     __fest_to = __fest_chunks.length;
     if (__fest_to) {
         __fest_iterator = 0;

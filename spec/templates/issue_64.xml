@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+	<img src="img/emb.png" onclick = ' document.location.href = "/" ' ></img>
+</fest:template>

@@ -33,7 +33,7 @@ describe('fest:attribute(s)', function () {
         expect(
             render('templates/attribute_expression.xml').contents
         ).toBe(
-            '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ "key": "value" }"><span class="name" data-spec-chars="{<"\'&>}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div data-lf="a\n\rb" data-backslash="\\" data-apos="\'" data-quot=""" data-block="A" data-block-with-text="aB{c}"></div>'
+            '<div class="b-block" data-amp="&amp;" data-lt="&lt;" data-gt="&gt;" data-apos="\'" data-quot="&quot;" data-elcb="{" data-ercb="}" data-lcb="{" data-rcb="}" data-ecb="{}" data-dcb="{}" data-crazy="{{}{}}" data-crazy-again="{{}{}}" data-crazy-too="{}{}"><div class="b-block_modifier" data-has-modifier="true"></div><div class="b-block__element" data-obj-value="value" data-obj-json="{ &quot;key&quot;: &quot;value&quot; }"><span class="name" data-spec-chars="{&lt;&quot;\'&amp;&gt;}" data-espec-chars="{&lt;&quot;\'&amp;&gt;}">b-block__element_modifier</span></div></div>1245<div data-lf="a\n\rb" data-backslash="\\" data-apos="\'" data-quot="&quot;" data-block="A" data-block-with-text="aB{c}"></div>'
         );
     });
 
@@ -43,6 +43,14 @@ describe('fest:attribute(s)', function () {
             render('templates/attribute_expression_with_error.xml');
         }).toThrowMatch(
             /At line 3: expression #1 in attribute "class" has SyntaxError: Unexpected token ILLEGAL/
+        );
+    });
+
+    it('should fix #64', function () {
+        expect(
+            render('templates/issue_64.xml').contents
+        ).toBe(
+            '<img src="img/emb.png" onclick=" document.location.href = &quot;/&quot; "/>'
         );
     });
 

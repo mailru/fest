@@ -1,4 +1,4 @@
-# Fest [![Build Status](https://travis-ci.org/eprev/fest.png?branch=master)](https://travis-ci.org/eprev/fest)
+# Fest [![Build Status](https://travis-ci.org/eprev/fest.png?branch=0.7)](https://travis-ci.org/eprev/fest)
 
 ## Данные и вывод
 
@@ -511,4 +511,8 @@ $ grunt
 
 Grunt используется для валидации JS (тестов) и запуска тестов. Перед отправкой пулл-риквеста убедись, что успешно выполнены `git rebase master` и `grunt`.
 
-Если необходимо пересобрать шаблоны spec/expected, то выполните `./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/initial` и `./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/translated --translate=spec/templates/en_US.po`.
+Если необходимо пересобрать шаблоны spec/expected, то выполните: ```
+
+$ ./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/initial
+$ ./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/translated --translate=spec/templates/en_US.po
+```

@@ -17,4 +17,12 @@ describe('Other errors', function () {
         ]);
     });
 
+    it('should throw XML errors in strict mode', function () {
+        expect(function () {
+            render('templates/strict_error.xml');
+        }).toThrowMatch(
+            /At line 3: Error: Attribute without value/
+        );
+    });
+
 });

@@ -1,3 +1,6 @@
+v 0.7.0
+	* handle XML errors in the strict mode
+	* escape HTML entities in static-defined attributes #64
 v 0.6.4
 	* fixed possible XSS in escape functions
 v 0.6.3
