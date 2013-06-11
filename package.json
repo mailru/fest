@@ -19,6 +19,7 @@
 		"fest-proxy": "./bin/fest-proxy",
 		"fest-build": "./bin/fest-build",
 		"fest-render": "./bin/fest-render",
+		"fest-compile": "./bin/fest-compile",
 		"po2js": "./bin/po2js"
 	},
 	"engines": {
