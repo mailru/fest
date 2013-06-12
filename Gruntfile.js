@@ -151,13 +151,14 @@ module.exports = function (grunt) {
         var done = this.async();
 
         var files = fs.readdirSync(input_files);
-        files.filter(function(file) {
-            // process only files with '.xml' extension in input_files directory
-            return file.indexOf('.xml', file.length - 4) !== -1;
-        });
 
         // we need to use this 'forEachLimit' on Mac OS X because of 'spawn EMFILE' error
         grunt.util.async.forEachLimit(files, 1, function(file) {
+            if (file.indexOf('.xml', file.length - 4) === -1) {
+                // process only files with '.xml' extension in input_files directory
+                return;
+            }
+
             var compile_args = [];
             for (var i in args) {
                 compile_args.push(args[i]);
