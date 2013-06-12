@@ -38,6 +38,22 @@ module.exports = function (grunt) {
             }
         },
 
+        fest_compile: {
+            initial: {
+                args: [
+                    '--compile.beautify=true',
+                    'spec/templates',
+                ]
+            },
+            translated: {
+                args: [
+                    '--compile.beautify=true',
+                    '--translate=spec/templates/en_US.po',
+                    'spec/templates'
+                ]
+            }
+        },
+
         jasmine_node: {
             options: {
                 specs: './spec',
@@ -125,11 +141,62 @@ module.exports = function (grunt) {
 
     });
 
+    grunt.registerMultiTask('fest_compile', 'Run fest-compile', function () {
+
+        var fs = require('fs');
+        var path = require('path');
+
+        var input_files = path.resolve(this.data.args.pop());
+        var args = this.data.args;
+        var done = this.async();
+
+        var files = fs.readdirSync(input_files);
+        files.filter(function(file) {
+            // process only files with '.xml' extension in input_files directory
+            return file.indexOf('.xml', file.length - 4) !== -1;
+        });
+
+        // we need to use this 'forEachLimit' on Mac OS X because of 'spawn EMFILE' error
+        grunt.util.async.forEachLimit(files, 1, function(file) {
+            var compile_args = [];
+            for (var i in args) {
+                compile_args.push(args[i]);
+            }
+            var template_file = path.resolve(input_files, file);
+            compile_args.push(template_file);
+
+            grunt.util.spawn({
+                cmd: './bin/fest-compile',
+                args: compile_args
+            }, function (error, result) {
+                if (file.indexOf('error') !== -1) {
+                    if (error) {
+                        done();
+                    } else {
+                        grunt.log.error('No error in file "' + template_file + '"')
+                        grunt.log.error('')
+                        done(false);
+                    }
+                } else {
+                    if (error) {
+                        grunt.log.error('Error in file "' + template_file + '"')
+                        grunt.log.error(error);
+                        grunt.log.error('')
+                        done(false);
+                    } else {
+                        done();
+                    }
+                }
+            });
+        });
+
+    });
+
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'jasmine_node']);
+    grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'fest_compile', 'jasmine_node']);
 
     grunt.registerTask('default', ['test']);
 
