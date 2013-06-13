@@ -497,6 +497,14 @@ $ fest-build --dir=fest --po=ru_RU.po --compile.auto_message=true
 $ fest-build --dir=fest --translate=en_US.po
 ```
 
+Пример компиляции одного шаблона:
+
+```
+$ fest-compile path/to/template.xml
+$ fest-compile --out=path/to/compiled.js path/to/template.xml
+$ fest-compile --out=path/to/compiled.js --translate=path/to/en_US.po path/to/template.xml
+```
+
 ## Contribution
 
 Необходимо установить [Grunt](http://gruntjs.com):

@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/initial'
+                    '--out=spec/tmp/build/initial'
                 ]
             },
             translated: {
@@ -32,8 +32,30 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/translated',
+                    '--out=spec/tmp/build/translated',
                     '--translate=spec/templates/en_US.po'
+                ]
+            }
+        },
+
+        fest_compile: {
+            initial: {
+                args: [
+                    'spec/templates',
+                    'spec/tmp/compile/initial',
+                    [
+                        '--compile.beautify=true'
+                    ]
+                ]
+            },
+            translated: {
+                args: [
+                    'spec/templates',
+                    'spec/tmp/compile/translated',
+                    [
+                        '--compile.beautify=true',
+                        '--translate=spec/templates/en_US.po'
+                    ]
                 ]
             }
         },
@@ -125,11 +147,73 @@ module.exports = function (grunt) {
 
     });
 
+    grunt.registerMultiTask('fest_compile', 'Run fest-compile', function () {
+
+        var fs = require('fs');
+        var path = require('path');
+        var po = require('./lib/po');
+
+        var input_files = path.resolve(this.data.args[0]);
+        var output_files = path.resolve(this.data.args[1]);
+        var args = this.data.args[2];
+        var done = this.async();
+
+        var files = fs.readdirSync(input_files);
+        var is_ok = true;
+
+        // we need to use this 'forEachLimit' on Mac OS X because of 'spawn EMFILE' error
+        grunt.util.async.forEachLimit(files, 31, function(file, cb) {
+            if (file.indexOf('.xml', file.length - 4) === -1) {
+                // process only files with '.xml' extension in input_files directory
+                return cb();
+            }
+
+            var compile_args = [];
+            var lang = '';
+            for (var i in args) {
+                compile_args.push(args[i]);
+                if (args[i].indexOf('--translate=') === 0) {
+                    var pof = po.load(args[i].slice(12));
+                    lang = pof.headers['Language'];
+                }
+            }
+
+            if (file.indexOf('error') === -1) {
+                var compiled_filename = file.slice(0, -4) + (lang ? '.' + lang : '') + '.js';
+                var compiled_file = path.resolve(output_files, compiled_filename);
+                compile_args.push('--out=' + compiled_file);
+            }
+            var template_file = path.resolve(input_files, file);
+            compile_args.push(template_file);
+
+            grunt.util.spawn({
+                cmd: './bin/fest-compile',
+                args: compile_args
+            }, function (error, result) {
+                if (file.indexOf('error') !== -1) {
+                    if (!error && !result.stderr) {
+                        grunt.log.error(template_file, error, result);
+                        is_ok = false;
+                    }
+                } else {
+                    if (error) {
+                        grunt.log.error(error);
+                        is_ok = false;
+                    }
+                }
+                cb();
+            });
+        }, function() {
+            done(is_ok);
+        });
+
+    });
+
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'jasmine_node']);
+    grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'fest_compile', 'jasmine_node']);
 
     grunt.registerTask('default', ['test']);
 
