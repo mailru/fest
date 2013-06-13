@@ -1,3 +1,5 @@
+v 0.7.1
+	* added fest-compile tool
 v 0.7.0
 	* handle XML errors in the strict mode
 	* escape HTML entities in static-defined attributes #64

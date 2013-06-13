@@ -2,7 +2,7 @@
 	"name": "fest",
 	"description": "JavaScript Templates",
 	"keywords": ["template", "templating", "html", "xml"],
-	"version": "0.7.0",
+	"version": "0.7.1",
 	"repository": {
 		"type": "git",
 		"url": "http://github.com/mailru/fest.git"
@@ -11,7 +11,8 @@
 	"contributors": [
 		"Anton Eprev <a.eprev@gmail.com>",
 		"Lebedev Konstantin <ibnrubaxa@gmail.com>",
-		"Max Maximov <max.maximov@gmail.com> (http://maxmaximov.com)",
+		"Max Maximov <max.maximov@gmail.com>",
+		"Vladimir Rudnyh <dreadatour@gmail.com>",
 		"Artem Tyurin"
 	],
 	"main": "./lib/fest",
@@ -19,6 +20,7 @@
 		"fest-proxy": "./bin/fest-proxy",
 		"fest-build": "./bin/fest-build",
 		"fest-render": "./bin/fest-render",
+		"fest-compile": "./bin/fest-compile",
 		"po2js": "./bin/po2js"
 	},
 	"engines": {
