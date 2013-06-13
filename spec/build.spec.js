@@ -53,19 +53,19 @@ describe('fest-compile', function () {
         });
     });
 
-    // it('should translate and compile directories with templates', function () {
-    //     var actualFiles = fs.readdirSync(__dirname + '/tmp/compile/translated'),
-    //         expectedFiles = fs.readdirSync(__dirname + '/expected/translated');
-    //     expect(
-    //         actualFiles.length
-    //     ).toBe(
-    //         expectedFiles.length
-    //     );
-    //     expectedFiles.forEach(function (fn) {
-    //         var actual = fs.readFileSync(__dirname + '/tmp/compile/translated/' + fn, 'utf8'),
-    //             expected = fs.readFileSync(__dirname + '/expected/translated/' + fn, 'utf8');
-    //         expect(actual).toBe(expected);
-    //     });
-    // });
+    it('should translate and compile directories with templates', function () {
+        var actualFiles = fs.readdirSync(__dirname + '/tmp/compile/translated'),
+            expectedFiles = fs.readdirSync(__dirname + '/expected/translated');
+        expect(
+            actualFiles.length
+        ).toBe(
+            expectedFiles.length
+        );
+        expectedFiles.forEach(function (fn) {
+            var actual = fs.readFileSync(__dirname + '/tmp/compile/translated/' + fn, 'utf8'),
+                expected = fs.readFileSync(__dirname + '/expected/translated/' + fn, 'utf8');
+            expect(actual).toBe(expected);
+        });
+    });
 
 });
