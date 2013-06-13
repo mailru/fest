@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/initial'
+                    '--out=spec/tmp/build/initial'
                 ]
             },
             translated: {
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/translated',
+                    '--out=spec/tmp/build/translated',
                     '--translate=spec/templates/en_US.po'
                 ]
             }
@@ -41,15 +41,21 @@ module.exports = function (grunt) {
         fest_compile: {
             initial: {
                 args: [
-                    '--compile.beautify=true',
                     'spec/templates',
+                    'spec/tmp/compile/initial',
+                    [
+                        '--compile.beautify=true'
+                    ]
                 ]
             },
             translated: {
                 args: [
-                    '--compile.beautify=true',
-                    '--translate=spec/templates/en_US.po',
-                    'spec/templates'
+                    'spec/templates',
+                    'spec/tmp/compile/translated',
+                    [
+                        '--compile.beautify=true',
+                        '--translate=spec/templates/en_US.po'
+                    ]
                 ]
             }
         },
@@ -146,14 +152,15 @@ module.exports = function (grunt) {
         var fs = require('fs');
         var path = require('path');
 
-        var input_files = path.resolve(this.data.args.pop());
-        var args = this.data.args;
+        var input_files = path.resolve(this.data.args[0]);
+        var output_files = path.resolve(this.data.args[1]);
+        var args = this.data.args[2];
         var done = this.async();
 
         var files = fs.readdirSync(input_files);
 
         // we need to use this 'forEachLimit' on Mac OS X because of 'spawn EMFILE' error
-        grunt.util.async.forEachLimit(files, 1, function(file) {
+        grunt.util.async.forEachLimit(files, 10, function(file) {
             if (file.indexOf('.xml', file.length - 4) === -1) {
                 // process only files with '.xml' extension in input_files directory
                 return;
@@ -163,6 +170,8 @@ module.exports = function (grunt) {
             for (var i in args) {
                 compile_args.push(args[i]);
             }
+            var compiled_file = path.resolve(output_files, file.slice(0, -4) + '.js');
+            compile_args.push('--out=' + compiled_file);
             var template_file = path.resolve(input_files, file);
             compile_args.push(template_file);
 
@@ -171,18 +180,10 @@ module.exports = function (grunt) {
                 args: compile_args
             }, function (error, result) {
                 if (file.indexOf('error') !== -1) {
-                    if (error) {
-                        done();
-                    } else {
-                        grunt.log.error('No error in file "' + template_file + '"')
-                        grunt.log.error('')
-                        done(false);
-                    }
+                    done(error ? true : false);
                 } else {
                     if (error) {
-                        grunt.log.error('Error in file "' + template_file + '"')
                         grunt.log.error(error);
-                        grunt.log.error('')
                         done(false);
                     } else {
                         done();
