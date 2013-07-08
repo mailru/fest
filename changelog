@@ -1,3 +1,6 @@
+v 0.7.2
+	* fixed dirname #73
+	* support for absoulte path in src attribute for include, insert and script tags
 v 0.7.1
 	* added fest-compile tool
 v 0.7.0
