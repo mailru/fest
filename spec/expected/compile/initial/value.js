@@ -92,6 +92,21 @@
         } else if (typeof s === "undefined") return "";
         return s;
     }
+    var __fest_jsonchars = /[<>]/g,
+        __fest_jsonchars_test = /[<>]/,
+        __fest_jsonhash = {
+            "<": "\\u003C",
+            ">": "\\u003E"
+        };
+
+    function __fest_replaceJSON(chr) {
+        return __fest_jsonhash[chr];
+    }
+    function __fest_escapeJSON(s) {
+        s = JSON.stringify(s);
+        if (__fest_jsonchars_test.test(s)) return s.replace(__fest_jsonchars, __fest_replaceJSON);
+        return s;
+    }
     var json = __fest_context;
     try {
         __fest_buf += (__fest_escapeHTML(json.value))
@@ -121,9 +136,19 @@
         __fest_log_error(e.message + "6");
     }
     try {
-        __fest_buf += (__fest_escapeHTML(json.undefined))
+        __fest_buf += (__fest_escapeJSON(json.s))
     } catch (e) {
         __fest_log_error(e.message + "7");
+    }
+    try {
+        __fest_buf += (__fest_escapeJSON(json.value))
+    } catch (e) {
+        __fest_log_error(e.message + "8");
+    }
+    try {
+        __fest_buf += (__fest_escapeHTML(json.undefined))
+    } catch (e) {
+        __fest_log_error(e.message + "9");
     }
     __fest_to = __fest_chunks.length;
     if (__fest_to) {

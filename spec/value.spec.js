@@ -7,9 +7,9 @@ describe('fest:value', function () {
 
     it('should escape control characters', function () {
         expect(
-            render('templates/value.xml', { 'value': 'value' }).contents
+            render('templates/value.xml', { 'value': 'value', 's' : '</script>' }).contents
         ).toBe(
-            'valuevalue<script/>\\"|\\\'\\u003Cscript\\/\\u003E'
+            'valuevalue<script/>\\"|\\\'\\u003Cscript\\/\\u003E"\\u003C\/script\\u003E""value"'
         );
     });
 
