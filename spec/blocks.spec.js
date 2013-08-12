@@ -26,7 +26,7 @@ describe('fest:set and fest:get', function () {
         expect(
             render('templates/block_with_params.xml', {title: 'Fest'}).contents
         ).toBe(
-            '<!DOCTYPE html><title>Fest</title><body><article><h1>Fest</h1><p>200</p></article></body>'
+            '<!DOCTYPE html><title>Fest</title><body><article><h1>Fest</h1><p>200</p></article></body><title>other name</title><h1>Fest start page </h1><big><h1>Hi, David</h1></big><p>lorem ipsum</p>about'
         );
     });
 

@@ -25,4 +25,31 @@
 		</body>
 	</fest:set>
 	<fest:set name="status">200</fest:set>
+
+	<fest:set name="index">
+		<title><fest:value output="text">params.name </fest:value></title>
+		<h1><fest:value output="text">params.title </fest:value><fest:space/></h1>
+		<big><fest:value output="text">params.greet</fest:value></big>
+		<p><fest:value output="text">params.topic</fest:value></p>
+		<fest:value output="text">params.footer</fest:value>
+	</fest:set>
+	<fest:set name="greeting">
+		Hi,<fest:space/><fest:value>params.username</fest:value>
+	</fest:set>
+	<fest:get name="index" params="{title: 'Fest start page', name: json.title}">
+		<fest:params>
+		{
+			name: "other name",
+			topic: "lorem ipsum"
+		}
+		</fest:params>
+		<fest:param name="footer">
+			about
+		</fest:param>
+		<fest:param name="greet">
+			<h1>
+				<fest:get name="greeting">{username: "David"}</fest:get>
+			</h1>
+		</fest:param>
+	</fest:get> 
 </fest:template>

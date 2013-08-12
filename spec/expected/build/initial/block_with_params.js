@@ -174,6 +174,98 @@
         __fest_buf += ("200");
         return __fest_buf;
     };
+    __fest_blocks.index = function(params) {
+        var __fest_buf = "";
+        __fest_buf += ("<title>");
+        try {
+            __fest_buf += (params.name)
+        } catch (e) {
+            __fest_log_error(e.message + "29");
+        }
+        __fest_buf += ("</title><h1>");
+        try {
+            __fest_buf += (params.title)
+        } catch (e) {
+            __fest_log_error(e.message + "30");
+        }
+        __fest_buf += (" </h1><big>");
+        try {
+            __fest_buf += (params.greet)
+        } catch (e) {
+            __fest_log_error(e.message + "31");
+        }
+        __fest_buf += ("</big><p>");
+        try {
+            __fest_buf += (params.topic)
+        } catch (e) {
+            __fest_log_error(e.message + "32");
+        }
+        __fest_buf += ("</p>");
+        try {
+            __fest_buf += (params.footer)
+        } catch (e) {
+            __fest_log_error(e.message + "33");
+        }
+        return __fest_buf;
+    };
+    __fest_blocks.greeting = function(params) {
+        var __fest_buf = "";
+        __fest_buf += ("Hi, ");
+        try {
+            __fest_buf += (__fest_escapeHTML(params.username))
+        } catch (e) {
+            __fest_log_error(e.message + "36");
+        }
+        return __fest_buf;
+    };
+    __fest_select = "index";
+    __fest_params = {};
+    try {
+        __fest_extend(__fest_params, {
+            title: 'Fest start page',
+            name: json.title
+        })
+    } catch (e) {
+        __fest_log_error(e.message)
+    }
+    try {
+        __fest_extend(__fest_params, {
+            name: "other name",
+            topic: "lorem ipsum"
+        })
+    } catch (e) {
+        __fest_log_error(e.message)
+    }
+    __fest_params.footer = __fest_param(function() {
+        var __fest_buf = "",
+            __fest_select, __fest_if, __fest_iterator, __fest_to, __fest_fn, __fest_params;
+        __fest_buf += ("about");
+        return __fest_buf;
+    });
+    __fest_params.greet = __fest_param(function() {
+        var __fest_buf = "",
+            __fest_select, __fest_if, __fest_iterator, __fest_to, __fest_fn, __fest_params;
+        __fest_buf += ("<h1>");
+        __fest_select = "greeting";
+        __fest_params = {};
+        try {
+            __fest_params = {
+                username: "David"
+            }
+        } catch (e) {
+            __fest_log_error(e.message)
+        }
+        __fest_fn = __fest_blocks[__fest_select];
+        if (__fest_fn) __fest_buf += __fest_call(__fest_fn, __fest_params, false);
+        __fest_buf += ("</h1>");
+        return __fest_buf;
+    });
+    __fest_chunks.push(__fest_buf, {
+        name: __fest_select,
+        params: __fest_params,
+        cp: true
+    });
+    __fest_buf = "";
     __fest_to = __fest_chunks.length;
     if (__fest_to) {
         __fest_iterator = 0;
