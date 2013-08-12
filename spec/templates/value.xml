@@ -3,6 +3,10 @@
 	<fest:value>json.value</fest:value>
 	<fest:value safe="true">json.value</fest:value>
 	<fest:value output="text"><![CDATA["<script/>"]]></fest:value>
+	<fest:value output="text">(5>2)?
+		true:
+		false;
+	</fest:value>
 	<fest:value output="js">'"'</fest:value>|<fest:value output="js">"'"</fest:value>
 	<fest:value output="js"><![CDATA["<script/>"]]></fest:value>
 	<fest:value output="json">json.s</fest:value>
