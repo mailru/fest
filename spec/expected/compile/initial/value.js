@@ -120,35 +120,40 @@
         __fest_log_error(e.message + "4");
     }
     try {
+        __fest_buf += ((5 > 2) ? true : false)
+    } catch (e) {
+        __fest_log_error(e.message + "8");
+    }
+    try {
         __fest_buf += (__fest_escapeJS('"'))
     } catch (e) {
-        __fest_log_error(e.message + "5");
+        __fest_log_error(e.message + "9");
     }
     __fest_buf += ("|");
     try {
         __fest_buf += (__fest_escapeJS("'"))
     } catch (e) {
-        __fest_log_error(e.message + "5");
+        __fest_log_error(e.message + "9");
     }
     try {
         __fest_buf += (__fest_escapeJS("<script/>"))
     } catch (e) {
-        __fest_log_error(e.message + "6");
+        __fest_log_error(e.message + "10");
     }
     try {
         __fest_buf += (__fest_escapeJSON(json.s))
     } catch (e) {
-        __fest_log_error(e.message + "7");
+        __fest_log_error(e.message + "11");
     }
     try {
         __fest_buf += (__fest_escapeJSON(json.value))
     } catch (e) {
-        __fest_log_error(e.message + "8");
+        __fest_log_error(e.message + "12");
     }
     try {
         __fest_buf += (__fest_escapeHTML(json.undefined))
     } catch (e) {
-        __fest_log_error(e.message + "9");
+        __fest_log_error(e.message + "13");
     }
     __fest_to = __fest_chunks.length;
     if (__fest_to) {

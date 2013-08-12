@@ -9,7 +9,7 @@ describe('fest:value', function () {
         expect(
             render('templates/value.xml', { 'value': 'value', 's' : '</script>' }).contents
         ).toBe(
-            'valuevalue<script/>\\"|\\\'\\u003Cscript\\/\\u003E"\\u003C\/script\\u003E""value"'
+            'valuevalue<script/>true\\"|\\\'\\u003Cscript\\/\\u003E"\\u003C\/script\\u003E""value"'
         );
     });
 
