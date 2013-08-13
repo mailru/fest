@@ -1,3 +1,5 @@
+	* console.log replaced by console.error #70
+	* trim traling ; in expressions #66
 v 0.7.2
 	* fixed dirname #73
 	* support for absoulte path in src attribute for include, insert and script tags
