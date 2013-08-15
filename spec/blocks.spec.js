@@ -10,7 +10,7 @@ describe('fest:set and fest:get', function () {
         expect(
             render('templates/blocks.xml', undefined, undefined, {nine: 'nine'}).contents
         ).toBe(
-            'start|one|two2|three1|five|six|seven|eight|nine|ten|eleven|finish'
+            'start|one|two2|three1|five|six|seven|eight|nine|ten|eleven|foobar|finish'
         );
     });
 

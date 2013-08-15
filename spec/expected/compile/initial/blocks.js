@@ -244,7 +244,7 @@
         try {
             __fest_buf += (__fest_escapeHTML(this.nine))
         } catch (e) {
-            __fest_log_error(e.message + "40");
+            __fest_log_error(e.message + "41");
         }
         __fest_buf += ("|");
         return __fest_buf;
@@ -303,7 +303,7 @@
         try {
             __fest_buf += (__fest_escapeHTML(params.text))
         } catch (e) {
-            __fest_log_error(e.message + "54");
+            __fest_log_error(e.message + "55");
         }
         __fest_buf += ("|");
         return __fest_buf;
@@ -326,7 +326,30 @@
         cp: false
     });
     __fest_buf = "";
-    __fest_buf += ("finish");
+    try {
+        var foo = 'bar';
+    } catch (e) {
+        __fest_log_error(e.message);
+    }
+    __fest_blocks.bar = function(params) {
+        var __fest_buf = "";
+        __fest_buf += ("foobar");
+        return __fest_buf;
+    };
+    try {
+        __fest_select = (foo)
+    } catch (e) {
+        __fest_select = "";
+        __fest_log_error(e.message)
+    }
+    __fest_params = {};
+    __fest_chunks.push(__fest_buf, {
+        name: __fest_select,
+        params: __fest_params,
+        cp: false
+    });
+    __fest_buf = "";
+    __fest_buf += ("|finish");
     __fest_to = __fest_chunks.length;
     if (__fest_to) {
         __fest_iterator = 0;

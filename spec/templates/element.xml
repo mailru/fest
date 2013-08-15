@@ -39,6 +39,7 @@
 		var name2 = 'span';
 		var name3 = 'br';
 		var nameX2 = function(){};
+		var name5 = 'span';
 	</fest:script>
 	<fest:element select="name1">
 		<fest:element select="name2">
@@ -56,4 +57,7 @@
 	<fest:element select="nameX"/>
 	<fest:element select="nameX2"/>
 
+	<fest:element name="{name5}"/>
+	<fest:element name="d{(true)?'i':''}v"/>
+	
 </fest:template>

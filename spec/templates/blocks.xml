@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="foreach">
+
 	start
 	<fest:get name="one-one"/>
 	<fest:set name="one-one">|one|</fest:set>
@@ -56,5 +57,12 @@
 	</fest:set>
 
 	<fest:get name="block">{callback: "block2", data: {text: "eleven"}}</fest:get>
-	finish
+	
+	<fest:script>
+		var foo = 'bar';
+	</fest:script>
+	
+	<fest:set name="bar">foobar</fest:set>
+	<fest:get name="{foo}"/>
+	|finish
 </fest:template>
