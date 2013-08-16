@@ -54,4 +54,14 @@
 	</div>
 	<fest:set name="class">foo</fest:set>
 	<div>foo</div>
+	<div>
+		<fest:attributes>
+			<fest:attribute name="data-{(true)?'k':'i'}a{(true)?'t':'u'}a" value="abc{(true)?'d':'e'}">
+				_efg
+			</fest:attribute>
+			<fest:attribute name="{undefined.undefined}">
+				not_displays
+			</fest:attribute>
+		</fest:attributes>
+	</div>
 </fest:template>

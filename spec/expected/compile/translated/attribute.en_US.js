@@ -163,7 +163,38 @@
         __fest_buf += ("foo");
         return __fest_buf;
     };
-    __fest_buf += ("<div>foo</div>");
+    __fest_buf += ("<div>foo</div><div");
+    try {
+        __fest_select = "data-" + ((true) ? 'k' : 'i') + "a" + ((true) ? 't' : 'u') + "a"
+    } catch (e) {
+        __fest_select = "";
+        __fest_log_error(e.message)
+    }
+    if (__fest_select !== "") {
+        __fest_buf += (" ");
+        __fest_buf += (__fest_select);
+        __fest_buf += ("=\"");
+        try {
+            __fest_select = "abc" + ((true) ? 'd' : 'e')
+        } catch (e) {
+            __fest_select = "";
+            __fest_log_error(e.message)
+        }
+        __fest_buf += (__fest_select);
+        __fest_buf += ("_efg\"");
+    }
+    try {
+        __fest_select = (undefined.undefined)
+    } catch (e) {
+        __fest_select = "";
+        __fest_log_error(e.message)
+    }
+    if (__fest_select !== "") {
+        __fest_buf += (" ");
+        __fest_buf += (__fest_select);
+        __fest_buf += ("=\"not_displays\"");
+    }
+    __fest_buf += ("></div>");
     __fest_to = __fest_chunks.length;
     if (__fest_to) {
         __fest_iterator = 0;
