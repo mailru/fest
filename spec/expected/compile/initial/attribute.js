@@ -171,9 +171,7 @@
         __fest_log_error(e.message)
     }
     if (__fest_select !== "") {
-        __fest_buf += (" ");
-        __fest_buf += (__fest_select);
-        __fest_buf += ("=\"");
+        __fest_buf += (" " + __fest_select + "=\"");
         try {
             __fest_select = "abc" + ((true) ? 'd' : 'e')
         } catch (e) {
@@ -190,9 +188,7 @@
         __fest_log_error(e.message)
     }
     if (__fest_select !== "") {
-        __fest_buf += (" ");
-        __fest_buf += (__fest_select);
-        __fest_buf += ("=\"not_displays\"");
+        __fest_buf += (" " + __fest_select + "=\"not_displays\"");
     }
     __fest_buf += ("></div>");
     __fest_to = __fest_chunks.length;
