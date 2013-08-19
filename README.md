@@ -1,4 +1,4 @@
-# Fest [![Build Status](https://travis-ci.org/eprev/fest.png?branch=0.7)](https://travis-ci.org/eprev/fest)
+# Fest [![Build Status](https://travis-ci.org/mailru/fest.png?branch=0.7)](https://travis-ci.org/mailru/fest)
 
 ## Данные и вывод
 
