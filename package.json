@@ -2,7 +2,7 @@
 	"name": "fest",
 	"description": "JavaScript Templates",
 	"keywords": ["template", "templating", "html", "xml"],
-	"version": "0.7.3",
+	"version": "0.8.0",
 	"repository": {
 		"type": "git",
 		"url": "http://github.com/mailru/fest.git"

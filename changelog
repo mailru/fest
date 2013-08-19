@@ -1,4 +1,7 @@
 v 0.8.0
+	* added attribute value for fest:attribute (#63)
+	* added support for fest:attribute dynamic names (#63)
+	* added support for inline expressions in fest:get name and fest:element name (#63)
 	* updated documentation
 v 0.7.3
 	* added attribute "params" to fest:get #67
