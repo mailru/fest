@@ -1,3 +1,5 @@
+v 0.8.0
+	* updated documentation
 v 0.7.3
 	* added attribute "params" to fest:get #67
 	* support for "~" in fest-build #71
