@@ -10,7 +10,7 @@ describe('fest:element', function () {
         expect(
             result.contents
         ).toBe(
-            '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div><span></span><div></div>'
+            '<div class="foo bar"></div><div><i></i></div><div>foo</div><hr/><img src="foo"/><div><span>foo</span>bar<br/><div class="foo"></div></div><div></div><div></div><span></span><div></div><span>login</span><table>table code</table><div>expr code</div><div>div code</div>'
         );
         expect(
             result.errors
@@ -18,7 +18,8 @@ describe('fest:element', function () {
             [
                 /name4 is not defined/,
                 /nameX is not defined/,
-                /Element name must be a string/
+                /Element name must be a string/,
+                /variable2 is not defined/
             ]
         );
     });

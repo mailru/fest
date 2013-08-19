@@ -59,5 +59,19 @@
 
 	<fest:element name="{name5}"/>
 	<fest:element name="d{(true)?'i':''}v"/>
-	
+
+	<fest:element name="span">login</fest:element>
+	<fest:script>
+	    var variable = 'table';
+	</fest:script>
+	<fest:element name="{variable}">
+	    table code
+	</fest:element>
+	<fest:element name="d{(true)?'i':'a'}v">
+	    expr code
+	</fest:element>
+	<fest:element name="{variable2}">
+	    div code
+	</fest:element>
+
 </fest:template>
