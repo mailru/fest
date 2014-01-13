@@ -86,7 +86,7 @@ Hello,John!
 Устаналивает локальную JavaScript переменную.
 
 ```xml
-<fest:var name="question">Ultimate Question of Life, The Universe, and Everything</fest:value>
+<fest:var name="question">Ultimate Question of Life, The Universe, and Everything</fest:var>
 <fest:value>question</fest:value><!-- Ultimate Question of Life, The Universe, and Everything -->
 <fest:var name="answer" select="question.length - 13" />
 <fest:value>answer</fest:value><!-- 42  -->
