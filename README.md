@@ -181,7 +181,7 @@ Hello,<fest:space/><fest:value>json.name</fest:value>!<!-- Hello, John! -->
 ```xml
 <fest:script>
     var name = 'foo'
-</fest:srcipt>
+</fest:script>
 <fest:get select="name"/><!-- foo -->
 <fest:set name="foo">foo</fest:set>
 <fest:set name="bar">bar</fest:set>
