@@ -592,6 +592,6 @@ Grunt используется для валидации JS (тестов) и з
 Если необходимо пересобрать шаблоны spec/expected, то выполните:
 
 ```
-$ ./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/initial
-$ ./bin/fest-build --dir=spec/templates --exclude=*error* --compile.beautify=true --out=spec/expected/translated --translate=spec/templates/en_US.po
+$ ./bin/fest-build --dir=spec/templates --exclude='*error*' --compile.beautify=true --out=spec/expected/initial
+$ ./bin/fest-build --dir=spec/templates --exclude='*error*' --compile.beautify=true --out=spec/expected/translated --translate=spec/templates/en_US.po
 ```
