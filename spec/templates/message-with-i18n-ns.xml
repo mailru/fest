@@ -1,0 +1,10 @@
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:i18n="http://i18n.fest.mail.ru">
+    <fest:set name="block">
+        <fest:value output="text">params.text</fest:value>
+    </fest:set>
+    <fest:get name="block">
+    {
+        text: '<i18n:msg>Строка</i18n:msg>'
+    }
+    </fest:get>
+</fest:template>

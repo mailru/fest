@@ -49,4 +49,16 @@ describe('fest:message', function () {
         );
     });
 
+    it('should support messages with i18n namespace', function () {
+        expect(
+            render('templates/message-with-i18n-ns.xml', {}, {
+                messages: {
+                    'Строка': 'Line'
+                }
+            }).contents
+        ).toBe(
+            'Line'
+        );
+    });
+
 });
