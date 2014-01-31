@@ -61,4 +61,42 @@ describe('fest:message', function () {
         );
     });
 
+    it('should allow redefine messages via events', function () {
+        var sourceMap = {
+            'Логотип {json.name}': '0',
+            'Строкаrow': '2',
+            'Строка со\n\t\t<a href="#" title="123">ссылкой</a>': '3'
+        };
+
+        expect(
+            render('templates/message.xml', {
+                name: 'Fest'
+            }, {
+                nplurals: 2,
+                plural: function (n) {
+                    return n != 1 ? 1 : 0;
+                },
+                auto_message: true,
+                messages: {
+                    '0': 'Logo of {json.name}',
+                    'Строка': 'Line',
+                    '2': 'Row',
+                    '3': 'Line with a <a href="#" title="123">link</a>'
+                },
+                events: {
+                    'dictionary': function (event) {
+                        if (event.key == 'рубль|рубля|рублей') {
+                            event.content = 'ruble|rubles';
+                        }
+                        else {
+                            event.key = sourceMap[event.key] || event.key;
+                        }
+                    }
+                }
+            }).contents
+        ).toBe(
+                '<a href="#"><img src="favicon.png" alt="Logo of Fest"/></a>Row\n\t\n\t\tLine with a<a href="#" title="123">link</a>RowLine2 rubles'
+            );
+    });
+
 });

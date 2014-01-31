@@ -2,6 +2,8 @@
 
 module.exports = function (grunt) {
 
+    var IS_WIN = /^win/.test(process.platform);
+
     grunt.config.init({
         meta: {
             src  : 'lib/**/*.js',
@@ -104,10 +106,15 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('jasmine_node', 'Run jasmine-node', function () {
 
         var options = this.options(),
-            done = this.async();
+            done = this.async(),
+            cmd = './node_modules/.bin/jasmine-node';
+
+        if( IS_WIN ) {
+            cmd = cmd + '.cmd';
+        }
 
         grunt.util.spawn({
-            cmd: './node_modules/.bin/jasmine-node',
+            cmd: cmd,
             args: [options.specs],
             opts: {
                 env: grunt.util._.extend(

@@ -1,4 +1,5 @@
 var fs = require('fs'),
+    os = require('os'),
     resolve = require('path').resolve.bind(null, __dirname),
     defaultOptions = process.env.FEST_COMPILE ? JSON.parse(process.env.FEST_COMPILE) : {};
     // jasmine = require('jasmine-node');
@@ -12,13 +13,26 @@ function extend(dest){
     return dest;
 }
 
+var normaliseLineBreak = os.EOL !== "\n"
+    ? (function(re) {
+        return function(str) {
+            return str.replace(re, "\n");
+        }
+    })(new RegExp(os.EOL, "g"))
+    : function(str){ return str }
+;
+
+function readFileSync(fileName) {
+    return normaliseLineBreak(String(fs.readFileSync(fileName)));
+}
+
 var errors = [],
     __fest_error =  function (err) { errors.push(err); },
     compileFn = (new Function(
         '__fest_error', '__dirname', '__read_file',
-        fs.readFileSync(resolve('../lib/compile.js')) + '; return compile;'
+        readFileSync(resolve('../lib/compile.js')) + '; return compile;'
     ))(
-        __fest_error, resolve('../lib'), fs.readFileSync
+        __fest_error, resolve('../lib'), readFileSync
     );
 
 exports.render = function (file, json, options, thisArg) {
