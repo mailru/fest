@@ -1,3 +1,5 @@
+	* added 'dictionary' event
+	* change 'message' event format, callback now has only one param - event object
 v 0.8.1
 	* added support for i18n namespace (#98)
 v 0.8.0
