@@ -8,7 +8,7 @@
 
 		<!-- Определяем элемент "btn__text" -->
 		<span bem:elem="text">
-			<!-- Добавляем модификатор "btn__text_icon" в зависимости от модификатора "btn_icon" -->
+			<!-- Добавляем модификатор "btn__text_pad" в зависимости от модификатора "btn_icon" -->
 			<bem:mod name="pad" has-mod="icon"/>
 
 			<fest:value>params.text</fest:value>
