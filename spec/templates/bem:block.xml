@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem" context_name="ctx">
+
+	<div bem:block="btn">
+		<bem:mod name="icon" test="params.icon"/>
+
+		<span bem:elem="text">
+			<bem:mod name="pad" has-mod="icon"/>
+
+			<fest:value>params.text</fest:value>
+		</span>
+	</div>
+
+	<bem:btn>{ text: "foo" }</bem:btn>
+	<bem:btn>{ text: "bar", icon: true }</bem:btn>
+
+</fest:template>
