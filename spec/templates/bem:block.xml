@@ -1,17 +1,22 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem" context_name="ctx">
 
+	<!-- Определяем блок "btn" -->
 	<div bem:block="btn">
+		<!-- Добавляем модификатор "btn_icon" в зависимости от параметров -->
 		<bem:mod name="icon" test="params.icon"/>
 
+		<!-- Определяем элемент "btn__text" -->
 		<span bem:elem="text">
+			<!-- Добавляем модификатор "btn__text_icon" в зависимости от модификатора "btn_icon" -->
 			<bem:mod name="pad" has-mod="icon"/>
 
 			<fest:value>params.text</fest:value>
 		</span>
 	</div>
 
-	<bem:btn>{ text: "foo" }</bem:btn>
+	<!-- Используем блок "btn" -->
+	<bem:btn>{ text: "foo", mods: ["main"] }</bem:btn>
 	<bem:btn>{ text: "bar", icon: true }</bem:btn>
 
 </fest:template>
