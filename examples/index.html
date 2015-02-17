@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>Fest :: Examples</title>
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<link rel="stylesheet" href="https://img.imgsmail.ru/ts/build/css/septima/pages/main-flat.101da58476d9a1cae9ceb73fd331ab3f.css?v=1423826501"/>
+	<script>
+		var patron = {
+			toolkit: {
+				lang: {}
+			}
+		};
+	</script>
+
+	<script src="http://127.0.0.1:8091/fest/lego-bem.js"></script>
+	<script src="fest.binding.js"></script>
+
+</head>
+<body>
+
+	<div style="padding: 50px;">
+		<h1 style="margin-bottom: 30px">Fest :: Binding</h1>
+
+		<div id="playground"></div>
+		<pre id="code"></pre>
+	</div>
+
+
+
+
+	<script>
+		// http://jsperf.com/fest-react/edit
+		var lego = fest.withBindings('lego-bem');
+
+		// Создаем ModelView для кнопки
+		var btn = new ModelView({
+			text: 'Основная',
+			mods: 'primary'
+		});
+
+		// Dropdown
+		var dropdown = new ModelView({
+			ctrl: 'Переместить',
+			icon: ['toolbar', 'toolbar_move'],
+			items: ['Входящие', 'Спам']
+		});
+
+		// Рендерим
+		playground.innerHTML = (
+			lego['btn'](btn) + // кнопка
+			'<br/>' +
+			'<br/>' +
+			lego['b-dropdown'](dropdown) // dropdown ;]
+		);
+
+		// Маленький тест
+		setTimeout(function () {
+			btn.$set({
+				mods: [],
+				text: 'Написать',
+				icon: ['toolbar', 'toolbar_compose']
+			});
+
+			setTimeout(function () {
+				btn.$set({
+					text: 'Печать',
+					icon: ['toolbar', 'toolbar_print']
+				});
+			}, 300);
+		}, 300);
+	</script>
+
+</body>
+</html>

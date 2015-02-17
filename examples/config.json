@@ -1,0 +1,10 @@
+{
+	"host": "127.0.0.1",
+	"port": 8091,
+	"clientMask": "fest/",
+	"templateDir": ".tpl/",
+	"compile": {
+		"fnName": "__template__",
+		"additionalVars": ["__gid=1"]
+	}
+}

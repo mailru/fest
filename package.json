@@ -27,7 +27,8 @@
 		"node": ">= 0.8"
 	},
 	"scripts": {
-		"test": "grunt test --verbose"
+		"test": "grunt test --verbose",
+		"examples": "./bin/fest-proxy examples/config.json"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.1",
