@@ -1,49 +1,11 @@
 <?xml version="1.0"?>
 <fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem">
-	<!-- И так, это наш lego, первы мы объявляем блок "ico" -->
 	<i bem:block="ico"></i>
 
-	<!-- Дальше, btn -->
-	<button bem:block="btn">
-		<fest:if test="ctx.icon">
-			<!-- Тут мы используем ico, если передали `ctx.icon` -->
-			<bem:ico>{ mods: ctx.icon }</bem:ico>
-		</fest:if>
+	<fest:include src="hello.xml"/>
 
-		<!-- Определяем элемент btn__text -->
-		<span bem:elem="text">
-			<bem:mod name="pad" test="ctx.icon"/>
-			<fest:value>ctx.text</fest:value>
-		</span>
-	</button>
-
-	<!-- Определяем блок b-dropdown -->
-	<div bem:block="b-dropdown">
-		<!-- Модификатор в раскрытом виде -->
-		<bem:mod name="expanded" test="ctx.expanded"/>
-
-		<!-- b-dropdwn__ctrl -->
-		<div bem:elem="ctrl" on-click="ctx.expanded = !ctx.expanded;">
-			<!-- Опять ico -->
-			<bem:ico>{ mods: ctx.icon }</bem:ico>
-
-			<span bem:elem="text">
-				<fest:value>ctx.ctrl</fest:value>
-			</span>
-
-			<i bem:elem="arrow"></i>
-		</div>
-
-		<!-- Рендерим список, только если dropdown раскрыт -->
-		<fest:if test="ctx.expanded">
-			<div bem:elem="list" on-click="ctx.expanded = false;" on-click-outside="ctx.expanded = false;">
-				<fest:for-each data="ctx.items" as="item">
-					<a bem:elem="list__item">
-						<fest:value>item</fest:value>
-					</a>
-				</fest:for-each>
-			</div>
-		</fest:if>
-	</div>
+	<fest:include src="btn.xml"/>
+	<fest:include src="b-nav.xml"/>
+	<fest:include src="b-dropdown.xml"/>
 
 </fest:template>

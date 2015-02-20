@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem">
+
+	<!-- Определяем блок b-dropdown -->
+	<div bem:block="b-dropdown">
+		<!-- Модификатор в раскрытом виде -->
+		<bem:mod name="expanded" test="ctx.expanded"/>
+
+		<!-- b-dropdwn__ctrl -->
+		<div bem:elem="ctrl" on-click="ctx.expanded = !ctx.expanded;">
+			<!-- Опять ico -->
+			<bem:ico>{ mods: ctx.icon }</bem:ico>
+
+			<span bem:elem="text">
+				<fest:value>ctx.ctrl</fest:value>
+			</span>
+
+			<i bem:elem="arrow"></i>
+		</div>
+
+		<!-- Рендерим список, только если dropdown раскрыт -->
+		<fest:if test="ctx.expanded">
+			<div bem:elem="list" on-click="ctx.expanded = !ctx.expanded;" on-click-outside="ctx.expanded = false;">
+				<fest:for-each data="ctx.items" as="item">
+					<a bem:elem="list__item">
+						<fest:value>item</fest:value>
+					</a>
+				</fest:for-each>
+			</div>
+		</fest:if>
+	</div>
+
+</fest:template>

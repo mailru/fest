@@ -1,103 +1,19 @@
 (function () {
-	function transformTemplate(name) {
-		var bindIdx = 0,
-			template = window.fest[name].toString();
+	'use strict';
 
-		template = template
-					.replace(/(var __xid)/g, 'var __xb = [], __xid')
-					.replace(/\/\*M\$\*\/([^<]*?)\/\*\$M\*\//g, '$1') // сливам все модификаторы в один
-				;
-
-		do {
-			template = template.replace(/\/\*\$(V|M|B|IF)\*\/([\s\S]*?)\/\*(\1)\$\*\//g, function (_, type, expr) {
-				var __xb = '__xb[' + bindIdx + ']',
-					code = [];
-
-				if (type === 'M') { // MOD
-					code.push(
-						'__fest_buf +=  " m=' + bindIdx + '";',
-						__xb + ' = {};',
-						__xb + '.name = __bem_x;',
-						__xb + '.mods = __bem_mods;',
-						__xb + '.$apply = function (__bem_block_mods) {',
-						'__bem_mods = this.mods;',
-						'__bem_x = this.name;',
-						expr,
-						'return __bem_mods;',
-						'}',
-						expr
-					);
-				}
-				else if (type === 'B') { // BLOCK
-					code.push(
-						__xb + ' = {};',
-						__xb + '.$apply = function () {',
-						expr.split('/*$*/')[0],
-						'this.model.$set(__fest_params);',
-						'};',
-						expr,
-						__xb + '.model = __fest_params'
-					);
-				}
-				else {
-					code.push(
-						__xb + ' = function () {var __fest_buf = "";',
-						expr.replace(/\b__fest_escape[^(]+/g, ''),
-						'return __fest_buf;}'
-					);
-
-
-					if (type === 'IF') {
-						code.push(
-								__xb + '.last = !!__fest_if;',
-								__xb + '.test = function () {',
-								expr.split('/*$*/')[0],
-								'if (this.last !== !!__fest_if) { this.last = !!__fest_if; return true; }',
-								'};'
-						);
-					}
-
-					// Обертка коментариями
-					code.push(
-						'__fest_buf += "<!--' + bindIdx + '-->";',
-						expr,
-						'__fest_buf += "<!--/' + bindIdx + '-->";'
-					);
-				}
-
-				code.push(__xb + '.type = "' + type + '";');
-				bindIdx++;
-
-				return code.join('\n');
-			});
-//					console.log('---------');
-//					console.log(template);
-//					console.log('~~~~~')
-		} while (/\/\*(\$[A-Z]+|[A-Z]\$)\*\//.test(template));
-
-		template = template.replace(/<[a-z][^>]+/g, function (entry) {
-			var idx = 0;
-
-			return entry.replace(/\son-([a-z]+)(-outside)?=\\"(.*?)\\"/g, function (_, event, outside, expr) {
-				return ' e' + (idx++) + '=" + __xevents.push({' +
-					'name:"' + event + '",' +
-					'outside: ' + !!outside + ',' +
-					'fn: ' + 'function (evt, el) {return (' + expr.trim().replace(/;+$/, '')  + ');}' +
-					'}) + "'
-				;
-			});
-		});
-
-//				console.log(template)
-		template = new Function('return ' + template)();
-
-		template({}); // init call
-
-		return template;
-	}
-
+	/**
+	 * Пустышка для помощи в создании произвольного куска html
+	 * @type HTMLDivElement
+	 * @private
+	 */
 	var _fragment = document.createElement('div');
 
+
+	/**
+	 * Создание DOM-куска на основе произвольной html-строки
+	 * @param  {string}  html
+	 * @return {DocumentFragment}
+	 */
 	function _createFragment(html) {
 		if (/^(<!--.*?-->)?<option/i.test(html)) {
 			_fragment.innerHTML = '<select>' + html + '</select>';
@@ -122,6 +38,153 @@
 		return _fragment.firstChild;
 	}
 
+
+	/**
+	 * Список препроцессоров
+	 * @type {Array}
+	 * @private
+	 */
+	var _preprocessors = [];
+
+
+	function templatePreprocessing(name) {
+		var bindIdx = 0,
+			template = this[name].toString(), // Получаем ссылку на скомпилированную-шаблон
+			r_expr,
+			r_expr_g;
+
+		r_expr = _preprocessors.map(function (desc) {
+			return desc.id;
+		});
+
+		r_expr = new RegExp('\\/\\*\\$(' + r_expr.join('|') + ')\\*\\/([\\\s\\S]*?)\\/\\*(\\1)\\$\\*\\/');
+		r_expr_g = new RegExp(r_expr.source, 'g');
+
+		template = template
+			.replace(/(var __xid)/g, 'var __xb = [], __bid, __xid')
+			.replace(/\/\*M\$\*\/([^<]*?)\/\*\$M\*\//g, '$1') // сливам все модификаторы в один
+		;
+
+
+
+		// Биндим события
+		template = template.replace(/<[a-z][^>]+>/g, function (entry) {
+			var events = [],
+				__xb = '__xb[__bid]';
+
+			entry = entry.replace(/\son-([a-z]+)(-outside)?=\\"(.*?)\\"/g, function (_, event, outside, expr) {
+				events.push(
+					'{name:"' + event + '",' +
+					'outside:' + !!outside + ',' +
+					'fn:function (evt, el) {return (' + expr.trim().replace(/;+$/, '') + ');}}'
+				);
+
+				return '';
+			});
+
+			if (events.length) {
+				entry += '<!--e" + (__xb.push([' + events.join(',') + ']) - 1) + "-->';
+			}
+
+			return entry;
+		});
+
+
+		do {
+			template = template.replace(r_expr_g, function (_, name, expr) {
+				var __xb = '__xb[__bid]',
+					code = [],
+					pre = _preprocessors[name];
+
+				if (pre) {
+					code.push(
+						'__bid = __xb.push({ parent: __bid }) - 1;',
+						//__xb + ' = {};',
+						__xb + '.id = __bid;',
+						__xb + '.name = "' + name + '";'
+					);
+
+					// Экспортируем свойства
+					pre.props && Object.keys(pre.props).forEach(function (key) {
+						var idx = expr.indexOf('/*$*/'),
+							incut = __xb + '.' + key + '=' + pre.props[key] + ';';
+
+						if (idx > -1) {
+							idx += 5;
+							expr = expr.substr(0, idx) + incut + expr.substr(idx);
+						}
+						else {
+							code.push(incut);
+						}
+					});
+
+					// Рендер функция
+					if (pre.render) {
+						code.push(
+							__xb + '.$render = function () { var __fest_buf = "";',
+							(pre.expr ? pre.expr(expr) : expr),
+							'return __fest_buf;};'
+						);
+					}
+
+					// Функция тест
+					if (pre.$test) {
+						code.push(__xb + '.$test = ' + pre.$test.toString().replace('this.getter();', expr.split('/*$*/')[0]) + ';');
+					}
+
+					// Применение изменений
+					if (pre.$apply) {
+						code.push(__xb + '.$apply = ' + pre.$apply.toString().replace('this.getter();', expr.split('/*$*/')[0]) + ';');
+					}
+
+					// Биндинг через коментарий
+					if (pre.attr) {
+						code.push('__fest_buf +=  " ' + pre.attr + '=" + __bid;');
+					}
+
+					// Обертка коментариями
+					if (pre.dom === 'wrap') {
+						code.push(
+							'__fest_buf += "<!--"+__bid+"-->";',
+							expr,
+							'__fest_buf += "<!--/"+__bid+"-->";'
+						);
+					}
+					else if (pre.dom === 'link') {
+						code.push('__fest_buf += "<!--l"+__bid+"-->";', expr);
+					}
+					else {
+						code.push(expr);
+					}
+
+					// Экспортируем свойства
+					pre.afterProps && Object.keys(pre.afterProps).forEach(function (key) {
+						code.push(__xb + '.' + key + '=' + pre.afterProps[key] + ';');
+					});
+
+					code.push('if (' + __xb + '.parent !== void 0) __bid = ' + __xb + '.parent;');
+				}
+				else {
+					code.push(expr);
+				}
+
+				bindIdx++;
+
+				return code.join('\n');
+			});
+		} while (r_expr.test(template));
+
+
+		template = new Function('return ' + template)();
+
+		// Инициализируем шиблон и экспортируем блоки
+		template({});
+
+		return template;
+	}
+
+
+
 	function ModelView(ctx) {
 		ctx.__proto__ = this;
 		return ctx;
@@ -134,43 +197,52 @@
 			return window[this.$id];
 		},
 
-		$init: function (el) {
-			var nodeValue;
+		$init: function (el, endEl) {
+			var $inited,
+				chr,
+				idx,
+				nodeValue;
 
-			el = el || this.$().firstChild;
+			if (el === true) {
+				el = this.$();
+				this.$inited = $inited = true;
+			}
 
 			if (el) {
 				do {
 					if (el.nodeType === 8) {
 						nodeValue = el.nodeValue;
+						idx = nodeValue|0;
+						chr = nodeValue.charAt(0);
 
-						if (nodeValue.charAt(0) === '/') {
-							this.$binds[nodeValue.substr(1)|0]._el = el;
-						} else {
-							this.$binds[nodeValue|0].el = el;
+						if (!(chr > 0)) {
+							idx = nodeValue.substr(1) | 0;
 						}
-					}
-					else if (el.nodeType === 1) {
-						if (el.attributes.m) {
-							this.$binds[el.attributes.m.value].el = el;
+
+						if (chr === 'l') { // простая связка
+							this.$binds[idx].el = el;
 						}
-						else if (el.attributes.e0) {
-							setTimeout(function (el) {
-								var i = 0, attr, desc, attrs = el.attributes;
+						else if (chr === 'e') { // события
+							setTimeout(function (el, events) {
+								events.el = el;
+								this.$events.push(events);
 
-								for (; attr = attrs['e' + i]; i++) {
-									desc = this.$events[attr.value-1];
-									desc.el = el;
-									desc.unbind = function () {
-										(this.outside ? document : el).removeEventListener(this.name, this.handle);
-										this.handle =
-										this.unbind =
-										this.el = null;
-									};
+								events.unbind = function () {
+									events.forEach(function (desc) {
+										(desc.outside ? document : el).removeEventListener(desc.name, desc.handle);
+										desc.handle = null;
+									});
 
+									el = null;
+									events.el = null;
+									events.unbind = null;
+								};
+
+								events.forEach(function (desc) {
 									(desc.outside ? document : el).addEventListener(desc.name, desc.handle = function (desc, evt) {
 										if (desc.outside) {
 											var check = evt.target;
+
 											do {
 												if (check === el) {
 													return;
@@ -178,21 +250,36 @@
 											} while (check = check.parentNode);
 										}
 
-										desc.fn(evt, el);
+										desc.fn.call(el, evt, el);
 
 										this.$apply();
 									}.bind(this, desc));
-								}
+								}, this);
+							}.bind(this, el.previousSibling || el.parentNode, this.$binds[idx]));
 
-								attrs = attr = null;
-							}.bind(this, el));
+							this.$binds[idx] = void 0;
+						}
+						else if (chr === '/') {
+							this.$binds[idx]._el = el;
+						}
+						else {
+							this.$binds[idx].el = el;
+						}
+					}
+					else if (el.nodeType === 1 && ($inited || !el.attributes.scope)) {
+						if (el.attributes.m) {
+							this.$binds[el.attributes.m.value].el = el;
 						}
 
-						if (el.childNodes.length > 1) {
+						if (el.childNodes.length > 0) {
 							this.$init(el.firstChild);
 						}
 					}
-				} while (el = el.nextSibling);
+
+					if ($inited === true) {
+						break;
+					}
+				} while ((el = el.nextSibling) && (el !== endEl));
 			}
 		},
 
@@ -266,12 +353,7 @@
 
 			if (html !== '') {
 				parentEl.insertBefore(_createFragment(html), endEl);
-
-				do{
-					startEl = startEl.nextSibling;
-					this.$init(startEl);
-				}
-				while (startEl.nextSibling !== endEl);
+				this.$init(startEl, endEl);
 
 				return true;
 			}
@@ -281,59 +363,152 @@
 
 		$apply: function () {
 			if (this.$inited !== true) {
-				this.$inited = true;
-				this.$init();
+				this.$init(true);
 			}
 
 			var i = 0,
-				el,
+				el = this.$(),
 				bind,
-				type,
+				bindEl,
+				html,
 				binds = this.$binds,
-				length = binds.length;
+				length = binds.length,
+				$events = this.$events;
 
 			for (; i < length; i++) {
 				bind = binds[i];
 
-				if (bind === void 0) {
+				if (bind === void 0 || isDetached(el, bind.el)) {
+					if (bind !== void 0) {
+						binds.unbind && binds.unbind();
+						bind.el = bind._el = null;
+					}
+
+					binds.splice(i, 1);
+					i--;
+					length--;
+					continue;
+				}
+				else if ((bind.$test !== void 0) && !bind.$test()) {
 					continue;
 				}
 
-				type = bind.type;
+				bindEl = bind.el;
 
-				if (type === 'B') {
-					bind.$apply();
+				if (bind.$apply !== void 0) {
+					bind.$apply(el, bindEl);
 				}
-				else if (type === 'M') {
-					if (bind.el) {
-						bind.el.className = bind.$apply(' ' + this.$().className + ' ');
-					} else {
-						bind.mods = this._mods || bind.mods;
-						this.$().className = bind.$apply(this.$().className);
-					}
-				}
-				else if (type === 'IF') {
-					if (bind.test()) {
-						this.$replaceBetween(bind.el, bind._el, bind());
-						this.$events.forEach(function (evt) {
+
+				if (bind.$render !== void 0) {
+					html = bind.$render();
+
+					if (bind.name === 'IF') {
+						this.$replaceBetween(bind.el, bind._el, html);
+						$events.forEach(function (evt, i) {
 							evt.el && !evt.el.parentNode && evt.unbind();
+							$events.splice(i, 1);
 						});
 					}
-				}
-				else {
-					el = bind.el.nextSibling;
+					else {
+						bindEl = bindEl.nextSibling;
 
-					if (el === bind._el) {
-						el.parentNode.insertBefore(document.createTextNode(bind()), bind._el);
-					} else {
-						el.nodeValue = bind();
+						if (bindEl === bind._el) {
+							bindEl.parentNode.insertBefore(document.createTextNode(html), bind._el);
+						} else {
+							bindEl.nodeValue = html;
+						}
 					}
 				}
 			}
 		}
 	};
 
+
+	function isDetached(rootEl, el) {
+		while (rootEl !== el) {
+			el = el.parentNode;
+
+			if (el === null) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+
+	/**
+	 * Добавить препроцессор
+	 * @param  {Object} desc описание препроцессора
+	 * @return {templatePreprocessing}
+	 */
+	templatePreprocessing.add = function (desc) {
+		_preprocessors.push(desc);
+		_preprocessors[desc.id] = desc;
+
+		return this;
+	};
+
+
+	// Добавляем препроцессоры
+	templatePreprocessing
+		.add({
+			id: 'V', // fest:value
+			dom: 'wrap', // связь с DOM (добавить html-комментарии)
+			render: true, // можно рендерить
+			expr: function (value) { return value.replace(/\b__fest_escape[^(]+/g, ''); }
+		})
+		.add({
+			id: 'IF', // fest:if
+			dom: 'wrap',
+			render: true,
+			props: {
+				last: '!!__fest_if' // запомнить последнее значение биндинга
+			},
+			$test: function () { // функция проверки изменений
+				var __fest_if;
+
+				this.getter();
+
+				if (this.last !== !!__fest_if) {
+					this.last = !!__fest_if;
+					return true;
+				}
+			}
+		})
+		.add({
+			id: 'B', // <bem:___/>
+			dom: 'link',
+			afterProps: {
+				model: '__fest_params'
+			},
+			$apply: function () {
+				var __fest_params;
+				this.getter();
+				this.model.$set(__fest_params);
+			}
+		})
+		.add({
+			id: 'M',
+			attr: 'm', // биндинг через аттрибут
+			props: {
+				name: '__bem_x',
+				mods: '__bem_mods'
+			},
+			$apply: function (el, bindEl) {
+				var __bem_mods =  this.mods,
+					__bem_x = this.name,
+					__bem_block_mods = el.className;
+
+				this.getter();
+
+				(bindEl || el).className = __bem_mods;
+			}
+		})
+	;
+
+
 	// Export
-	fest.withBindings = transformTemplate;
-	window.ModelView = ModelView;
+	fest.withBindings = templatePreprocessing;
+	fest.ModelView = ModelView;
 })();

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem">
+
+	<button bem:block="btn">
+		<fest:if test="ctx.icon">
+			<!-- Тут мы используем ico, если передали `ctx.icon` -->
+			<bem:ico>{ mods: ctx.icon }</bem:ico>
+		</fest:if>
+
+		<!-- Определяем элемент btn__text -->
+		<span bem:elem="text">
+			<bem:mod name="pad" test="ctx.icon"/>
+			<fest:value>ctx.text</fest:value>
+		</span>
+	</button>
+
+</fest:template>

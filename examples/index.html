@@ -11,6 +11,25 @@
 	<meta name="description" content=""/>
 
 	<link rel="stylesheet" href="https://img.imgsmail.ru/ts/build/css/septima/pages/main-flat.101da58476d9a1cae9ceb73fd331ab3f.css?v=1423826501"/>
+	<style>
+		.b-nav__item {
+			cursor: pointer;
+		}
+
+		.b-nav__subitems {
+			overflow-y: hidden;
+			transition: max-height .25s, opacity .2s;
+			max-height: 100px;
+			opacity: 1;
+		}
+
+		.b-nav__subitems_close {
+			display: block;
+			max-height: 0;
+			opacity: 0;
+		}
+	</style>
+
 	<script>
 		var patron = {
 			toolkit: {
@@ -25,14 +44,105 @@
 </head>
 <body>
 
-	<div style="padding: 50px;">
-		<h1 style="margin-bottom: 30px">Fest :: Binding</h1>
+	<div style="padding: 10px 50px 50px;">
 
 		<div id="playground"></div>
-		<pre id="code"></pre>
+
 	</div>
 
 
+	<script>
+		var folders = [
+			{
+				"id": "0",
+				"icon": [ "folder", "folder_inbox"],
+				"text": "Входящие",
+				"parent": "-1",
+				"items": [
+					{
+						"id": "3",
+						"icon": ["folder", "folder_inbox"],
+						"text": "123",
+						"parent": "0"
+					},
+					{
+						"id": "9",
+						"icon": ["folder", "folder_inbox"],
+						"text": "BCS",
+						"parent": "0"
+					},
+					{
+						"id": "8",
+						"icon": ["folder", "folder_inbox"],
+						"text": "XXX",
+						"parent": "0"
+					}
+				]
+			},
+			{
+				"id": "5",
+				"icon": ["folder", "folder_user"],
+				"text": "Archive",
+				"parent": "-1"
+			},
+			{
+				"id": "6",
+				"icon": ["folder", "folder_user"],
+				"text": "empty",
+				"parent": "-1"
+			},
+			{
+				"id": "1",
+				"icon": ["folder", "folder_user"],
+				"text": "secure",
+				"parent": "-1",
+				"items": [
+					{
+						"id": "2",
+						"icon": ["folder", "folder_user"],
+						"text": "<public # \" & -'- &>",
+						"parent": "1"
+					},
+					{
+						"id": "4",
+						"icon": ["folder", "folder_user"],
+						"text": "tmp",
+						"parent": "1"
+					}
+				]
+			},
+			{
+				"id": "500000",
+				"icon": ["folder", "folder_sent"],
+				"text": "Отправленные",
+				"parent": "-1"
+			},
+			{
+				"id": "500001",
+				"icon": ["folder", "folder_drafts"],
+				"text": "Черновики",
+				"parent": "-1"
+			},
+			{
+				"id": "950",
+				"icon": ["folder", "folder_spam"],
+				"text": "Спам",
+				"parent": "-1"
+			},
+			{
+				"id": "500002",
+				"icon": ["folder", "folder_trash"],
+				"text": "Корзина",
+				"parent": "-1",
+				"items": [{
+					"id": "7",
+					"icon": ["folder", "folder_trash"],
+					"text": "trash",
+					"parent": "500002"
+				}]
+			}
+		]
+	</script>
 
 
 	<script>
@@ -40,28 +150,58 @@
 		var lego = fest.withBindings('lego-bem');
 
 		// Создаем ModelView для кнопки
-		var btn = new ModelView({
+		var btn = new fest.ModelView({
 			text: 'Основная',
 			mods: 'primary'
 		});
 
 		// Dropdown
-		var dropdown = new ModelView({
+		var dropdown = new fest.ModelView({
 			ctrl: 'Переместить',
 			icon: ['toolbar', 'toolbar_move'],
 			items: ['Входящие', 'Спам']
 		});
 
+		var nav = new fest.ModelView({
+			mods: ['foldings-and-icons'],
+			active: 0,
+			items: folders || [{
+				"id": "0",
+				"icon": ["folder", "folder_inbox"],
+				"text": "Входящие",
+				"parent": "-1",
+				"items": [{
+					"id": "3",
+					"icon": ["folder", "folder_inbox"],
+					"text": "123",
+					"parent": "0"
+				}]
+			}]
+		});
+
+
 		// Рендерим
+		console.time('Рендер');
 		playground.innerHTML = (
+			lego['hello'](new fest.ModelView({ name: '' })) +
+			'<br/>' +
+			'<br/>' +
 			lego['btn'](btn) + // кнопка
 			'<br/>' +
 			'<br/>' +
-			lego['b-dropdown'](dropdown) // dropdown ;]
+			lego['b-dropdown'](dropdown) + // dropdown ;]
+			'<br/>' +
+			'<br/>' +
+			lego['b-nav'](nav) + // список папок
+			''
 		);
+		console.timeEnd('Рендер');
+
 
 		// Маленький тест
 		setTimeout(function () {
+//			debugger;
+
 			btn.$set({
 				mods: [],
 				text: 'Написать',

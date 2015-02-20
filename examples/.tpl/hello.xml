@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem">
+
+	<div bem:block="hello">
+		<h2>Hello<fest:space/><fest:value>ctx.name || "%username%"</fest:value>!</h2>
+		<input type="text" class="form__field" on-input="ctx.name = this.value;" />
+	</div>
+
+</fest:template>

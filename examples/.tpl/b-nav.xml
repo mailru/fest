@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:bem="http://fest.mail.ru/bem">
+
+	<!-- Навигация -->
+	<div bem:block="b-nav">
+		<fest:for-each data="ctx.items" as="item">
+			<div bem:elem="item" on-click="ctx.active = item.id">
+				<bem:mod name="active" test="ctx.active == item.id"/>
+
+				<a bem:elem="link">
+					<fest:if test="item.items">
+						<div bem:elem="item__folding" on-click="item.expanded = !item.expanded;">
+							<div bem:elem="item__folding__arrow">
+								<bem:mod name="open" test="item.expanded" />
+							</div>
+						</div>
+					</fest:if>
+
+					<fest:if test="item.unread">
+						<span bem:elem="item__count"><fest:value>item.unread</fest:value></span>
+					</fest:if>
+
+					<div bem:elem="ico"><bem:ico>{ mods: item.icon }</bem:ico></div>
+					<span bem:elem="item__text"><fest:value>item.text</fest:value></span>
+				</a>
+			</div>
+
+			<fest:if test="item.items">
+				<div bem:elem="subitems">
+					<bem:mod name="close" test="!item.expanded" />
+
+					<fest:for-each data="item.items" as="item">
+						<div bem:elem="item" on-click="ctx.active = item.id">
+							<bem:mod name="active" test="ctx.active == item.id"/>
+
+							<a bem:elem="link">
+								<div bem:elem="ico"><bem:ico>{ mods: item.icon }</bem:ico></div>
+								<span bem:elem="item__text"><fest:value>item.text</fest:value></span>
+							</a>
+						</div>
+					</fest:for-each>
+				</div>
+			</fest:if>
+		</fest:for-each>
+	</div>
+
+</fest:template>
