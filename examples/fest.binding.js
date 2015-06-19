@@ -1,5 +1,23 @@
-(function () {
+define([], function () {
 	'use strict';
+
+	var _queue = [];
+	var _active = false;
+	var _addQueue = function (model) {
+		_queue.push(model);
+
+		if (!_active) {
+			_active = true;
+			setTimeout(_processingQueue, 1);
+		}
+	};
+	var _processingQueue = function () {
+		_active = false;
+		while (_queue.length) {
+			_queue.shift().$apply();
+		}
+	};
+
 
 	/**
 	 * Пустышка для помощи в создании произвольного куска html
@@ -47,15 +65,18 @@
 	var _preprocessors = [];
 
 
-	function templatePreprocessing(name) {
+	function templatePreprocessing(fnTpl) {
 		var bindIdx = 0,
-			template = this[name].toString(), // Получаем ссылку на скомпилированную-шаблон
+			template = fnTpl.toString(),
+			r_opts,
 			r_expr,
 			r_expr_g;
 
 		r_expr = _preprocessors.map(function (desc) {
 			return desc.id;
 		});
+
+		r_opts = new RegExp('\\/\\*\\$OPTS:([^\\*]+)\\*\\/');
 
 		r_expr = new RegExp('\\/\\*\\$(' + r_expr.join('|') + ')\\*\\/([\\\s\\S]*?)\\/\\*(\\1)\\$\\*\\/');
 		r_expr_g = new RegExp(r_expr.source, 'g');
@@ -94,7 +115,8 @@
 			template = template.replace(r_expr_g, function (_, name, expr) {
 				var __xb = '__xb[__bid]',
 					code = [],
-					pre = _preprocessors[name];
+					pre = _preprocessors[name],
+					opts;
 
 				if (pre) {
 					code.push(
@@ -103,6 +125,13 @@
 						__xb + '.id = __bid;',
 						__xb + '.name = "' + name + '";'
 					);
+
+					// Опции
+					opts = expr.match(r_opts);
+					if (opts) {
+						expr = expr.replace(opts[0], '');
+						code.push(__xb + '.opts = ' + opts[1] + ';');
+					}
 
 					// Экспортируем свойства
 					pre.props && Object.keys(pre.props).forEach(function (key) {
@@ -186,7 +215,16 @@
 
 
 	function ModelView(ctx) {
+		var pid;
+
 		ctx.__proto__ = this;
+		ctx.$apply = function () {
+			clearTimeout(pid);
+			setTimeout(function () {
+				ctx._$apply();
+			}, 1);
+		};
+
 		return ctx;
 	}
 
@@ -194,7 +232,7 @@
 		constructor: ModelView,
 
 		$: function () {
-			return window[this.$id];
+			return this.el || window[this.$id];
 		},
 
 		$init: function (el, endEl) {
@@ -341,7 +379,8 @@
 			this.$binds = binds;
 			this.$events = events;
 			this.$inited = false;
-			setTimeout(this.$apply.bind(this));
+
+			_addQueue(this);
 		},
 
 		$replaceBetween: function (startEl, endEl, html) {
@@ -361,7 +400,7 @@
 			return false;
 		},
 
-		$apply: function () {
+		_$apply: function () {
 			if (this.$inited !== true) {
 				this.$init(true);
 			}
@@ -404,10 +443,14 @@
 
 					if (bind.name === 'IF') {
 						this.$replaceBetween(bind.el, bind._el, html);
+
 						$events.forEach(function (evt, i) {
 							evt.el && !evt.el.parentNode && evt.unbind();
 							$events.splice(i, 1);
 						});
+					}
+					else if (bind.name === 'V' && bind.opts === 'raw') {
+						this.$replaceBetween(bind.el, bind._el, html);
 					}
 					else {
 						bindEl = bindEl.nextSibling;
@@ -496,19 +539,23 @@
 				mods: '__bem_mods'
 			},
 			$apply: function (el, bindEl) {
-				var __bem_mods =  this.mods,
-					__bem_x = this.name,
-					__bem_block_mods = el.className;
+				if (el) {
+					var __bem_mods = this.mods,
+						__bem_x = this.name,
+						__bem_block_mods = el.className;
 
-				this.getter();
+					this.getter();
 
-				(bindEl || el).className = __bem_mods;
+					(bindEl || el).className = __bem_mods;
+				}
 			}
 		})
 	;
 
 
 	// Export
-	fest.withBindings = templatePreprocessing;
-	fest.ModelView = ModelView;
-})();
+	return {
+		ModelView: ModelView,
+		applyBindingPatch: templatePreprocessing
+	};
+});
