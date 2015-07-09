@@ -26,7 +26,8 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/build/initial'
+                    '--out=spec/tmp/build/initial',
+					'--debug=40894'
                 ]
             },
             translated: {
@@ -193,9 +194,10 @@ module.exports = function (grunt) {
             var template_file = path.resolve(input_files, file);
             compile_args.push(template_file);
 
-            grunt.util.spawn({
+			grunt.util.spawn({
+				grunt: true,
                 cmd: './bin/fest-compile',
-                args: compile_args
+				opts: {stdio: 'inherit'}
             }, function (error, result) {
                 if (file.indexOf('error') !== -1) {
                     if (!error && !result.stderr) {
@@ -210,6 +212,7 @@ module.exports = function (grunt) {
                 }
                 cb();
             });
+
         }, function() {
             done(is_ok);
         });
