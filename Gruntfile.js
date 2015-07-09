@@ -195,9 +195,8 @@ module.exports = function (grunt) {
             compile_args.push(template_file);
 
 			grunt.util.spawn({
-				grunt: true,
                 cmd: './bin/fest-compile',
-				opts: {stdio: 'inherit'}
+                args: compile_args
             }, function (error, result) {
                 if (file.indexOf('error') !== -1) {
                     if (!error && !result.stderr) {
