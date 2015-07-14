@@ -26,8 +26,7 @@ module.exports = function (grunt) {
                     '--dir=spec/templates',
                     '--exclude=*error*',
                     '--compile.beautify=true',
-                    '--out=spec/tmp/build/initial',
-					'--debug=40894'
+                    '--out=spec/tmp/build/initial'
                 ]
             },
             translated: {
@@ -194,7 +193,7 @@ module.exports = function (grunt) {
             var template_file = path.resolve(input_files, file);
             compile_args.push(template_file);
 
-			grunt.util.spawn({
+            grunt.util.spawn({
                 cmd: './bin/fest-compile',
                 args: compile_args
             }, function (error, result) {
