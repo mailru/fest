@@ -210,6 +210,7 @@ module.exports = function (grunt) {
                 }
                 cb();
             });
+
         }, function() {
             done(is_ok);
         });
