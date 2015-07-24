@@ -1,3 +1,8 @@
+v 0.9
+	* refactoring i18n
+	* add preparePoFile - method transform i18n messages to po file
+	* add fest.extract - method extract i18n messages form template
+
 v 0.8.2
 	* added 'dictionary' event
 	* change 'message' event format, callback now has only one param - event object
