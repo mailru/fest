@@ -61,6 +61,23 @@ describe('fest:message', function () {
         );
     });
 
+	it('should support external i18n function', function () {
+		global.__fest_i18n = function (str) { return str + ' test'; };
+
+		expect(
+			render('templates/message-with-i18n-ns.xml', {}, {
+				messages: {
+					'Строка': 'Line'
+				}
+			}).contents
+		).toBe(
+			'Line test'
+		);
+
+		delete global.__fest_i18n;
+	});
+
+
     it('should allow redefine messages via events', function () {
         var sourceMap = {
             'Логотип {json.name}': '0',

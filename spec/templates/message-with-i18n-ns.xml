@@ -4,7 +4,8 @@
     </fest:set>
     <fest:get name="block">
     {
-        text: '<i18n:msg>Строка</i18n:msg>'
+        text: <i18n:msg>Строка</i18n:msg>
     }
     </fest:get>
+
 </fest:template>
