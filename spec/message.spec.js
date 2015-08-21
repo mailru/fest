@@ -62,13 +62,14 @@ describe('fest:message', function () {
     });
 
 	it('should support external i18n function', function () {
-		global.__fest_i18n = function (str) { return str + ' test'; };
 
 		expect(
 			render('templates/message-with-i18n-ns.xml', {}, {
 				messages: {
 					'Строка': 'Line'
 				}
+			}, {
+				i18n: function (str) { return str + ' test'; }
 			}).contents
 		).toBe(
 			'Line test'
