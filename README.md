@@ -524,56 +524,22 @@ person.xml:
 ```
 
 ## Интернационализация
-
-### fest:plural
-
-По умолчанию доступна поддержка плюрализации для русского и английского языка. В параметрах `fest.compile` можно передать любую другую функцию плюрализации.
+Для работы интернационализации в `fest` добавлен новый неймспейс i18n. В нем определн
+тег msg, пример:
 
 ```xml
-<fest:plural select="json.n">один рубль|%s рубля|%s рублей</fest:plural>
-```
-Или англоязычный вариант:
+<?xml version="1.0"?>
+<fest:template xmlns:fest="http://fest.mail.ru" xmlns:i18n="http://i18n.fest.mail.ru">
+    <i18n:msg context="сооружения" data-name="Дракулы">Замок {name}</i18n:msg>
+    <fest:get name="block">
+    {
+        text: <i18n:msg>Строка</i18n:msg>
+    }
+    </fest:get>
 
-```xml
-<fest:plural select="json.n">one ruble|%s rubles</fest:plural>
-```
-
-Чтобы вывести символ “%” внутри тега `fest:plural` используйте “%%”:
-
-```xml
-<fest:plural select="json.n">…1%%…|…%s%%…|…%s%%…</fest:plural>
+</fest:template>
 ```
 
-### fest:message и fest:msg
-
-Позволяет указать границы фразы для перевода и контекст для снятия многозначности. Например,
-
-```xml
-<fest:message context="растение">Лук</fest:message>
-<fest:message context="оружие">Лук</fest:message>
-```
-
-Для каждого `fest:message`, `fest:msg`, обычного текста, заключенного между XML тегами (опция `auto_message`), или текстового значения некоторых атрибутов компилятор вызывает функцию `events.message` (если такая была указана в параметрах). Данный механизм используется в `fest-build` утилите для построения оригинального PO-файла.
-
-Пример вызова `fest-build` для создания PO-файла:
-
-```
-$ fest-build --dir=fest --po=ru_RU.po --compile.auto_message=true
-```
-
-Пример компиляции локализованных шаблонов:
-
-```
-$ fest-build --dir=fest --translate=en_US.po
-```
-
-Пример компиляции одного шаблона:
-
-```
-$ fest-compile path/to/template.xml
-$ fest-compile --out=path/to/compiled.js path/to/template.xml
-$ fest-compile --out=path/to/compiled.js --translate=path/to/en_US.po path/to/template.xml
-```
 
 ## Contribution
 
