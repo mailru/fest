@@ -53,11 +53,11 @@ describe('fest:message', function () {
         expect(
             render('templates/message-with-i18n-ns.xml', {}, {
                 messages: {
-                    'Строка': 'Line'
+                    'Строка&nbsp;': 'Line&nbsp;'
                 }
             }).contents
         ).toBe(
-            'Line'
+            'Line&nbsp;'
         );
     });
 
@@ -66,13 +66,13 @@ describe('fest:message', function () {
 		expect(
 			render('templates/message-with-i18n-ns.xml', {}, {
 				messages: {
-					'Строка': 'Line'
+					'Строка&nbsp;': 'Line&nbsp;'
 				}
 			}, {
 				i18n: function (str) { return str + ' test'; }
 			}).contents
 		).toBe(
-			'Line test'
+			'Line&nbsp; test'
 		);
 
 		delete global.__fest_i18n;
