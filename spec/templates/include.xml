@@ -3,5 +3,4 @@
 	<fest:for iterate="json.list" index="i" value="item">
 		<fest:include context="item" src="./include_foreach.xml"/>
 	</fest:for>
-	<fest:include context="json.list" src="./nofile.xml"/>
 </fest:template>

@@ -1,10 +1,12 @@
 <fest:template xmlns:fest="http://fest.mail.ru" xmlns:i18n="http://i18n.fest.mail.ru">
     <fest:set name="block">
-        <fest:value output="text">params.text</fest:value>
+        <fest:value output="text">params.text + params.text2 + params.text3</fest:value>
     </fest:set>
     <fest:get name="block">
     {
-        text: <i18n:msg>Строка&amp;nbsp;</i18n:msg>
+        text: <i18n:msg>tst</i18n:msg>,
+        text2: <i18n:msg data-link='<a rel="history">' data-linkclose='</a>'>Use&amp;nbsp;{link}redirect{linkclose}.</i18n:msg>,
+        text3: <i18n:msg data-name="{'Dima'}">Hello, {name}</i18n:msg>
     }
     </fest:get>
 
