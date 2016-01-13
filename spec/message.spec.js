@@ -53,11 +53,11 @@ describe('fest:message', function () {
         expect(
             render('templates/message-with-i18n-ns.xml', {}, {
                 messages: {
-                    'Строка&nbsp;': 'Line&nbsp;'
+                    'Use&amp;nbsp;{link}redirect{linkclose}.': 'Какой-то перевод&nbsp;'
                 }
             }).contents
         ).toBe(
-            'Line&nbsp;'
+            'tstUse&nbsp;{link}redirect{linkclose}.Hello, {name}'
         );
     });
 
@@ -72,7 +72,7 @@ describe('fest:message', function () {
 				i18n: function (str) { return str + ' test'; }
 			}).contents
 		).toBe(
-			'Line&nbsp; test'
+			'tst testUse&nbsp;{link}redirect{linkclose}. testHello, {name} test'
 		);
 
 		delete global.__fest_i18n;
