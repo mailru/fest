@@ -5,3 +5,4 @@
 node_modules
 benchmark
 spec/tmp
+reports
