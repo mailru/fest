@@ -53,13 +53,31 @@ describe('fest:message', function () {
         expect(
             render('templates/message-with-i18n-ns.xml', {}, {
                 messages: {
-                    'Строка': 'Line'
+                    'Use&amp;nbsp;{link}redirect{linkclose}.': 'Какой-то перевод&nbsp;'
                 }
             }).contents
         ).toBe(
-            'Line'
+            'tstUse&nbsp;{link}redirect{linkclose}.Hello, {name}'
         );
     });
+
+	it('should support external i18n function', function () {
+
+		expect(
+			render('templates/message-with-i18n-ns.xml', {}, {
+				messages: {
+					'Строка&nbsp;': 'Line&nbsp;'
+				}
+			}, {
+				i18n: function (str) { return str + ' test'; }
+			}).contents
+		).toBe(
+			'tst testUse&nbsp;{link}redirect{linkclose}. testHello, {name} test'
+		);
+
+		delete global.__fest_i18n;
+	});
+
 
     it('should allow redefine messages via events', function () {
         var sourceMap = {

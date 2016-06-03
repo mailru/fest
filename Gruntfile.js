@@ -122,7 +122,7 @@ module.exports = function (grunt) {
 
         grunt.util.spawn({
             cmd: cmd,
-            args: [options.specs],
+            args: [options.specs, '--junitreport'],
             opts: {
                 env: grunt.util._.extend(
                     {}, process.env, { FEST_COMPILE: JSON.stringify(options.compile) }
