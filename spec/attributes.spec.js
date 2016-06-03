@@ -9,7 +9,8 @@ describe('fest:attribute(s)', function () {
         expect(
             render('templates/attribute.xml').contents
         ).toBe(
-            '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true" \"=\"\"\"></div><div>foo</div><div data-kata="abcd_efg"></div>'
+            '<input/><div>foobar</div><div class="foo bar"></div><div class="foo"></div><div when="true" otherwise="true" \"=\"\"\"></div><div>foo</div>' +
+            '<div data-kata="abcd_efg"></div>'
         );
     });
 

@@ -1,5 +1,8 @@
+'use strict';
+
 var fs = require('fs'),
     os = require('os'),
+    fest = require('../lib/fest'),
     resolve = require('path').resolve.bind(null, __dirname),
     defaultOptions = process.env.FEST_COMPILE ? JSON.parse(process.env.FEST_COMPILE) : {};
     // jasmine = require('jasmine-node');
@@ -39,10 +42,14 @@ exports.render = function (file, json, options, thisArg) {
     errors = [];
     var source = compileFn(resolve(file), extend(options || {}, defaultOptions)),
         template = (new Function('__fest_error', 'return ' + source))(__fest_error);
-    return {
-        contents: template.call(thisArg, json),
-        errors: errors
-    };
+
+    let contents = template.call(thisArg, json);
+
+    if (defaultOptions.mode === 'vdom') {
+        contents = fest.toHTML(contents);
+    }
+
+    return {contents, errors};
 };
 
 exports.compile = function (file, options) {

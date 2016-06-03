@@ -50,16 +50,16 @@ module.exports = function (grunt) {
                     ]
                 ]
             },
-            translated: {
-                args: [
-                    'spec/templates',
-                    'spec/tmp/compile/translated',
-                    [
-                        '--compile.beautify=true',
-                        '--translate=spec/templates/en_US.po'
-                    ]
-                ]
-            }
+            //translated: {
+            //    args: [
+            //        'spec/templates',
+            //        'spec/tmp/compile/translated',
+            //        [
+            //            '--compile.beautify=true',
+            //            '--translate=spec/templates/en_US.po'
+            //        ]
+            //    ]
+            //}
         },
 
         jasmine_node: {
@@ -68,6 +68,13 @@ module.exports = function (grunt) {
                 compile: {
                     debug: true,
                     beautify: true
+                }
+            },
+            mode_vdom: {
+                options: {
+                    compile: {
+                        mode: 'vdom'
+                    }
                 }
             },
             mode_string: {
@@ -221,7 +228,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('test', ['clean', 'jshint', 'fest_build', 'fest_compile', 'jasmine_node']);
+    grunt.registerTask('test', ['jshint', 'fest_build', 'fest_compile', 'jasmine_node']);
 
     grunt.registerTask('default', ['test']);
 
